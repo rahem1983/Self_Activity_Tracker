@@ -28,27 +28,25 @@
     
     <div class="container pb-3">
 
-        <div class="col-lg-12" style="align-items: center;">
+      
             <div class="container" style="width: 600px; height: 700px; background: white; box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px; margin-top: 70px;">
          
-        <h1 class="text-center pt-2" style="color: #002db3"> Start New Project</h1>
+        <h2 class="text-center pt-2" style="color: #002db3">Set Weekly Target</h2>
 
-        <form style="color:#002db3 ">
-            <div class="form-row pt-4">
-              <div class="form-group">
-                <label for="title">Project Title</label>
-                <input type="text" class="form-control" id="title" placeholder="Name of your project">
-              </div>
-            </div>
+        <form style="color:#002db3">
+            
+           
+                <h5 class="text-center pt-2">Sample Project Name</h5>
+               
 
             <div class="form-row pt-4">
                 <div class="form-group">
-                <label for="shortdesc">Short Description</label>
-                <textarea class="form-control post-text" id="shortdesc" rows="2" cols="2" placeholder="Short Description about your project"></textarea>
+                <label for="dat1">29 Nov 2021</label>
+                <textarea class="form-control post-text" id="day1" rows="2" cols="2" placeholder="Short Description about your project"></textarea>
                   </div>
               </div>
               
-              <div class="form-row pt-4">
+              {{-- <div class="form-row pt-4">
                 <div class="form-group">
               <label for="ProbableFinishDate">Estimated Finishing Date:</label>
                 <input type="date" id="ProbableFinishDate" name="ProbableFinishDate">
@@ -60,7 +58,7 @@
                 <label for="projectreq">Project Requirements</label>
                 <textarea class="form-control post-text" id="projectreq" rows="2" cols="2" placeholder="Technologies required in this project"></textarea>
                   </div>
-              </div>
+              </div> --}}
 
 
               
@@ -79,8 +77,7 @@
 
 
 
-    </div>
-    </div>
+        </div>
     </div>
  
     
