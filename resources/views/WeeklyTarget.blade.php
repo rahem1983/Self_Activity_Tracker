@@ -18,7 +18,7 @@
         .post-text{
 
             resize: none;
-            height: 150px;
+            height: 70px;
         }
 
     </style>
@@ -29,7 +29,7 @@
     <div class="container pb-3">
 
       
-            <div class="container" style="width: 600px; height: 700px; background: white; box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px; margin-top: 70px;">
+            <div class="container" style="width: 600px; height: 1060px; background: white; box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px; margin-top: 70px;">
          
         <h2 class="text-center pt-2" style="color: #002db3">Set Weekly Target</h2>
 
@@ -41,24 +41,54 @@
 
             <div class="form-row pt-4">
                 <div class="form-group">
-                <label for="dat1">29 Nov 2021</label>
-                <textarea class="form-control post-text" id="day1" rows="2" cols="2" placeholder="Short Description about your project"></textarea>
+                <label for="day1">Day-1/ 30 Nov 2021-Tuesday</label>
+                <textarea class="form-control post-text" id="day1" rows="2" cols="2" placeholder="Write your target for this specific day"></textarea>
                   </div>
-              </div>
-              
-              {{-- <div class="form-row pt-4">
-                <div class="form-group">
-              <label for="ProbableFinishDate">Estimated Finishing Date:</label>
-                <input type="date" id="ProbableFinishDate" name="ProbableFinishDate">
-                </div>
               </div>
 
               <div class="form-row pt-4">
                 <div class="form-group">
-                <label for="projectreq">Project Requirements</label>
-                <textarea class="form-control post-text" id="projectreq" rows="2" cols="2" placeholder="Technologies required in this project"></textarea>
+                <label for="day2">Day-2/ 1 Dec 2021-Wednesday</label>
+                <textarea class="form-control post-text" id="day2" rows="2" cols="2" placeholder="Write your target for this specific day"></textarea>
                   </div>
-              </div> --}}
+              </div>
+
+              <div class="form-row pt-4">
+                <div class="form-group">
+                <label for="day3">Day-3/ 2 Dec 2021-Thursday</label>
+                <textarea class="form-control post-text" id="day1" rows="2" cols="2" placeholder="Write your target for this specific day"></textarea>
+                  </div>
+              </div>
+
+              <div class="form-row pt-4">
+                <div class="form-group">
+                <label for="day4">Day-4/ 3 Dec 2021-Friday</label>
+                <textarea class="form-control post-text" id="day1" rows="2" cols="2" placeholder="Write your target for this specific day"></textarea>
+                  </div>
+              </div>
+
+              <div class="form-row pt-4">
+                <div class="form-group">
+                <label for="day5">Day-5/ 4 Dec 2021-Saturday</label>
+                <textarea class="form-control post-text" id="day1" rows="2" cols="2" placeholder="Write your target for this specific day"></textarea>
+                  </div>
+              </div>
+
+              <div class="form-row pt-4">
+                <div class="form-group">
+                <label for="day6">Day-6/ 5 Dec 2021-Sunday</label>
+                <textarea class="form-control post-text" id="day1" rows="2" cols="2" placeholder="Write your target for this specific day"></textarea>
+                  </div>
+              </div>
+
+              <div class="form-row pt-4">
+                <div class="form-group">
+                <label for="day7">Day-7/ 6 Dec 2021-Monday</label>
+                <textarea class="form-control post-text" id="day1" rows="2" cols="2" placeholder="Write your target for this specific day"></textarea>
+                  </div>
+              </div>
+              
+            
 
 
               
