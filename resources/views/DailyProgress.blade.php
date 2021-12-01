@@ -36,12 +36,12 @@
         <form style="color:#002db3">
             
            
-                <h5 class="text-center pt-2">Sample Project Name</h5>
+                <h5 class="text-center pt-2">Daily Progress</h5>
                
 
             <div class="form-row pt-4">
                 <div class="form-group">
-                <label for="day1">Day-1/ 30 Nov 2021-Tuesday</label>
+                <label for="day1">Today's Progression</label>
                 <textarea class="form-control post-text" id="day1" rows="2" cols="2" placeholder="Write your target for this specific day"></textarea>
                   </div>
               </div>
@@ -53,41 +53,7 @@
                   </div>
               </div>
 
-              <div class="form-row pt-4">
-                <div class="form-group">
-                <label for="day3">Day-3/ 2 Dec 2021-Thursday</label>
-                <textarea class="form-control post-text" id="day1" rows="2" cols="2" placeholder="Write your target for this specific day"></textarea>
-                  </div>
-              </div>
-
-              <div class="form-row pt-4">
-                <div class="form-group">
-                <label for="day4">Day-4/ 3 Dec 2021-Friday</label>
-                <textarea class="form-control post-text" id="day1" rows="2" cols="2" placeholder="Write your target for this specific day"></textarea>
-                  </div>
-              </div>
-
-              <div class="form-row pt-4">
-                <div class="form-group">
-                <label for="day5">Day-5/ 4 Dec 2021-Saturday</label>
-                <textarea class="form-control post-text" id="day1" rows="2" cols="2" placeholder="Write your target for this specific day"></textarea>
-                  </div>
-              </div>
-
-              <div class="form-row pt-4">
-                <div class="form-group">
-                <label for="day6">Day-6/ 5 Dec 2021-Sunday</label>
-                <textarea class="form-control post-text" id="day1" rows="2" cols="2" placeholder="Write your target for this specific day"></textarea>
-                  </div>
-              </div>
-
-              <div class="form-row pt-4">
-                <div class="form-group">
-                <label for="day7">Day-7/ 6 Dec 2021-Monday</label>
-                <textarea class="form-control post-text" id="day1" rows="2" cols="2" placeholder="Write your target for this specific day"></textarea>
-                  </div>
-              </div>
-              
+             
             
 
 
