@@ -81,66 +81,33 @@
             <div class="col-lg-6" style="align-items: center;">
                 <div class="container" style="box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px; width: 700px; height: 560px; background: white; margin-top: 70px;">
                    
-                    <h2 class="text-center pt-2" style="color: #002db3">Signup</h2>
+                    <h2 class="text-center pt-2" style="color: #002db3">Login</h2>
 
                     <form style="color:#002db3 ">
-                        <div class="form-row pt-4">
-                          <div class="form-group">
-                            <input type="text" class="form-control" id="name" placeholder="Name">
-                          </div>
-                        </div>
-
+            
                         <div class="form-row pt-4">
                             <div class="form-group">
+                              <h5><label for="title">Email</label></h5>
                               <input type="text" class="form-control" id="email" placeholder="Email">
                             </div>
                           </div>
 
+                                                 
                           <div class="form-row pt-4">
                             <div class="form-group">
-                              <input type="number" class="form-control" id="mobile" placeholder="Mobile No.">
-                            </div>
-                          </div>
-
-                          <div class="form-row pt-4">
-                            <div class="form-group">
-                            <label for="gender" class="text-dark">Gender</label> &nbsp;
-                          <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
-                            <label class="form-check-label" for="inlineRadio1"> Male</label>
-                          </div>
-                          <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
-                            <label class="form-check-label" for="inlineRadio2"> Female</label>
-                          </div>
-
-                          <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3">
-                            <label class="form-check-label" for="inlineRadio2"> Others</label>
-                          </div>
-                        </div>
-                      </div>
-
-                          <div class="form-row pt-4">
-                            <div class="form-group">
+                              <h5><label for="title">Password</label></h5>
                               <input type="password" class="form-control" id="pass" placeholder="Password">
                             </div>
                           </div>
                           
 
-                          <div class="form-row pt-4">
-                            <div class="form-group">
-                              <input type="text" class="form-control" id="designation" placeholder="Designation e.g: Web/App Developer, Graphic Designer, HR..">
-                            </div>
-                          </div>
-
                           <div class="form-check pt-4">
                             <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                            <label class="form-check-label text-dark" for="exampleCheck1">I Agree to <small><a href="#"> Terms and Conditions</a></small></label>
+                            <label class="form-check-label text-dark" for="exampleCheck1">Keep me logged in</label>
                           </div>
 
                           <div class="pt-4 text-center">
-                            <button type="submit" class="btn btn-primary" style="background-color: #002db3">Submit</button>
+                            <button type="submit" class="btn btn-primary" style="background-color: #002db3">Login</button>
                           </div>
                         </div>
                         
