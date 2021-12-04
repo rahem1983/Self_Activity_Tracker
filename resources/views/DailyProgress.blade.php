@@ -24,12 +24,12 @@
     </style>
 
 </head>
-<body>
+<body>  
     
     <div class="container pb-3">
 
       
-            <div class="container" style="width: 600px; height: 1050px; background: white; box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px; margin-top: 70px;">
+            <div class="container" style="width: 600px; max-height: 100%; background: white; box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px; margin-top: 70px;">
          
         <h2 class="text-center pt-2" style="color: #002db3">Set Weekly Target</h2>
 
@@ -59,8 +59,8 @@
 
               
 
-              <div class="pt-5 text-center">
-                <button type="submit" class="btn btn-primary" style="background-color: #002db3">Done</button>
+              <div class="pt-5 text-center" style="padding-bottom: 20px">
+                <button type="submit" class="btn btn-primary" style="background-color: #002db3; ">Done</button>
               </div>
             
           </form>

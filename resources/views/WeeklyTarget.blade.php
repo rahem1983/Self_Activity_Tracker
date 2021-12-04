@@ -12,6 +12,7 @@
       <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
      
       <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+      <Script src="./js/WeeklyTarget.js" defer></Script>
       
     
     <style>
@@ -41,7 +42,13 @@
 
             <div class="form-row pt-4">
                 <div class="form-group">
-                <label for="day1">Day-1/ 30 Nov 2021-Tuesday</label>
+                <label for="day1">Day-1/ 30 Nov 2021-Tuesday</label><br>
+                <input type="checkbox" id="CBproject1" >
+                <label for="CBproject1"> project 1</label><br>
+                <div id="inputProject1"></div>
+                <input type="checkbox" id="CBproject2" >
+                <label for="CBproject2"> project 2</label><br>
+                <div id="inputProject2"></div>
                 <textarea class="form-control post-text" id="day1" rows="2" cols="2" placeholder="Write your target for this specific day"></textarea>
                   </div>
               </div>

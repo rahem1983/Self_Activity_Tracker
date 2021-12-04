@@ -75,20 +75,26 @@
         <div class="row pt-5 pb-3 justify-content center" style="align-items: center;">
             
             <div class="col-lg-6" style="align-items: center;">
-                <img src="undraw_online_ad_re_ol62.svg" style="width: 900px;" alt="">
+                <img src="{{url('./image/undraw_online_ad_re_ol62.svg')}}" style="width: 900px;" alt="">
             </div>
 
             <div class="col-lg-6" style="align-items: center;">
                 <div class="container" style="box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px; width: 700px; height: 560px; background: white; margin-top: 70px;">
                    
                     <h2 class="text-center pt-2" style="color: #002db3">Login</h2>
+                    @if(session('NoUser'))
+                      <div class="title text-center mb-3 pt-4 text-white">
+                        <h5 class="font-weight bolder" style="color:  #FF0000;">{{session('NoUser')}}</h5>
+                      </div>
+                    @endif    
 
-                    <form style="color:#002db3 ">
-            
+                    <form style="color:#002db3; padding-top: 20px;" action="{{url("./login")}}" method="post">
+                      @csrf
                         <div class="form-row pt-4">
                             <div class="form-group">
                               <h5><label for="title">Email</label></h5>
-                              <input type="text" class="form-control" id="email" placeholder="Email">
+                              <input type="text" class="form-control" id="email" name="email" placeholder="Email">
+                              {{-- <span style="color:#ff0000 ">@error('email'){{$message}}@enderror</span> --}}
                             </div>
                           </div>
 
@@ -96,17 +102,24 @@
                           <div class="form-row pt-4">
                             <div class="form-group">
                               <h5><label for="title">Password</label></h5>
-                              <input type="password" class="form-control" id="pass" placeholder="Password">
+                              <input type="password" class="form-control" id="pass" name="password" placeholder="Password">
+                              {{-- <span style="color:#ff0000 ">@error('password'){{$message}}@enderror</span> --}}
                             </div>
                           </div>
                           
 
-                          <div class="form-check pt-4">
+                          {{-- <div class="form-check pt-4">
                             <input type="checkbox" class="form-check-input" id="exampleCheck1">
                             <label class="form-check-label text-dark" for="exampleCheck1">Keep me logged in</label>
-                          </div>
+                          </div> --}}
 
-                          <div class="pt-4 text-center">
+                          @if(session('PasswordMissmatch'))
+                            <div class="title text-center mb-3 pt-4 text-white">
+                                <h5 class="font-weight bolder" style="color:  #FF0000;">{{session('PasswordMissmatch')}}</h5>
+                            </div>
+                          @endif
+
+                          <div class="text-center" style="padding-top: 100px;">
                             <button type="submit" class="btn btn-primary" style="background-color: #002db3">Login</button>
                           </div>
                         </div>
