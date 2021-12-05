@@ -21,6 +21,13 @@
             height: 70px;
         }
 
+        .custom-radio input{
+          visibility: hidden;
+        }
+
+        .custom-radio{
+          font-size: 30px;
+        } 
     </style>
 
 </head>
@@ -31,30 +38,142 @@
       
             <div class="container" style="width: 600px; max-height: 100%; background: white; box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px; margin-top: 70px;">
          
-        <h2 class="text-center pt-2" style="color: #002db3">Set Weekly Target</h2>
+        <h2 class="text-center pt-2" style="color: #002db3">Daily Progress</h2>
 
         <form style="color:#002db3">
             
-           
-                <h5 class="text-center pt-2">Daily Progress</h5>
-               
+          <div class="form-row pt-4">
+            <div class="form-group">
+            <label for="project">In which project you worked today?</label>
+              <div class="form-check">
+               <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+               <label class="form-check-label" for="exampleRadios1">Project 1</label>
+             </div>
+
+              <div class="form-check">
+                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+                <label class="form-check-label" for="exampleRadios2">Project 2</label>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="form-row pt-4">
+            <div class="form-group">
+            <label for="target">Did you finish today's target?</label> <br>
+              <div class="form-check form-check-inline">
+               <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+               <label class="form-check-label" for="exampleRadios1">Yes</label>
+             </div>
+
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+                <label class="form-check-label" for="exampleRadios2">No</label>
+              </div>
+            </div>
 
             <div class="form-row pt-4">
-                <div class="form-group">
-                <label for="day1">Today's Progression</label>
-                <textarea class="form-control post-text" id="day1" rows="2" cols="2" placeholder="Write your target for this specific day"></textarea>
-                  </div>
-              </div>
+              <div class="form-group">
+                {{-- IF NO... --}}
+              <textarea class="form-control post-text" id="day1" rows="2" cols="2" placeholder="Write the reason why you couldn't finish today's target"></textarea>
+                </div>
+            </div>
+          </div>
 
+
+
+          <div class="form-row pt-4">
+            <div class="form-group">
+            <label for="target">Any new skill learned today?</label> <br>
+              <div class="form-check form-check-inline">
+               <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+               <label class="form-check-label" for="exampleRadios1">Yes</label>
+             </div>
+
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+                <label class="form-check-label" for="exampleRadios2">No</label>
+              </div>
+            </div>
+
+            <div class="form-row pt-4">
+              <div class="form-group">
+                {{-- IF YES... --}}
+              <textarea class="form-control post-text" id="day1" rows="2" cols="2" placeholder="Write the skills you have learned today"></textarea>
+                </div>
+            </div>
+          </div>
+                  
               <div class="form-row pt-4">
                 <div class="form-group">
-                <label for="day2">Day-2/ 1 Dec 2021-Wednesday</label>
-                <textarea class="form-control post-text" id="day2" rows="2" cols="2" placeholder="Write your target for this specific day"></textarea>
-                  </div>
-              </div>
-
-             
+                   <label for="title">When did you start working today?</label>
+                   <input type="text" class="form-control" id="title" placeholder="Time AM/PM">
+                </div>
+             </div>
             
+             <div class="form-row pt-4">
+              <div class="form-group">
+                 <label for="title">When did you finish working today?</label>
+                 <input type="text" class="form-control" id="title" placeholder="Time AM/PM">
+              </div>
+           </div>
+
+
+           <div class="form-row pt-4">
+            <div class="form-group">
+            <label for="target">How did you feel working today?</label> <br>
+              <div class="form-check form-check-inline custom-radio">
+               <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+               <label class="form-check-label" for="exampleRadios1">😭</label>
+             </div>
+
+             <div class="form-check form-check-inline custom-radio">
+              <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+              <label class="form-check-label" for="exampleRadios1">😢</label>
+            </div>
+
+            <div class="form-check form-check-inline custom-radio">
+              <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+              <label class="form-check-label" for="exampleRadios1"></label>
+            </div>
+
+            <div class="form-check form-check-inline custom-radio">
+              <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+              <label class="form-check-label" for="exampleRadios1">😭</label>
+            </div>
+
+            <div class="form-check form-check-inline custom-radio">
+              <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+              <label class="form-check-label" for="exampleRadios1">😭</label>
+            </div>
+
+            <div class="form-check form-check-inline custom-radio">
+              <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+              <label class="form-check-label" for="exampleRadios1">😭</label>
+            </div>
+
+            <div class="form-check form-check-inline custom-radio">
+              <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+              <label class="form-check-label" for="exampleRadios1">😭</label>
+            </div>
+
+            <div class="form-check form-check-inline custom-radio">
+              <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+              <label class="form-check-label" for="exampleRadios1">😭</label>
+            </div>
+
+            <div class="form-check form-check-inline custom-radio">
+              <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+              <label class="form-check-label" for="exampleRadios1">😭</label>
+            </div>
+
+              <div class="form-check form-check-inline custom-radio">
+                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+                <label class="form-check-label custom-radio" for="exampleRadios2">😁</label>
+              </div>
+            </div>
+          </div>
+
 
 
               
