@@ -124,7 +124,8 @@
             <label for="target">How did you feel working today?</label> <br>
               <div class="form-check form-check-inline custom-radio">
                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
-               <label class="form-check-label" for="exampleRadios1">😭</label>
+               <label class="form-check-label" for="exampleRadios1"><img src="https://img.icons8.com/emoji/48/000000/loudly-crying-face.png"/></label>
+               
              </div>
 
              <div class="form-check form-check-inline custom-radio">
