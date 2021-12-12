@@ -36,35 +36,21 @@
 </head>
 <body>
 
-    <div class="container">
-
-        <div class="row pt-5">
-            <div class="col-lg-12">
+    <div class="container-fluid">
+        <div class="row pt-4">
+            <div class="col-lg-4">
                 <div class="card">
                     <!-- <img class="card-img-top" src="..." alt="Card image cap"> --}} -->
                     <div class="card-header text-center"><h5>User Details</h5></div>
                     <div class="card-body text-center">
                         <img  class="card-img-top gol-img" src="https://icon-library.com/images/default-profile-icon/default-profile-icon-1.jpg" alt="Avatar"><br>
                         <a href="#"><button type="button" class="mt-2 btn btn-light btn-sm">Edit Profile</button></a>
-                      <h3 class="pt-2">Mashrur Jamil Rafin</h3>
-                      <h4>Web Developer</h3>
-                      <div class="pt-3">
-                        <a href=""><button type="button" class="btn btn-primary">Start New Project</button></a>
-                        <a href=""><button type="button" class="btn btn-primary">Set Weekly Target</button></a>
-                        <a href=""><button type="button" class="btn btn-primary">Daily Progress</button></a>
-                        </div>
+                      <h4 class="pt-2">Mashrur Jamil Rafin</h4>
+                      <h5>Web Developer</h5>
                     </div>
                 </div> 
-            </div>
-            <div class="col-lg-1">
-                
-            </div>
-        </div>
 
-
-        <div class="row pt-3">
-            <div class="col-lg-6">
-                <div class="card">
+                <div class="card pt-3">
                     <!-- <img class="card-img-top" src="..." alt="Card image cap"> --}} -->
                     <div class="card-header text-center"><h5>Achievements 🏆</h5></div>
                     <div class="card-body">
@@ -72,11 +58,50 @@
                         <h6>Random Achievement lorem ipsum </h6>
                         <h6>Sample Achievement lorem ipsum </h6>
                     </div>
-                </div> 
-            </div>
-            <div class="col-lg-6">
+                </div>       
+        </div>
 
-            </div>
+                <div class="col-lg-6">
+                    <div class="card">
+                        <!-- <img class="card-img-top" src="..." alt="Card image cap"> --}} -->
+                        <div class="card-header text-center"><h5>Today's Tasks</h5></div>
+                        <div class="card-body">
+                            <h6>• Sample Tasks lorem ipsum </h6>
+                            <h6>• Random Tasks lorem ipsum </h6>
+                            <h6>• Sample Tasks lorem ipsum </h6>
+                        </div>
+                    </div>
+                   <div class="pt-4">   
+                    <h5>Projects</h5>
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <a href=""><h6 class="text-dark">Self Activity Tracker</h6></a>
+                                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Labore veniam beatae quod delectus voluptates corrupti</p>
+                                        <small><p class="text-muted">5 days Ago</p></small>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <a href=""><h6 class="text-dark">Self Activity Tracker</h6></a>
+                                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Labore veniam beatae quod delectus voluptates corrupti</p>
+                                        <small><p class="text-muted">5 days Ago</p></small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>  
+
+                        <div class="p-2">
+                            <a href=""><button type="button" class="btn btn-primary m-2">Start New Project</button></a>
+                            <a href=""><button type="button" class="btn btn-primary m-2">Set Weekly Target</button></a>
+                            <a href=""><button type="button" class="btn btn-primary m-2">Daily Progress</button></a>
+                            </div>
+                </div>
+        
         </div>
         
 
