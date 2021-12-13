@@ -29,6 +29,27 @@
             height: 100px;
         }
 
+        .card-img
+        {
+            width: 300px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+
+        }
+
+        .wht-btn{
+            border: 1px solid;
+            border-color: grey;
+            background: white;
+        }
+
+        .wht-btn:hover
+        {
+            background: #3333ff;
+            color: white;
+            
+        }
     </style>
 
     <!-- <script src="./css/home.css" defer> </script> -->
@@ -36,7 +57,7 @@
 </head>
 <body>
 
-    <div class="container-fluid">
+    <div class="container">
         <div class="row pt-4">
             <div class="col-lg-4">
                 <div class="card">
@@ -47,16 +68,23 @@
                         <a href="#"><button type="button" class="mt-2 btn btn-light btn-sm">Edit Profile</button></a>
                       <h4 class="pt-2">Mashrur Jamil Rafin</h4>
                       <h5>Web Developer</h5>
+
+                      <div class="p-2">
+                        <a href=""><button type="button" class="btn wht-btn btn-sm">Start New Project</button></a>
+                        <a href=""><button type="button" class="btn wht-btn btn-sm">Set Weekly Target</button></a>
+                        <a href=""><button type="button" class="btn wht-btn btn-sm mt-1">Daily Progress</button></a>
+                        </div>
                     </div>
                 </div> 
 
-                <div class="card pt-3">
+                <div class="card mt-3">
                     <!-- <img class="card-img-top" src="..." alt="Card image cap"> --}} -->
                     <div class="card-header text-center"><h5>Achievements 🏆</h5></div>
                     <div class="card-body">
-                        <h6>Sample Achievement lorem ipsum </h6>
-                        <h6>Random Achievement lorem ipsum </h6>
-                        <h6>Sample Achievement lorem ipsum </h6>
+                        <img title="Achievements Badges" class="card-img" src="trophies.jpg" alt="">
+                        <!-- <h6>• Sample Tasks lorem ipsum </h6>
+                            <h6>• Random Tasks lorem ipsum </h6>
+                            <h6>• Sample Tasks lorem ipsum </h6> -->
                     </div>
                 </div>       
         </div>
@@ -66,11 +94,19 @@
                         <!-- <img class="card-img-top" src="..." alt="Card image cap"> --}} -->
                         <div class="card-header text-center"><h5>Today's Tasks</h5></div>
                         <div class="card-body">
-                            <h6>• Sample Tasks lorem ipsum </h6>
-                            <h6>• Random Tasks lorem ipsum </h6>
-                            <h6>• Sample Tasks lorem ipsum </h6>
+                            <h6 class="text-danger">• Sample Tasks lorem ipsum </h6>
+                            <h6 class="text-danger">• Random Tasks lorem ipsum </h6>
+                            <h6 class="text-success">• Sample Tasks lorem ipsum </h6>
+
+                            <div class="d-flex flex-row-reverse">
+                               <small>
+                                   <span class="text-danger">🟥 Incomplete</span>&nbsp;
+                                   <span class="text-success">🟩 Complete</span>
+                               </small>
+                            </div>
                         </div>
                     </div>
+                   
                    <div class="pt-4">   
                     <h5>Projects</h5>
                         <div class="row">
@@ -86,7 +122,28 @@
                             <div class="col-sm-6">
                                 <div class="card">
                                     <div class="card-body">
-                                        <a href=""><h6 class="text-dark">Self Activity Tracker</h6></a>
+                                        <a href=""><h6 class="text-dark">ToDo App</h6></a>
+                                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Labore veniam beatae quod delectus voluptates corrupti</p>
+                                        <small><p class="text-muted">5 days Ago</p></small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row pt-2">
+                            <div class="col-sm-6">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <a href=""><h6 class="text-dark">TicTacToe</h6></a>
+                                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Labore veniam beatae quod delectus voluptates corrupti</p>
+                                        <small><p class="text-muted">5 days Ago</p></small>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="card">
+                                    <div class="card-body">
+                                        <a href=""><h6 class="text-dark">Medical App</h6></a>
                                         <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Labore veniam beatae quod delectus voluptates corrupti</p>
                                         <small><p class="text-muted">5 days Ago</p></small>
                                     </div>
@@ -95,11 +152,21 @@
                         </div>
                     </div>  
 
-                        <div class="p-2">
-                            <a href=""><button type="button" class="btn btn-primary m-2">Start New Project</button></a>
-                            <a href=""><button type="button" class="btn btn-primary m-2">Set Weekly Target</button></a>
-                            <a href=""><button type="button" class="btn btn-primary m-2">Daily Progress</button></a>
-                            </div>
+                    <div class="card mt-5 mb-5">
+                        <div class="card-header text-center">
+                          <h5><a style="text-decoration:none;" class="card-link text-dark" data-toggle="collapse" href="#collapseOne">
+                            Incomplete Pending Tasks</a></h5> 
+                        </div>
+                        <div id="collapseOne" class="collapse" data-parent="">
+                          <div class="card-body">
+                            <h6 class="text-danger">• Sample Tasks lorem ipsum <small>1 day Ago</small></h6>
+                            <h6 class="text-danger">• Random Tasks lorem ipsum <small>3 days Ago</small></h6>
+                            <h6 class="text-danger">• Sample Tasks lorem ipsum <small>5 days Ago</small></h6>
+                          </div>
+                        </div>
+                      </div>
+
+                       
                 </div>
         
         </div>
