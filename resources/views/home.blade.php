@@ -58,8 +58,8 @@
 <body>
 
     <div class="container">
-        <div class="row pt-4">
-            <div class="col-lg-4">
+        <div class="row pt-5">
+            <div class="col-lg-4" style="margin-left: 50px">
                 <div class="card">
                     <!-- <img class="card-img-top" src="..." alt="Card image cap"> --}} -->
                     <div class="card-header text-center"><h5>User Details</h5></div>
@@ -77,7 +77,7 @@
                     </div>
                 </div> 
 
-                <div class="card mt-3">
+                <div class="card mt-4">
                     <!-- <img class="card-img-top" src="..." alt="Card image cap"> --}} -->
                     <div class="card-header text-center"><h5>Achievements 🏆</h5></div>
                     <div class="card-body">
@@ -89,7 +89,7 @@
                 </div>       
         </div>
 
-                <div class="col-lg-6">
+                <div class="col-lg-6" style="margin-left: 60px;">
                     <div class="card">
                         <!-- <img class="card-img-top" src="..." alt="Card image cap"> --}} -->
                         <div class="card-header text-center"><h5>Today's Tasks</h5></div>
@@ -146,11 +146,13 @@
                                         <a href=""><h6 class="text-dark">Medical App</h6></a>
                                         <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Labore veniam beatae quod delectus voluptates corrupti</p>
                                         <small><p class="text-muted">5 days Ago</p></small>
+                                        
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>  
+                    <div class="text-primary pt-1">See all projects</div>
 
                     <div class="card mt-5 mb-5">
                         <div class="card-header text-center">
@@ -168,6 +170,11 @@
 
                        
                 </div>
+
+                <!-- <div class="col-lg-2">
+                      <div class=" p-2 text-danger">SOLD SOLD SOLD SOLD SOLD SOLD SOLD SOLD</div> 
+                </div>-->
+
         
         </div>
         
