@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Demo</title>
+    <title>Calendar</title>
    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
     <script
       src="https://kit.fontawesome.com/64d58efce2.js"
@@ -30,7 +30,6 @@
         .hero
         {
            width: 100%;
-           /* background: linear-gradient(45deg, #6ac1c5, #bda5ff); */
         }
 
         .center{
@@ -40,28 +39,66 @@
                 padding: 100px;
         }
 
-        /* #calendar{
-            width: 1200px;
-            position: relative;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%,-50%);
-            display:block;
-        } */
+        .yellow-dot{
+
+            height: 10px;
+            width: 10px;
+            background-color: yellow;
+            border-radius: 50%;
+            display: inline-block;
+            border: 1px solid gray;
+        }
+
+        .txt{
+            font-size: 15px;
+        }
+
+        .red-dot{
+            
+            height: 10px;
+            width: 10px;
+            background-color: red;
+            border-radius: 50%;
+            display: inline-block;
+            border: 1px solid gray;
+        }
+
+        .green-dot{
+            
+            height: 10px;
+            width: 10px;
+            background-color: #63d867;
+            border-radius: 50%;
+            display: inline-block;
+            border: 1px solid gray;
+        }
+
+
+        .orange-dot{
+            
+            height: 10px;
+            width: 10px;
+            background-color: orange;
+            border-radius: 50%;
+            display: inline-block;
+            border: 1px solid gray;
+        }
 
     </style>
 
 
 </head>
 <body>
-    
 
-
-          <div class="container center" style="margin-top: -10px;">
-            <div class="hero">
-                
+          <div class="container" style="margin-top: -20px;">         
+            <div class="hero center">
+                <h2 class="text-center pb-4" style= "color:#002db3;">Calendar</h2>
+                <div class="text-center">
+                    <p class="txt"><span class="green-dot"></span> Offdays &nbsp; <span class="yellow-dot"></span> Pending Daily Tasks &nbsp; <span class="red-dot"></span> Incomplete Tasks &nbsp; 
+                        <span class="orange-dot"></span> Probable Finish Dates &nbsp;</p>
+                 </div>
                 <div id="calendar"></div>
-
+                
             </div>
           </div>
             
@@ -80,9 +117,9 @@
           <!-- EVO calendar JS -->
         <script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
         <!-- <script src="evo-calendar.min.js"></script> -->
-
         <script src="../../public/js/evo-calendar.min.js"></script>
 
+        
         <script>
                 
                 // Initialize evo-calendar in your script file or an inline <script> tag
@@ -112,11 +149,11 @@
                    {
                      id: 'event1', // Event's ID (required)
                      name: "Project Submission", // Event name (required)
-                     badge: "Important", // Event badge (optional)
+                     //badge: "Important", // Event badge (optional)
                      date: "December/1/2021", // Event date (required)
                      description: "Project Estimated End Date",
                      type: "Event", // Event type (required)
-                     color: "red",
+                     color: "orange",
                      }
                  ]
                      })
