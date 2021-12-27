@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Demo</title>
+    <title>Self Activity Tracker</title>
    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
     <script
       src="https://kit.fontawesome.com/64d58efce2.js"
@@ -15,7 +15,7 @@
 
       <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
 
-
+    <!--Chart JS link-->
       <script
       src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js">
       </script>
@@ -87,7 +87,21 @@
                             <h6>• Sample Tasks lorem ipsum </h6> -->
                     </div>
                 </div>       
-        </div>
+        
+                MOOD GRAPH
+                <!-- Mood Graph -->
+            <div class="card mt-3" style="padding-right: 20px;">
+                <div class="card-title mt-3" style="padding-left: 15px; border-left: 4px solid blue;"><h4>Mood Graph</h4>
+                  
+                </div>
+                <div class="card-body">
+                  <canvas id="myDonutChart" style="width:100%; max-width:900px; display: block;margin-left: auto; margin-right: auto;"></canvas>      
+                </div>
+    
+                </div>
+        
+        
+            </div>
 
                 <div class="col-lg-6" style="margin-left: 60px;">
                     <div class="card">
@@ -152,7 +166,7 @@
                             </div>
                         </div>
                     </div>  
-                    <div class="text-primary pt-1">See all projects</div>
+                    <div class="text-primary pt-1"><a href="#" style="text-decoration: none;">See all projects</a></div>
 
                     <div class="card mt-5 mb-5">
                         <div class="card-header text-center">
@@ -191,6 +205,49 @@
 
 
 
+
+
+    <!-- Mood Graph JS -->
+    <script>
+        var xValues = ["Angry", "Depressed", "Neutral", "Relieved", "Very Happy"];
+        var yValues = [5, 7, 9, 5, 4, 3];
+        var barColors = [
+                        "#fe7f00",
+                        "#36f",
+                        "red",
+                        "green",
+                        "black"
+      ];
+         
+      new Chart("myDonutChart", {
+      type: "doughnut",
+      data: {
+        labels: xValues,
+        datasets: [{
+          backgroundColor: barColors,
+          data: yValues,
+        }]
+      },
+      options: { 
+        legend: {display: true,
+        position: 'bottom',
+        },
+        title: {
+          display: false,
+          // text: "Doughnut Chart Example"
+        },
+      
+      },
+      
+         
+      });
+      
+      
+         
+       </script>
+  
+  
+  
 
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
