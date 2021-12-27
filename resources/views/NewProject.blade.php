@@ -8,7 +8,7 @@
       <script
          src="https://kit.fontawesome.com/64d58efce2.js"
          crossorigin="anonymous"></script>
-      <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+         <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
       <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
       <Script src="./js/Newproject.js" defer></Script>
       <style>
@@ -46,17 +46,18 @@
          <div class="col-lg-12" style="align-items: center;" >
             <div class="container p-2 mid-box">
                <h2 class="text-center pt-2" style="color: #002db3"> Start New Project</h2>
-               <form style="color:#002db3 ">
+               <form id="newProjectForm" style="color:#002db3 " {{--action="{{url('./creatProject')}}" method="post"--}}>
+                  @csrf
                   <div class="form-row pt-4">
                      <div class="form-group">
                         <label for="title">Project Title</label>
-                        <input type="text" class="form-control" id="title" placeholder="Name of your project">
+                        <input type="text" class="form-control" id="title" name="title" placeholder="Name of your project">
                      </div>
                   </div>
                   <div class="form-row pt-4">
                      <div class="form-group">
                         <label for="shortdesc">Short Description</label>
-                        <textarea class="form-control post-text" id="shortdesc" rows="2" cols="2" placeholder="Short Description about your project"></textarea>
+                        <input class="form-control post-text" id="shortdesc" name="shortdesc" placeholder="Short Description about your project">
                      </div>
                   </div>
                   <div class="form-row pt-4">
@@ -68,15 +69,15 @@
                   <div class="form-row pt-4">
                      <div class="form-group">
                         <label for="projectreq">Project Requirements</label>
-                        <textarea class="form-control post-text" id="projectreq" rows="2" cols="2" placeholder="Technologies required in this project"></textarea>
+                        <input class="form-control post-text" id="projectreq" name="projectreq" rows="0" cols="2" placeholder="Technologies required in this project">
                      </div>
                   </div>
 
                   {{-- skill req --}}
                   <div class="form-row pt-4">
                      <div class="form-group">
-                        <label for="skillreq">Skills Requirements</label>
-                        <input type="text" class="form-control" id="skillreq1" placeholder="Skill required in this project">
+                        <label for="skillreq">Skills Requirements </label>
+                        <input type="text" class="form-control skillreq" id="skillreq" name="skillreq" placeholder="(Framework or Language)">
                         <div class="pt-2" id="SkillReqDiv">
                            
                         </div>
@@ -87,8 +88,8 @@
                   {{-- new skill req --}}
                   <div class="form-row pt-4">
                      <div class="form-group">
-                        <label for="newskillreq">New skills Requirements</label>
-                        <input type="text" class="form-control" id="newskillreq1" placeholder="New skill required in this project">
+                        <label for="newskillreq">New skills Requirements </label>
+                        <input type="text" class="form-control newskillreq" id="newskillreq" name="newskillreq" placeholder="(Framework or Language)">
                         <div class="pt-2" id="newSkillReqDiv">
                         </div>
                      </div>
@@ -99,11 +100,11 @@
                      <div class="form-group">
                         <label>Add Collaborators</label>
                         <div class="form-check form-check-inline">
-                           <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="yes">
+                           <input class="form-check-input colabRedio" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="yes">
                            <label class="form-check-label  text-dark" for="inlineRadio1"> Yes</label>
                         </div>
                         <div class="form-check form-check-inline">
-                           <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="no">
+                           <input class="form-check-input colabRedio" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="no">
                            <label class="form-check-label  text-dark" for="inlineRadio2"> No</label>
                         </div>
                      </div>
@@ -112,12 +113,12 @@
                      
                   </div>
                   <div class="pt-5 text-center">
-                     <button type="submit" class="btn btn-primary" style="background-color: #002db3">Done</button>
+                     <button type="submit" class="btn btn-primary" id="submitButton" style="background-color: #002db3">Done</button>
                   </div>
                </form>
             </div>
-            <div id="SkillReqDiv">
-            </div>
+            {{-- <div id="SkillReqDiv">
+            </div> --}}
          </div>
       </div>
       </div>

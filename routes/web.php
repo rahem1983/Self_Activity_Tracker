@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\ProjectController;
+use App\Http\Controllers\DailyHistoryController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -34,4 +36,12 @@ Route::get('Logout', function(){
 
 Route::view('weeklyTarget', 'WeeklyTarget');
 
+Route::view('Home', 'home');
+
 Route::view('dailyProgerss', 'DailyProgress');
+
+Route::post('creatProject', [ProjectController::class, 'creatProject']);
+Route::get('GetSessionUserProject', [ProjectController::class, 'GetSessionUserProject']);
+
+Route::get('DH', [DailyHistoryController::class, 'getData']);
+Route::post('postWeeklyTarget', [DailyHistoryController::class, 'postData']);

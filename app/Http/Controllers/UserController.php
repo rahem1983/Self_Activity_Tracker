@@ -29,7 +29,8 @@ class UserController extends Controller
         $user->phone = $req->phone;
         $user->gender = $req->gender;
         $user->designation = $req->designation;
-        $user->active = 0;
+        $user->type = "general";
+        $user->active = 0;  //
         $user->password = Hash::make($req->password); // the value from the request is saved to the user object
         // return $user;
         $user->save(); //user is saved to database

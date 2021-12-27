@@ -30,89 +30,126 @@
     <div class="container pb-3">
 
       
-            <div class="container" style="width: 600px; height: 1050px; background: white; box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px; margin-top: 70px;">
+            <div class="container" style="width: 600px; max-height: 100%; background: white; box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px; margin-top: 70px;">
          
         <h2 class="text-center pt-2" style="color: #002db3">Set Weekly Target</h2>
 
-        <form style="color:#002db3">
-            
+        <form id="weekForm" style="color:#002db3">
+            @csrf
            
-                <h5 class="text-center pt-2">Sample Project Name</h5>
+            {{-- <h5 class="text-center pt-2">Sample Project Name</h5> --}}
                
-
-            <div class="form-row pt-4">
-                <div class="form-group">
-                <label for="day1">Day-1/ 30 Nov 2021-Tuesday</label><br>
-                <input type="checkbox" id="CBproject1" >
-                <label for="CBproject1"> project 1</label><br>
-                <div id="inputProject1"></div>
-                <input type="checkbox" id="CBproject2" >
-                <label for="CBproject2"> project 2</label><br>
-                <div id="inputProject2"></div>
-                <textarea class="form-control post-text" id="day1" rows="2" cols="2" placeholder="Write your target for this specific day"></textarea>
-                  </div>
-              </div>
-
               <div class="form-row pt-4">
-                <div class="form-group">
-                <label for="day2">Day-2/ 1 Dec 2021-Wednesday</label>
-                <textarea class="form-control post-text" id="day2" rows="2" cols="2" placeholder="Write your target for this specific day"></textarea>
-                  </div>
+                <div class="daily">
+                  <div class="day"> </div>
+                  <div class="form-group inputOnDate">
+                    {{-- <div class="inputOnProject">
+                    <input type="checkbox" id="CBproject" >
+                    <label for="CBproject"> project 1</label><br>
+                    <div id="inputProject"></div>
+                    </div> --}}
+                    {{-- <input type="checkbox" id="CBproject2" >
+                    <label for="CBproject2"> project 2</label><br>
+                    <div id="inputProject2"></div> --}}
+                    {{-- <textarea class="form-control post-text" id="day1" rows="2" cols="2" placeholder="Write your target for this specific day"></textarea> --}}
+                  </div><br>
+                </div>
+                <div class="daily">
+                  <div class="day"> </div>
+                  <div class="form-group inputOnDate">
+                    {{-- <div class="inputOnProject">
+                    <input type="checkbox" id="CBproject" >
+                    <label for="CBproject"> project 1</label><br>
+                    <div id="inputProject"></div>
+                    </div> --}}
+                    {{-- <input type="checkbox" id="CBproject2" >
+                    <label for="CBproject2"> project 2</label><br>
+                    <div id="inputProject2"></div> --}}
+                    {{-- <textarea class="form-control post-text" id="day1" rows="2" cols="2" placeholder="Write your target for this specific day"></textarea> --}}
+                  </div><br>
+                </div>
+
+                <div class="daily">
+                  <div class="day"> </div>
+                  <div class="form-group inputOnDate">
+                    {{-- <div class="inputOnProject">
+                    <input type="checkbox" id="CBproject" >
+                    <label for="CBproject"> project 1</label><br>
+                    <div id="inputProject"></div>
+                    </div> --}}
+                    {{-- <input type="checkbox" id="CBproject2" >
+                    <label for="CBproject2"> project 2</label><br>
+                    <div id="inputProject2"></div> --}}
+                    {{-- <textarea class="form-control post-text" id="day1" rows="2" cols="2" placeholder="Write your target for this specific day"></textarea> --}}
+                  </div><br>
+                </div>
+
+                <div class="daily">
+                  <div class="day"> </div>
+                  <div class="form-group inputOnDate">
+                    {{-- <div class="inputOnProject">
+                    <input type="checkbox" id="CBproject" >
+                    <label for="CBproject"> project 1</label><br>
+                    <div id="inputProject"></div>
+                    </div> --}}
+                    {{-- <input type="checkbox" id="CBproject2" >
+                    <label for="CBproject2"> project 2</label><br>
+                    <div id="inputProject2"></div> --}}
+                    {{-- <textarea class="form-control post-text" id="day1" rows="2" cols="2" placeholder="Write your target for this specific day"></textarea> --}}
+                  </div><br>
+                </div>
+
+                <div class="daily">
+                  <div class="day"> </div>
+                  <div class="form-group inputOnDate">
+                    {{-- <div class="inputOnProject">
+                    <input type="checkbox" id="CBproject" >
+                    <label for="CBproject"> project 1</label><br>
+                    <div id="inputProject"></div>
+                    </div> --}}
+                    {{-- <input type="checkbox" id="CBproject2" >
+                    <label for="CBproject2"> project 2</label><br>
+                    <div id="inputProject2"></div> --}}
+                    {{-- <textarea class="form-control post-text" id="day1" rows="2" cols="2" placeholder="Write your target for this specific day"></textarea> --}}
+                  </div><br>
+                </div>
+
+                <div class="daily">
+                  <div class="day"> </div>
+                  <div class="form-group inputOnDate">
+                    {{-- <div class="inputOnProject">
+                    <input type="checkbox" id="CBproject" >
+                    <label for="CBproject"> project 1</label><br>
+                    <div id="inputProject"></div>
+                    </div> --}}
+                    {{-- <input type="checkbox" id="CBproject2" >
+                    <label for="CBproject2"> project 2</label><br>
+                    <div id="inputProject2"></div> --}}
+                    {{-- <textarea class="form-control post-text" id="day1" rows="2" cols="2" placeholder="Write your target for this specific day"></textarea> --}}
+                  </div><br>
+                </div>
+
+                <div class="daily">
+                  <div class="day"> </div>
+                  <div class="form-group inputOnDate">
+                    {{-- <div class="inputOnProject">
+                    <input type="checkbox" id="CBproject" >
+                    <label for="CBproject"> project 1</label><br>
+                    <div id="inputProject"></div>
+                    </div> --}}
+                    {{-- <input type="checkbox" id="CBproject2" >
+                    <label for="CBproject2"> project 2</label><br>
+                    <div id="inputProject2"></div> --}}
+                    {{-- <textarea class="form-control post-text" id="day1" rows="2" cols="2" placeholder="Write your target for this specific day"></textarea> --}}
+                  </div><br>
+                </div>
               </div>
 
-              <div class="form-row pt-4">
-                <div class="form-group">
-                <label for="day3">Day-3/ 2 Dec 2021-Thursday</label>
-                <textarea class="form-control post-text" id="day1" rows="2" cols="2" placeholder="Write your target for this specific day"></textarea>
-                  </div>
-              </div>
-
-              <div class="form-row pt-4">
-                <div class="form-group">
-                <label for="day4">Day-4/ 3 Dec 2021-Friday</label>
-                <textarea class="form-control post-text" id="day1" rows="2" cols="2" placeholder="Write your target for this specific day"></textarea>
-                  </div>
-              </div>
-
-              <div class="form-row pt-4">
-                <div class="form-group">
-                <label for="day5">Day-5/ 4 Dec 2021-Saturday</label>
-                <textarea class="form-control post-text" id="day1" rows="2" cols="2" placeholder="Write your target for this specific day"></textarea>
-                  </div>
-              </div>
-
-              <div class="form-row pt-4">
-                <div class="form-group">
-                <label for="day6">Day-6/ 5 Dec 2021-Sunday</label>
-                <textarea class="form-control post-text" id="day1" rows="2" cols="2" placeholder="Write your target for this specific day"></textarea>
-                  </div>
-              </div>
-
-              <div class="form-row pt-4">
-                <div class="form-group">
-                <label for="day7">Day-7/ 6 Dec 2021-Monday</label>
-                <textarea class="form-control post-text" id="day1" rows="2" cols="2" placeholder="Write your target for this specific day"></textarea>
-                  </div>
-              </div>
-              
-            
-
-
-              
-
-              <div class="pt-5 text-center">
+              <div class="pt-5 pb-5 text-center">
                 <button type="submit" class="btn btn-primary" style="background-color: #002db3">Done</button>
               </div>
             
           </form>
-
-
-
-
-
-
-
-
 
         </div>
     </div>
