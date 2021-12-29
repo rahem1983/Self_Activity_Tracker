@@ -88,12 +88,9 @@
                     </div>
                 </div>       
         
-                MOOD GRAPH
                 <!-- Mood Graph -->
-            <div class="card mt-3" style="padding-right: 20px;">
-                <div class="card-title mt-3" style="padding-left: 15px; border-left: 4px solid blue;"><h4>Mood Graph</h4>
-                  
-                </div>
+            <div class="card mt-3 mb-2">
+                <div class="card-header text-center"><h5>Mood Graph</h5></div>
                 <div class="card-body">
                   <canvas id="myDonutChart" style="width:100%; max-width:900px; display: block;margin-left: auto; margin-right: auto;"></canvas>      
                 </div>
@@ -168,21 +165,31 @@
                     </div>  
                     <div class="text-primary pt-1"><a href="#" style="text-decoration: none;">See all projects</a></div>
 
-                    <div class="card mt-5 mb-5">
-                        <div class="card-header text-center">
-                          <h5><a style="text-decoration:none;" class="card-link text-dark" data-toggle="collapse" href="#collapseOne">
-                            Incomplete Pending Tasks</a></h5> 
-                        </div>
-                        <div id="collapseOne" class="collapse" data-parent="">
-                          <div class="card-body">
-                            <h6 class="text-danger">• Sample Tasks lorem ipsum <small>1 day Ago</small></h6>
-                            <h6 class="text-danger">• Random Tasks lorem ipsum <small>3 days Ago</small></h6>
-                            <h6 class="text-danger">• Sample Tasks lorem ipsum <small>5 days Ago</small></h6>
-                          </div>
-                        </div>
-                      </div>
 
-                       
+                        <div class="card mt-3 mb-2">
+                            <div class="card-header text-center"><h5>Monthly Attendance Report</h5></div>
+                            <div class="card-body">
+
+                                <canvas id="myPieChart" style="width:100%; max-width:900px; display: block;margin-left: auto; margin-right: auto;"></canvas>
+                           
+                            </div>
+                        </div>
+
+                        <div class="card mt-4 mb-5">
+                            <div class="card-header text-center">
+                              <h5><a style="text-decoration:none;" class="card-link text-dark" data-toggle="collapse" href="#collapseOne">
+                                Incomplete Pending Tasks</a></h5> 
+                            </div>
+                            <div id="collapseOne" class="collapse" data-parent="">
+                              <div class="card-body">
+                                <h6 class="text-danger">• Sample Tasks lorem ipsum <small>1 day Ago</small></h6>
+                                <h6 class="text-danger">• Random Tasks lorem ipsum <small>3 days Ago</small></h6>
+                                <h6 class="text-danger">• Sample Tasks lorem ipsum <small>5 days Ago</small></h6>
+                              </div>
+                            </div>
+                          </div>
+
+
                 </div>
 
                 <!-- <div class="col-lg-2">
@@ -209,14 +216,15 @@
 
     <!-- Mood Graph JS -->
     <script>
-        var xValues = ["Angry", "Depressed", "Neutral", "Relieved", "Very Happy"];
-        var yValues = [5, 7, 9, 5, 4, 3];
+        var xValues = ["Angry😡", "Depressed😥", "Neutral😐", "Relieved😌", "Very Happy😃"];
+        var yValues = [5, 7, 9, 5, 4];
         var barColors = [
+                        "#ff0000",
                         "#fe7f00",
+                        "#ffff00",
                         "#36f",
-                        "red",
-                        "green",
-                        "black"
+                        "#63d867"
+                        
       ];
          
       new Chart("myDonutChart", {
@@ -229,12 +237,12 @@
         }]
       },
       options: { 
-        legend: {display: true,
+        legend: {
+        display: true,
         position: 'bottom',
         },
         title: {
           display: false,
-          // text: "Doughnut Chart Example"
         },
       
       },
@@ -245,6 +253,38 @@
       
          
        </script>
+
+
+
+    <!--Monthy Attendance Report-->
+    <script>
+         var xValues = ["Absent", "Present"];
+         var yValues = [8, 15];
+         var barColors = ["#ff0000", "#63d867"];
+        
+        new Chart("myPieChart", {
+        type: "pie",
+        data: {
+        labels: xValues,
+        datasets: [{
+        backgroundColor: barColors,
+        data: yValues
+        }]
+  },
+        options: {
+        legend: {
+        display: true,
+        position: 'bottom',
+        },
+        title: {
+        display: false,
+        }
+    }
+    });
+
+
+     
+   </script>
   
   
   
