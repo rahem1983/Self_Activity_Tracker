@@ -35,13 +35,15 @@ Route::get('Logout', function(){
 });
 
 Route::view('weeklyTarget', 'WeeklyTarget');
-
 Route::view('Home', 'home');
-
 Route::view('dailyProgerss', 'DailyProgress');
+Route::view('endProject','EndProjectForm');
 
 Route::post('creatProject', [ProjectController::class, 'creatProject']);
 Route::get('GetSessionUserProject', [ProjectController::class, 'GetSessionUserProject']);
+Route::post('completeProject', [ProjectController::class, 'completeProject']);
 
 Route::get('DH', [DailyHistoryController::class, 'getData']);
 Route::post('postWeeklyTarget', [DailyHistoryController::class, 'postData']);
+Route::post('dailyProgress', [DailyHistoryController::class, 'dailyProgress']);
+

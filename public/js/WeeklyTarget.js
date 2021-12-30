@@ -104,7 +104,7 @@ $.ajax({
                             data: {
                                 assignedDate:this.children[3].value,
                                 projectId:this.children[4].value,
-                                coment:this.children[5].children[0].value,
+                                todo:this.children[5].children[0].value,
                                 _token:$("input[name = _token]").val()
                             },
                             dataType: "json",

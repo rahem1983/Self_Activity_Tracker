@@ -12,7 +12,7 @@
       <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
      
       <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
-      
+      <Script src="./js/DailyProgress.js" defer></Script>
     
     <style>
         .post-text{
@@ -70,34 +70,34 @@
             cursor: pointer;
           }
 
-          input[class=angry] + img,
-          input[class=depressed]+img,
-          input[class=neutral] + img,
-          input[class=relieved]+img,
-          input[class=very-happy] + img{
+          input[id=angry] + img,
+          input[id=depressed]+img,
+          input[id=neutral] + img,
+          input[id=relieved]+img,
+          input[id=very-happy] + img{
               
               filter: grayscale(100%);
           }
 
-          input[class="angry"]:hover + img,
-          input[class=depressed]:hover+img,
-          input[class="neutral"]:hover + img,
-          input[class="relieved"]:hover+img,
-          input[class="very-happy"]:hover+img{
+          input[id="angry"]:hover + img,
+          input[id=depressed]:hover+img,
+          input[id="neutral"]:hover + img,
+          input[id="relieved"]:hover+img,
+          input[id="very-happy"]:hover+img{
               
               /* transform: scale(1.3); */
               filter: grayscale(0%);
           }
-          input[class="angry"]:checked + img,
-          input[class="angry"]:focus + img,
-          input[class="depressed"]:checked + img,
-          input[class="depressed"]:focus + img,
-          input[class="neutral"]:checked + img,
-          input[class="neutral"]:focus + img,
-          input[class="relieved"]:checked + img,
-          input[class="relieved"]:focus + img,
-          input[class="very-happy"]:checked + img,
-          input[class="very-happy"]:focus + img{
+          input[id="angry"]:checked + img,
+          input[id="angry"]:focus + img,
+          input[id="depressed"]:checked + img,
+          input[id="depressed"]:focus + img,
+          input[id="neutral"]:checked + img,
+          input[id="neutral"]:focus + img,
+          input[id="relieved"]:checked + img,
+          input[id="relieved"]:focus + img,
+          input[id="very-happy"]:checked + img,
+          input[id="very-happy"]:focus + img{
             
               filter: grayscale(0%);
               transform: scale(1.3);
@@ -124,9 +124,9 @@
          
         <h2 class="text-center pt-2" style="color: #002db3">Daily Progress</h2>
 
-        <form style="color:#002db3">
-            
-          <div class="form-row pt-4">
+        <form id="dailyProgress" style="color:#002db3">
+            @csrf
+          {{-- <div class="form-row pt-4">
             <div class="form-group">
             <h5><label for="project">In which project you worked today?</label></h5>
         
@@ -140,28 +140,28 @@
                 <h6><label class="form-check-label" for="exampleRadios2">Project 2</label></h6>
               </div>
             </div>
-          </div>
+          </div> --}}
 
-
-
+          <input type="" value="4" id="Tid">
+ 
           <div class="form-row pt-4">
             <div class="form-group">
             <h5><label for="target">Did you finish today's target?</label></h5>
               <div class="form-check form-check-inline">
-               <input class="form-check-input" type="radio" name="exampleRadios2" id="exampleRadios3" value="option1" checked>
-               <h6><label class="form-check-label" for="exampleRadios1">Yes</label></h6>
+               <input class="form-check-input" type="radio" name="finishRadios" id="finishRadiosY" value="Yes">
+               <h6><label class="form-check-label" for="finishRadios">Yes</label></h6>
              </div>
 
               <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="exampleRadios2" id="exampleRadios4" value="option2">
-                <h6><label class="form-check-label" for="exampleRadios2">No</label></h6>
+                <input class="form-check-input" type="radio" name="finishRadios" id="finishRadiosN" value="No">
+                <h6><label class="form-check-label" for="finishRadios">No</label></h6>
               </div>
             </div>
 
             <div class="form-row pt-4">
-              <div class="form-group">
+              <div class="form-group notComplete">
                 {{-- IF NO... --}}
-              <textarea class="form-control post-text" id="day1" rows="2" cols="2" placeholder="Write the reason why you couldn't finish today's target"></textarea>
+              
                 </div>
             </div>
           </div>
@@ -172,35 +172,35 @@
             <div class="form-group">
             <h5><label for="target">Any new skill learned today?</label></h5>
               <div class="form-check form-check-inline">
-               <input class="form-check-input" type="radio" name="exampleRadios3" id="exampleRadios5" value="option1" checked>
-               <h6><label class="form-check-label" for="exampleRadios1">Yes</label></h6>
+               <input class="form-check-input skillRadios" type="radio" name="skillRadios" id="skillRadiosY" value="Yes">
+               <h6><label class="form-check-label" for="skillRadios">Yes</label></h6>
              </div>
 
               <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="exampleRadios3" id="exampleRadios6" value="option2">
-                <h6><label class="form-check-label" for="exampleRadios2">No</label></h6>
+                <input class="form-check-input skillRadios" type="radio" name="skillRadios" id="skillRadiosN" value="No">
+                <h6><label class="form-check-label" for="skillRadios">No</label></h6>
               </div>
             </div>
 
-            <div class="form-row pt-4">
-              <div class="form-group">
+            <div class="form-row pt-2">
+              <div class="form-group newSkill">
                 {{-- IF YES... --}}
-              <textarea class="form-control post-text" id="day1" rows="2" cols="2" placeholder="Write the skills you have learned today"></textarea>
-                </div>
+              
+              </div>
             </div>
           </div>
                   
               <div class="form-row pt-4">
                 <div class="form-group">
-                   <h5><label for="title">When did you start working today?</label></h5>
-                   <input type="text" class="form-control" id="title" placeholder="Time AM/PM">
+                   <h5><label for="title">When did you start working today? (hh:mm AM/PM)</label></h5>
+                   <input type="time" class="form-control" id="startTime" placeholder="Time AM/PM" required>
                 </div>
              </div>
             
              <div class="form-row pt-4">
               <div class="form-group">
-                 <h5><label for="title">When did you finish working today?</label></h5>
-                 <input type="text" class="form-control" id="title" placeholder="Time AM/PM">
+                 <h5><label for="title">When did you finish working today? (hh:mm AM/PM)</label></h5>
+                 <input type="time" class="form-control" id="endTime" placeholder="Time AM/PM" required>
               </div>
            </div>
 
@@ -210,57 +210,42 @@
             <h5><label for="target">How did you feel working today?</label></h5> <br>
             
             <div class="rating">
-              <form class="rating-form">
-        
+
                 <label for="angry">
-                    <input type="radio" name="rating" class="angry" id="angry" value="angry" /> 
+                    <input type="radio" name="rating" class="mood" id="angry" value="1" /> 
                     <img class="emo" title="Angry" src="https://img.icons8.com/emoji/96/000000/pouting-face.png"/>
                     </label>
                     
                     <label for="depressed">
-                      <input type="radio" name="rating" class="depressed" id="depressed" value="depressed" />
+                      <input type="radio" name="rating" class="mood" id="depressed" value="2" />
                       <img class="emo" title="Depressed" src="https://img.icons8.com/emoji/96/000000/sad-but-relieved-face.png"/>
                       </label>
   
                       <label for="neutral">
-                        <input type="radio" name="rating" class="neutral" id="neutral" value="neutral"/>
+                        <input type="radio" name="rating" class="mood" id="neutral" value="3"/>
                         <img class="emo" title="Neutral" src="https://img.icons8.com/emoji/96/000000/slightly-smiling-face.png"/>
                         </label>
   
                     <label for="relieved">
-                      <input type="radio" name="rating" class="relieved" id="relieved" value="relieved"/>
+                      <input type="radio" name="rating" class="mood" id="relieved" value="4"/>
                       <img class="emo" title="Relieved" src="https://img.icons8.com/emoji/96/000000/relieved-face.png"/>
                     </label>
   
                 <label for="very-happy">
-                    <input type="radio" name="rating" class="very-happy" id="very-happy" value="very-happy" />
+                    <input type="radio" name="rating" class="mood" id="very-happy" value="5" />
                     <img class="emo" title="Very Happy" src="https://img.icons8.com/emoji/96/000000/grinning-face-emoji.png"/>
                     </label>
-        
-              </form>
+  
             </div>
-
-              
+             
             </div>
           </div>
-
-
-
-              
 
               <div class="pt-5 text-center" style="padding-bottom: 20px">
                 <button type="submit" class="btn btn-primary" style="background-color: #002db3; ">Done</button>
               </div>
             
           </form>
-
-
-
-
-
-
-
-
 
         </div>
     </div>

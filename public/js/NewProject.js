@@ -81,11 +81,11 @@ $("#newProjectForm").submit(function(e){
     let colab;  // colaborators in a string
 
         $(".skillreq").each(function(){  //saving the skill requirment in an array 
-            skillreq.push($(this).val().toUpperCase());
+            skillreq.push($(this).val().trim().toUpperCase());
         })
 
         $(".newskillreq").each(function(){   //saving the new skill requirment in an array
-            newskillreq.push($(this).val().toUpperCase());
+            newskillreq.push($(this).val().trim().toUpperCase());
         })
 
         var radiocheck = $('input[type="radio"]:checked');   //taking the radio button value that is checked (yes/no)
@@ -93,11 +93,11 @@ $("#newProjectForm").submit(function(e){
         if(radiocheck.val() === "yes"){  //if the user checkes the yes radio btn 
             $(".colab").each(function(){
                 if($(this).is(":checked")){
-                    colaborator.push($(this).val().toUpperCase());
+                    colaborator.push($(this).val().trim().toUpperCase());
                 }
             })
             if ($(".colabOther").val() !== "") {  // if the user put a value in the {others} input field
-                colaborator.push($(".colabOther").val().toUpperCase());
+                colaborator.push($(".colabOther").val().trim().toUpperCase());
             }
         }
 
@@ -108,15 +108,15 @@ $("#newProjectForm").submit(function(e){
             colab = colaborator.toString();
         }
 
-    let title = $("#title").val();
-    let shortdesc = $("#shortdesc").val();
+    let title = $("#title").val().trim();
+    let shortdesc = $("#shortdesc").val().trim();
     let ProbableFinishDate = $("#ProbableFinishDate").val();
     let projectreq = $("#projectreq").val();
     let skillrequire = skillreq.toString();
     let newskillrequire = newskillreq.toString();
  
     let _token = $("input[name = _token]").val();
-    console.log(_token);
+ 
     $.ajax({
         
         url: "creatProject",
