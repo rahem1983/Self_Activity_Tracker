@@ -19,7 +19,7 @@
       <script
       src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js">
       </script>
-
+    <Script src="./js/home.js" defer></Script>
     
     <style>
         .gol-img
@@ -70,9 +70,9 @@
                       <h5>Web Developer</h5>
 
                       <div class="p-2">
-                        <a href=""><button type="button" class="btn wht-btn btn-sm">Start New Project</button></a>
-                        <a href=""><button type="button" class="btn wht-btn btn-sm">Set Weekly Target</button></a>
-                        <a href=""><button type="button" class="btn wht-btn btn-sm mt-1">Daily Progress</button></a>
+                        <a href="{{url('NewProject')}}"><button type="button" class="btn wht-btn btn-sm">Start New Project</button></a>
+                        <a href="{{url('weeklyTarget')}}"><button type="button" class="btn wht-btn btn-sm">Set Weekly Target</button></a>
+                        <a href="{{url('endProject')}}"><button type="button" class="btn wht-btn btn-sm mt-1">End A project</button></a>
                         </div>
                     </div>
                 </div> 

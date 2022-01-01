@@ -25,9 +25,9 @@ class ProjectController extends Controller
         return response()->json($project);
         // return response()->json($project);
     }
-    public function GetSessionUserProject(){
+    public function GetSessionUserActiveProject(){
         $id = session('user')->id;
-        $project = Project::where('user_id', $id)->get();
+        $project = Project::where('user_id', $id)->where('active', 1)->get();
         return response()->json($project);
     }
 }

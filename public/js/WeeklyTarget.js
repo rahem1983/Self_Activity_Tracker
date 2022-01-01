@@ -21,7 +21,7 @@ const inputProject1 = document.querySelector("#inputProject");
 
 $.ajax({
     type: "GET",
-    url: "GetSessionUserProject",
+    url: "GetSessionUserActiveProject",
     dataType: "json",
     success: function (response) {
         const projectOfSessionUser = response

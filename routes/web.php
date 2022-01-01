@@ -40,7 +40,7 @@ Route::view('dailyProgerss', 'DailyProgress');
 Route::view('endProject','EndProjectForm');
 
 Route::post('creatProject', [ProjectController::class, 'creatProject']);
-Route::get('GetSessionUserProject', [ProjectController::class, 'GetSessionUserProject']);
+Route::get('GetSessionUserActiveProject', [ProjectController::class, 'GetSessionUserActiveProject']);
 Route::post('completeProject', [ProjectController::class, 'completeProject']);
 
 Route::get('DH', [DailyHistoryController::class, 'getData']);

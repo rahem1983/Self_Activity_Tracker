@@ -33,8 +33,8 @@ skillRadiosY.addEventListener("click", function(){  //if user click No for compl
         const inputSkill = document.createElement("input");
         inputSkill.id = "newskill";
         inputSkill.name = "newskill";
-        inputSkill.className = "form-control newskill"
-        inputSkill.placeholder = j+". Add another (Framework or Language)"
+        inputSkill.className = "form-control newskill";
+        inputSkill.placeholder = j+". Add another (Framework or Language)";
         SkillDiv.append(inputSkill);
         j++;
     })
@@ -91,7 +91,6 @@ $("#dailyProgress").submit(function(e){
                 mood = this.value;
             }
         })
-
 
 
     $.ajax({

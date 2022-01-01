@@ -12,7 +12,7 @@
       <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
      
       <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
-      
+      <Script src="./js/EndProjectForm.js" defer></Script>
     
     <style>
         .post-text{
@@ -167,21 +167,22 @@ input[class="btn-scale-desc-1"]:checked{
          
         <h2 class="text-center pt-2" style="color: #002db3">Project Completion Form</h2>
 
-        <form style="color:#002db3">
+        <form id="endForm" style="color:#002db3">
             
           <div class="form-row pt-4">
             <div class="form-group">
             <h6><label for="project">Choose a Running project to end</label></h6>
-        
-            <div class="form-check">
-               <input class="form-check-input" type="radio" name="exampleRadios1" id="exampleRadios1" value="option1" checked>
-               <label class="form-check-label" for="exampleRadios1">Project 1</label>
-             </div>
+            <div class="selectProject">
+              {{-- <div class="form-check">
+                <input class="form-check-input" type="radio" name="exampleRadios1" id="exampleRadios1" value="option1" checked>
+                <label class="form-check-label" for="exampleRadios1">Project 1</label>
+              </div>
 
               <div class="form-check">
                 <input class="form-check-input" type="radio" name="exampleRadios1" id="exampleRadios2" value="option2">
                 <label class="form-check-label" for="exampleRadios2">Project 2</label>
-              </div>
+              </div> --}}
+            </div>
             </div>
           </div>
 
@@ -249,43 +250,43 @@ input[class="btn-scale-desc-1"]:checked{
                 <div class="col-xs-12 pt-1">
                     <div class="chart-scale">
                         <div class="form-check form-check-inline form-check-inline-custom">
-                          <input class="form-check-input btn-scale-desc-1" type="radio" name="rating" id="1" value="option1" checked>
+                          <input class="form-check-input experience" type="radio" name="rating" id="1" value="1">
                           <label class="btn-scale btn-scale-desc-1" for="rating">1</label>
                         </div>
                         <div class="form-check form-check-inline form-check-inline-custom">
-                            <input class="form-check-input btn-scale-desc-2" type="radio" name="rating" id="2" value="option2">
+                            <input class="form-check-input experience" type="radio" name="rating" id="2" value="2">
                             <label class="btn-scale btn-scale-desc-2" for="rating">2</label>
                           </div>
                           <div class="form-check form-check-inline form-check-inline-custom">
-                            <input class="form-check-input" type="radio" name="rating" id="3" value="option3">
+                            <input class="form-check-input experience" type="radio" name="rating" id="3" value="3">
                             <label class="btn-scale btn-scale-desc-3" for="rating">3</label>
                           </div>
                           <div class="form-check form-check-inline form-check-inline-custom">
-                            <input class="form-check-input" type="radio" name="rating" id="4" value="option4">
+                            <input class="form-check-input experience" type="radio" name="rating" id="4" value="4">
                             <label class="btn-scale btn-scale-desc-4" for="rating">4</label>
                           </div>
                           <div class="form-check form-check-inline form-check-inline-custom">
-                            <input class="form-check-input" type="radio" name="rating" id="5" value="option5">
+                            <input class="form-check-input experience" type="radio" name="rating" id="5" value="5">
                             <label class="btn-scale btn-scale-desc-5" for="rating">5</label>
                           </div>
                           <div class="form-check form-check-inline form-check-inline-custom">
-                            <input class="form-check-input" type="radio" name="rating" id="6" value="option6">
+                            <input class="form-check-input experience" type="radio" name="rating" id="6" value="6">
                             <label class="btn-scale btn-scale-desc-6" for="rating">6</label>
                           </div>
                           <div class="form-check form-check-inline form-check-inline-custom">
-                            <input class="form-check-input" type="radio" name="rating" id="7" value="option7">
+                            <input class="form-check-input experience" type="radio" name="rating" id="7" value="7">
                             <label class="btn-scale btn-scale-desc-7" for="rating">7</label>
                           </div>
                           <div class="form-check form-check-inline form-check-inline-custom">
-                            <input class="form-check-input" type="radio" name="rating" id="8" value="option8">
+                            <input class="form-check-input experience" type="radio" name="rating" id="8" value="8">
                             <label class="btn-scale btn-scale-desc-8" for="rating">8</label>
                           </div>
                           <div class="form-check form-check-inline form-check-inline-custom">
-                            <input class="form-check-input" type="radio" name="rating" id="9" value="option9">
+                            <input class="form-check-input experience" type="radio" name="rating" id="9" value="9">
                             <label class="btn-scale btn-scale-desc-9" for="rating">9</label>
                           </div>
                           <div class="form-check form-check-inline form-check-inline-custom">
-                            <input class="form-check-input" type="radio" name="rating" id="10" value="option10">
+                            <input class="form-check-input experience" type="radio" name="rating" id="10" value="10">
                             <label class="btn-scale btn-scale-desc-10" for="rating">10</label>
                           </div>
                   </div>
