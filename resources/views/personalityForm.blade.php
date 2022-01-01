@@ -233,14 +233,14 @@ button.submit-btn {
           
                 <div class="step step-3">
                   <div class="form-group pt-3">
-                    <h6><label for="firstName">1. WHEN YOU GO SOMEWHERE FOR THE DAY, WOULD YOU RATHER-</label></h6>
+                    <h6><label for="firstName">11. DO YOU PREFER TO-</label></h6>
                     <div class="form-check">
                         <input class="form-check-input" type="radio" name="q1" id="inlineRadio1" value="option1">
-                        <label class="form-check-label" for="inlineRadio1">PLAN WHAT YOU WILL DO AND WHEN</label>
+                        <label class="form-check-label" for="inlineRadio1">ARRANGE PICNICS, PARTIES ETC, WELL IN ADVANCE</label>
                       </div>
                       <div class="form-check">
                         <input class="form-check-input" type="radio" name="q1" id="inlineRadio2" value="option2">
-                        <label class="form-check-label" for="inlineRadio2">JUST GO!!</label>
+                        <label class="form-check-label" for="inlineRadio2">BE FREE TO DO WHATEVER TO LOOKS LIKE FUN WHENTHE TIME COMES?</label>
                       </div>
                   </div>
 
@@ -248,11 +248,11 @@ button.submit-btn {
                     <h6><label for="firstName">2. IF YOU WERE A TEACHER, WOULD YOU RATHER TEACH-</label></h6>
                     <div class="form-check">
                         <input class="form-check-input" type="radio" name="q2" id="2op1" value="option1">
-                        <label class="form-check-label" for="2op1">FACTS-BASED COURSES</label>
+                        <label class="form-check-label" for="2op1">ARRANGE PICNICS, PARTIES ETC, WELL IN ADVANCE</label>
                       </div>
                       <div class="form-check">
                         <input class="form-check-input" type="radio" name="q2" id="2op2" value="option2">
-                        <label class="form-check-label" for="2op2">COURSES INVOLVING OPINION OR THEORY!</label>
+                        <label class="form-check-label" for="2op2">BE FREE TO DO WHATEVER TO LOOKS LIKE FUN WHENTHE TIME COMES?</label>
                       </div>
                   </div>
 

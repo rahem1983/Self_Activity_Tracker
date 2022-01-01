@@ -23,7 +23,7 @@
 
         input[name="rating"]{
             position: absolute;
-            display: none;
+            display:none;
           }
 
   .btn-scale {
@@ -33,7 +33,8 @@
   font-weight: bold;
   color: black;
   font-family: 'Lato', sans-serif;
-  padding: 2px;
+  padding: 4px;
+  margin: 4px;
 }
 
 .btn-scale-asc-1, .btn-scale-desc-10 {
@@ -150,10 +151,26 @@ input[class="btn-scale-desc-1"]:checked{
     transform: scale(1.3);
 }
 
-.form-check-inline-custom{
-    padding: 2px;
+.frm-chck-custom{
     margin: 2px;
+    padding: 2px;
 }
+
+          input[id="1"]:checked + div,
+          input[id="2"]:checked + div,
+          input[id="3"]:checked + div,
+          input[id="4"]:checked + div,
+          input[id="5"]:checked + div,
+          input[id="6"]:checked + div,
+          input[id="7"]:checked + div,
+          input[id="8"]:checked + div,
+          input[id="9"]:checked + div,
+          input[id="10"]:checked + div{
+            
+              transform: scale(1.3);
+              /* filter: grayscale(50%); */
+
+          }
 
     </style>
 
@@ -249,46 +266,56 @@ input[class="btn-scale-desc-1"]:checked{
             <div class="row">
                 <div class="col-xs-12 pt-1">
                     <div class="chart-scale">
-                        <div class="form-check form-check-inline form-check-inline-custom">
-                          <input class="form-check-input experience" type="radio" name="rating" id="1" value="1">
-                          <label class="btn-scale btn-scale-desc-1" for="rating">1</label>
-                        </div>
-                        <div class="form-check form-check-inline form-check-inline-custom">
-                            <input class="form-check-input experience" type="radio" name="rating" id="2" value="2">
-                            <label class="btn-scale btn-scale-desc-2" for="rating">2</label>
-                          </div>
-                          <div class="form-check form-check-inline form-check-inline-custom">
-                            <input class="form-check-input experience" type="radio" name="rating" id="3" value="3">
-                            <label class="btn-scale btn-scale-desc-3" for="rating">3</label>
-                          </div>
-                          <div class="form-check form-check-inline form-check-inline-custom">
-                            <input class="form-check-input experience" type="radio" name="rating" id="4" value="4">
-                            <label class="btn-scale btn-scale-desc-4" for="rating">4</label>
-                          </div>
-                          <div class="form-check form-check-inline form-check-inline-custom">
-                            <input class="form-check-input experience" type="radio" name="rating" id="5" value="5">
-                            <label class="btn-scale btn-scale-desc-5" for="rating">5</label>
-                          </div>
-                          <div class="form-check form-check-inline form-check-inline-custom">
-                            <input class="form-check-input experience" type="radio" name="rating" id="6" value="6">
-                            <label class="btn-scale btn-scale-desc-6" for="rating">6</label>
-                          </div>
-                          <div class="form-check form-check-inline form-check-inline-custom">
-                            <input class="form-check-input experience" type="radio" name="rating" id="7" value="7">
-                            <label class="btn-scale btn-scale-desc-7" for="rating">7</label>
-                          </div>
-                          <div class="form-check form-check-inline form-check-inline-custom">
-                            <input class="form-check-input experience" type="radio" name="rating" id="8" value="8">
-                            <label class="btn-scale btn-scale-desc-8" for="rating">8</label>
-                          </div>
-                          <div class="form-check form-check-inline form-check-inline-custom">
-                            <input class="form-check-input experience" type="radio" name="rating" id="9" value="9">
-                            <label class="btn-scale btn-scale-desc-9" for="rating">9</label>
-                          </div>
-                          <div class="form-check form-check-inline form-check-inline-custom">
-                            <input class="form-check-input experience" type="radio" name="rating" id="10" value="10">
-                            <label class="btn-scale btn-scale-desc-10" for="rating">10</label>
-                          </div>
+                        
+                      <label>
+                          <input class="form-check-input experience frm-chck-custom" type="radio" name="rating" id="1" value="1">
+                          <div class="btn-scale btn-scale-desc-1" for="rating">1</div>
+                        </label>
+
+                        <label>
+                            <input class="form-check-input experience frm-chck-custom" type="radio" name="rating" id="2" value="2">
+                            <div class="btn-scale btn-scale-desc-2" for="rating">2</div>
+                          </label>
+
+                          <label>
+                            <input class="form-check-input experience frm-chck-custom" type="radio" name="rating" id="3" value="3">
+                            <div class="btn-scale btn-scale-desc-3" for="rating">3</div>
+                          </label>
+
+                          <label>
+                            <input class="form-check-input experience frm-chck-custom" type="radio" name="rating" id="4" value="4">
+                            <div class="btn-scale btn-scale-desc-4" for="rating">4</div>
+                          </label>
+                          
+                          <label>
+                            <input class="form-check-input experience frm-chck-custom" type="radio" name="rating" id="5" value="5">
+                            <div class="btn-scale btn-scale-desc-5" for="rating">5</div>
+                          </label>
+
+                          <label>
+                            <input class="form-check-input experience frm-chck-custom" type="radio" name="rating" id="6" value="6">
+                            <div class="btn-scale btn-scale-desc-6" for="rating">6</div>
+                          </label>
+                          
+                          <label>
+                            <input class="form-check-input experience frm-chck-custom" type="radio" name="rating" id="7" value="7">
+                            <div class="btn-scale btn-scale-desc-7" for="rating">7</div>
+                          </label>
+
+                          <label>
+                            <input class="form-check-input experience frm-chck-custom" type="radio" name="rating" id="8" value="8">
+                            <div class="btn-scale btn-scale-desc-8" for="rating">8</div>
+                          </label>
+
+                          <label>
+                            <input class="form-check-input experience frm-chck-custom" type="radio" name="rating" id="9" value="9">
+                            <div class="btn-scale btn-scale-desc-9" for="rating">9</div>
+                          </label>
+
+                          <label>
+                            <input class="form-check-input experience frm-chck-custom" type="radio" name="rating" id="10" value="10">
+                            <div class="btn-scale btn-scale-desc-10" for="rating">10</div>
+                          </label>
                   </div>
         
             </div>
