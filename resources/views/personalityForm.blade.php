@@ -227,6 +227,7 @@ button.submit-btn {
                           ARE THE CENTER OF ATTENTION OR NOT </label>
                       </div>
                   </div>
+                 
                   <button type="button" class="previous-btn">Prev</button>
                   <button type="button" class="next-btn">Next</button>
                 </div>
@@ -245,69 +246,122 @@ button.submit-btn {
                   </div>
 
                   <div class="form-group pt-3">
-                    <h6><label for="firstName">2. IF YOU WERE A TEACHER, WOULD YOU RATHER TEACH-</label></h6>
+                    <h6><label for="firstName">12. DO YOU USUALLY GET ALONG BETTER WITH-</label></h6>
                     <div class="form-check">
                         <input class="form-check-input" type="radio" name="q2" id="2op1" value="option1">
-                        <label class="form-check-label" for="2op1">ARRANGE PICNICS, PARTIES ETC, WELL IN ADVANCE</label>
+                        <label class="form-check-label" for="2op1">REALISTIC PEOPLE</label>
                       </div>
                       <div class="form-check">
                         <input class="form-check-input" type="radio" name="q2" id="2op2" value="option2">
-                        <label class="form-check-label" for="2op2">BE FREE TO DO WHATEVER TO LOOKS LIKE FUN WHENTHE TIME COMES?</label>
+                        <label class="form-check-label" for="2op2">IMAGINATIVE PEOPLE</label>
                       </div>
                   </div>
 
                   <div class="form-group pt-3">
-                    <h6><label for="firstName">3. ARE YOU USUALLY-</label></h6>
+                    <h6><label for="firstName">13. WHEN YOU ARE WITH THE GROUP OF PEOPLE, WOULD YOU USUALLY RATHER-</label></h6>
                     <div class="form-check">
                         <input class="form-check-input" type="radio" name="q3" id="inlineRadio1" value="option1">
-                        <label class="form-check-label" for="inlineRadio1">A “GOOD MIXER” WITH GROUPS OF PEOPLE</label>
+                        <label class="form-check-label" for="inlineRadio1">JOIN IN THE TALK OF THE GROUP</label>
                       </div>
                       <div class="form-check">
                         <input class="form-check-input" type="radio" name="q3" id="inlineRadio2" value="option2">
-                        <label class="form-check-label" for="inlineRadio2">RATHER QUIET AND RESERVED</label>
+                        <label class="form-check-label" for="inlineRadio2">STAND BACK AND LISTEN FIRST</label>
                       </div>
                   </div>
                   <div class="form-group pt-3">
-                    <h6><label for="firstName">4. DO YOU MORE OFTEN LET-</label></h6>
+                    <h6><label for="firstName">14. IS IT A HIGHER COMPLIMENT TO BE CALLED-</label></h6>
                     <div class="form-check">
                         <input class="form-check-input" type="radio" name="q4" id="inlineRadio1" value="option1">
-                        <label class="form-check-label" for="inlineRadio1">YOUR HEART RULE YOUR HEAD</label>
+                        <label class="form-check-label" for="inlineRadio1">A PERSON OF REAL FEELING</label>
                       </div>
                       <div class="form-check">
                         <input class="form-check-input" type="radio" name="q4" id="inlineRadio2" value="option2">
-                        <label class="form-check-label" for="inlineRadio2">YOUR HEAD RULE YOUR HEART</label>
+                        <label class="form-check-label" for="inlineRadio2">A CONSISTENTLY REASONABLE PERSON</label>
                       </div>
                   </div>
 
 
                   <div class="form-group pt-3">
-                    <h6><label for="firstName">5.IN DOING SOMETHING THAT MANY OTHER PEOPLE DO, WOULD YOU
-                      RATHER-</label></h6>
+                    <h6><label for="firstName">15. IN READING FOR PLEASURE, DO YOU-</label></h6>
                     <div class="form-check">
                         <input class="form-check-input" type="radio" name="q5" id="1op1" value="1op1">
-                        <label class="form-check-label" for="1op1">INVENT A WAY OF YOUR OWN</label>
+                        <label class="form-check-label" for="1op1">ENJOY ODD OR ORIGINAL WAYS OF SAYING THINGS</label>
                       </div>
                       <div class="form-check">
                         <input class="form-check-input" type="radio" name="q5" id="1op2" value="1op2">
-                        <label class="form-check-label" for="1op2">DO IT IN THE ACCEPTED WAY?</label>
+                        <label class="form-check-label" for="1op2">LIKE WRITERS TO SAY EXACTLY WHAT THEY MEAN</label>
                       </div>
                   </div>
+                  
                   <button type="button" class="previous-btn">Prev</button>
                   <button type="button" class="next-btn">Next</button>
                 </div>
 
                 <div class="step step-4">
-                  <div class="form-group">
-                    <label for="country">country</label>
-                    <input type="text" id="country" name="country">
+                  <div class="form-group pt-3">
+                    <h6><label for="firstName">6. AMONG YOUR FRIENDS ARE YOU-</label></h6>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="q6" id="inlineRadio1" value="option1">
+                        <label class="form-check-label" for="inlineRadio1">FULL OF NEWS ABOUT EVERYBODY</label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="q6" id="inlineRadio2" value="option2">
+                        <label class="form-check-label" for="inlineRadio2">ONE OF THE LAST TO HEAR WHAT IS GOING ON?</label>
+                      </div>
                   </div>
-                  <div class="form-group">
-                    <label for="city">City</label>
-                    <input type="text" id="city" name="city">
+
+                  <div class="form-group pt-3">
+                    <h6><label for="firstName">7. DOES THE IDEA OF MAKING A LIST OF WHAT YOU SHOULD GET DONE
+                      OVER A WEEKEND-</label></h6>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="q7" id="2op1" value="option1">
+                        <label class="form-check-label" for="2op1">HELP YOU</label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="q7" id="2op2" value="option2">
+                        <label class="form-check-label" for="2op2">STRESS YOU</label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="q7" id="2op7" value="option3">
+                        <label class="form-check-label" for="2op7">POSITIVELY DEPRESS YOU</label>
+                      </div>
                   </div>
-                  <div class="form-group">
-                    <label for="postCode">Post Code</label>
-                    <input type="text" id="postCode" name="post-code">
+
+                  <div class="form-group pt-3">
+                    <h6><label for="firstName">8. WHEN YOU HAVE A SPECIAL JOB TO DO, DO YOU LIKE TO-</label></h6>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="q8" id="inlineRadio1" value="option1">
+                        <label class="form-check-label" for="inlineRadio1">ORGANIZE IT CAREFULLY BEFORE YOU START</label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="q8" id="inlineRadio2" value="option2">
+                        <label class="form-check-label" for="inlineRadio2">FIND OUT WHAT IS NECESSARY AS YOU GO ALONG</label>
+                      </div>
+                  </div>
+                  <div class="form-group pt-3">
+                    <h6><label for="firstName">9. DO YOU TEND TO HAVE-</label></h6>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="q9" id="inlineRadio1" value="option1">
+                        <label class="form-check-label" for="inlineRadio1">BROAD FRIENDSHIPS WITH MANY DIFFERENT PEOPLE</label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="q9" id="inlineRadio2" value="option2">
+                        <label class="form-check-label" for="inlineRadio2">DEEP FRIENDSHIP WITH VERY FEW PEOPLE</label>
+                      </div>
+                  </div>
+
+
+                  <div class="form-group pt-3">
+                    <h6><label for="firstName">10.DO YOU ADMIRE MORE THE PEOPLE WHO ARE-</label></h6>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="q10" id="1op1" value="1op1">
+                        <label class="form-check-label" for="1op1">NORMAL-ACTING TO NEVER MAKE THEMSELVES THE CENTER OF ATTENTION,</label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="q10" id="1op2" value="1op2">
+                        <label class="form-check-label" for="1op2">TOO ORIGINAL AND INDIVIDUAL TO CARE WHETHER THEY
+                          ARE THE CENTER OF ATTENTION OR NOT </label>
+                      </div>
                   </div>
 
 
