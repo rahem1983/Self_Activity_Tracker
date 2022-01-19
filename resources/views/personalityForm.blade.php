@@ -297,72 +297,253 @@ button.submit-btn {
                   <button type="button" class="next-btn">Next</button>
                 </div>
 
+
+
                 <div class="step step-4">
                   <div class="form-group pt-3">
-                    <h6><label for="firstName">6. AMONG YOUR FRIENDS ARE YOU-</label></h6>
+                    <h6><label for="firstName">16. DO YOU-</label></h6>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="q1" id="inlineRadio1" value="option1">
+                        <label class="form-check-label" for="inlineRadio1">TALK EASILY TO ALMOST ANYONE FOR AS LONG AS YOU
+                          HAVE TO</label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="q1" id="inlineRadio2" value="option2">
+                        <label class="form-check-label" for="inlineRadio2">FIND A LOT TO SAY ONLY TO CERTAIN PEOPLE OR UNDER
+                          CERTAIN CONDITIONS</label>
+                      </div>
+                  </div>
+
+                  <div class="form-group pt-3">
+                    <h6><label for="firstName">17. DOES FOLLOWING A SCHEDULE-</label></h6>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="q2" id="2op1" value="option1">
+                        <label class="form-check-label" for="2op1">APPEAL TO YOU</label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="q2" id="2op2" value="option2">
+                        <label class="form-check-label" for="2op2">CRAMP YOU</label>
+                      </div>
+                  </div>
+
+                  <div class="form-group pt-3">
+                    <h6><label for="firstName">18. WHEN IT IS SETTLED WELL IN ADVANCE THAT YOU WILL DO A
+                      CERTAIN THING AT A CERTAIN TIME,DO YOU FIND IT-</label></h6>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="q3" id="inlineRadio1" value="option1">
+                        <label class="form-check-label" for="inlineRadio1">NICE TO BE ABLE TO PLAN ACCORDINGLY</label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="q3" id="inlineRadio2" value="option2">
+                        <label class="form-check-label" for="inlineRadio2">A LITTLE UNPLEASANT TO BE TIED DOWN</label>
+                      </div>
+                  </div>
+                  <div class="form-group pt-3">
+                    <h6><label for="firstName">19. ARE YOU MORE SUCCESSFUL-</label></h6>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="q4" id="inlineRadio1" value="option1">
+                        <label class="form-check-label" for="inlineRadio1">AT FOLLOWING A CAREFULLY WORKED OUT PLAN</label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="q4" id="inlineRadio2" value="option2">
+                        <label class="form-check-label" for="inlineRadio2">AT DEALING WITH THE UNEXPECTED AND SEEING
+                          QUICKLY WHAT SHOULD BE DONE</label>
+                      </div>
+                  </div>
+
+
+                  <div class="form-group pt-3">
+                    <h6><label for="firstName">20. WOULD YOU RATHER BE CONSIDERED-</label></h6>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="q5" id="1op1" value="1op1">
+                        <label class="form-check-label" for="1op1">A PRACTICAL PERSON</label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="q5" id="1op2" value="1op2">
+                        <label class="form-check-label" for="1op2">AN OUT-OF-THE-BOX-THINKING PERSON</label>
+                      </div>
+                  </div>
+                  
+                  <button type="button" class="previous-btn">Prev</button>
+                  <button type="button" class="next-btn">Next</button>
+                </div>
+
+
+                <div class="step step-5">
+                  <div class="form-group pt-3">
+                    <h6><label for="firstName">21. IN A LARGE GROUP, DO YOU MORE OFTEN-</label></h6>
                     <div class="form-check">
                         <input class="form-check-input" type="radio" name="q6" id="inlineRadio1" value="option1">
-                        <label class="form-check-label" for="inlineRadio1">FULL OF NEWS ABOUT EVERYBODY</label>
+                        <label class="form-check-label" for="inlineRadio1">INTRODUCE OTHERS</label>
                       </div>
                       <div class="form-check">
                         <input class="form-check-input" type="radio" name="q6" id="inlineRadio2" value="option2">
-                        <label class="form-check-label" for="inlineRadio2">ONE OF THE LAST TO HEAR WHAT IS GOING ON?</label>
+                        <label class="form-check-label" for="inlineRadio2">GET INTRODUCED</label>
                       </div>
                   </div>
 
                   <div class="form-group pt-3">
-                    <h6><label for="firstName">7. DOES THE IDEA OF MAKING A LIST OF WHAT YOU SHOULD GET DONE
-                      OVER A WEEKEND-</label></h6>
+                    <h6><label for="firstName">22. DO YOU USUALLY-</label></h6>
                     <div class="form-check">
                         <input class="form-check-input" type="radio" name="q7" id="2op1" value="option1">
-                        <label class="form-check-label" for="2op1">HELP YOU</label>
+                        <label class="form-check-label" for="2op1">VALUE EMOTION MORE THAN LOGIC</label>
                       </div>
                       <div class="form-check">
                         <input class="form-check-input" type="radio" name="q7" id="2op2" value="option2">
-                        <label class="form-check-label" for="2op2">STRESS YOU</label>
-                      </div>
-                      <div class="form-check">
-                        <input class="form-check-input" type="radio" name="q7" id="2op7" value="option3">
-                        <label class="form-check-label" for="2op7">POSITIVELY DEPRESS YOU</label>
+                        <label class="form-check-label" for="2op2">SVALUE LOGIC MORE THAN FEELINGS</label>
                       </div>
                   </div>
 
                   <div class="form-group pt-3">
-                    <h6><label for="firstName">8. WHEN YOU HAVE A SPECIAL JOB TO DO, DO YOU LIKE TO-</label></h6>
+                    <h6><label for="firstName">23. WOULD YOU RATHER HAVE AS A FRIEND-</label></h6>
                     <div class="form-check">
                         <input class="form-check-input" type="radio" name="q8" id="inlineRadio1" value="option1">
-                        <label class="form-check-label" for="inlineRadio1">ORGANIZE IT CAREFULLY BEFORE YOU START</label>
+                        <label class="form-check-label" for="inlineRadio1">SOMEONE WHO IS ALWAYS COMING UP WITH NEW IDEAS</label>
                       </div>
                       <div class="form-check">
                         <input class="form-check-input" type="radio" name="q8" id="inlineRadio2" value="option2">
-                        <label class="form-check-label" for="inlineRadio2">FIND OUT WHAT IS NECESSARY AS YOU GO ALONG</label>
+                        <label class="form-check-label" for="inlineRadio2">SOMEONE WHO HAS BOTH FEET ON THE GROUND</label>
                       </div>
                   </div>
                   <div class="form-group pt-3">
-                    <h6><label for="firstName">9. DO YOU TEND TO HAVE-</label></h6>
+                    <h6><label for="firstName">24. CAN THE NEW PEOPLE YOU MEET TELL WHAT YOU ARE INTERESTED IN-</label></h6>
                     <div class="form-check">
                         <input class="form-check-input" type="radio" name="q9" id="inlineRadio1" value="option1">
-                        <label class="form-check-label" for="inlineRadio1">BROAD FRIENDSHIPS WITH MANY DIFFERENT PEOPLE</label>
+                        <label class="form-check-label" for="inlineRadio1">RIGHT AWAY</label>
                       </div>
                       <div class="form-check">
                         <input class="form-check-input" type="radio" name="q9" id="inlineRadio2" value="option2">
-                        <label class="form-check-label" for="inlineRadio2">DEEP FRIENDSHIP WITH VERY FEW PEOPLE</label>
+                        <label class="form-check-label" for="inlineRadio2">ONLY AFTER THEY REALLY GET TO KNOW YOU</label>
                       </div>
                   </div>
 
 
                   <div class="form-group pt-3">
-                    <h6><label for="firstName">10.DO YOU ADMIRE MORE THE PEOPLE WHO ARE-</label></h6>
+                    <h6><label for="firstName">25. (IF TWO ANSWERS ARE TRUE, CHECK BOTH BOXES) IN YOUR DAILY WORK, DO YOU-</label></h6>
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="q10" id="1op1" value="1op1">
-                        <label class="form-check-label" for="1op1">NORMAL-ACTING TO NEVER MAKE THEMSELVES THE CENTER OF ATTENTION,</label>
+                        <input class="form-check-input single-checkbox" type="checkbox" name="q10" id="1op1" value="1op1">
+                        <label class="form-check-label" for="1op1">USUALLY PLAN YOUR WORK SO YOU WON’T NEED TOWORK UNDER PRESSURE,</label>
                       </div>
                       <div class="form-check">
-                        <input class="form-check-input" type="radio" name="q10" id="1op2" value="1op2">
-                        <label class="form-check-label" for="1op2">TOO ORIGINAL AND INDIVIDUAL TO CARE WHETHER THEY
-                          ARE THE CENTER OF ATTENTION OR NOT </label>
+                        <input class="form-check-input single-checkbox" type="checkbox" name="q10" id="1op2" value="1op2">
+                        <label class="form-check-label" for="1op2">RATHER ENJOY AN EMERGENCY THAT MAKES YOU WORK
+                          AGAINST TIME </label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input single-checkbox" type="checkbox" name="q10" id="1op3" value="1op3">
+                        <label class="form-check-label" for="1op3">HATE TO WORK UNDER PRESSURE</label>
                       </div>
                   </div>
+
+
+                  
+                  <button type="button" class="previous-btn">Prev</button>
+                  <button type="button" class="next-btn">Next</button>
+                </div>
+
+
+
+
+                <div class="step step-6">
+                  <div class="form-group pt-3">
+                    <h6><label for="firstName">26. DO YOU USUALLY-</label></h6>
+                    <div class="form-check">
+                        <input class="form-check-input" type="radio" name="q6" id="inlineRadio1" value="option1">
+                        <label class="form-check-label" for="inlineRadio1">SHOW YOUR FEELINGS FREELY</label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="q6" id="inlineRadio2" value="option2">
+                        <label class="form-check-label" for="inlineRadio2">KEEP YOUR FEELINGS TO YOURSELF</label>
+                      </div>
+                  </div>
+
+
+                  <h6 class="pt-3 text-center"style="text-decoration: underline;">Part 2: Which word in each pair appeals to you more?</h6>
+                   <p class="text-center"style="text-decoration: none;">(Think what the word means, not how they look or how they sound)</p>
+                  
+                   <div class="row">
+                     <div class="col-3">
+                        <div class="form-group pt-2">
+                          <h6><label for="firstName">27. </label></h6>
+                          <div class="form-check">
+                            <input class="form-check-input" type="radio" name="27" id="inlineRadio1" value="option1">
+                            <label class="form-check-label" for="inlineRadio1">SCHEDULED</label>
+                          </div>
+                          <div class="form-check">
+                            <input class="form-check-input" type="radio" name="27" id="inlineRadio2" value="option2">
+                            <label class="form-check-label" for="inlineRadio2">UNPLANNED</label>
+                          </div>
+                        </div>
+
+                        <div class="form-group pt-2">
+                          <h6><label for="firstName">28. </label></h6>
+                          <div class="form-check">
+                            <input class="form-check-input" type="radio" name="28" id="inlineRadio1" value="option1">
+                            <label class="form-check-label" for="inlineRadio1">FACTS</label>
+                          </div>
+                          <div class="form-check">
+                            <input class="form-check-input" type="radio" name="28" id="inlineRadio2" value="option2">
+                            <label class="form-check-label" for="inlineRadio2">IDEAS</label>
+                          </div>
+                        </div>
+
+                        <div class="form-group pt-2">
+                          <h6><label for="firstName">27. </label></h6>
+                          <div class="form-check">
+                            <input class="form-check-input" type="radio" name="27" id="inlineRadio1" value="option1">
+                            <label class="form-check-label" for="inlineRadio1">SCHEDULED</label>
+                          </div>
+                          <div class="form-check">
+                            <input class="form-check-input" type="radio" name="27" id="inlineRadio2" value="option2">
+                            <label class="form-check-label" for="inlineRadio2">UNPLANNED</label>
+                          </div>
+                        </div>
+
+                        <div class="form-group pt-2">
+                          <h6><label for="firstName">27. </label></h6>
+                          <div class="form-check">
+                            <input class="form-check-input" type="radio" name="27" id="inlineRadio1" value="option1">
+                            <label class="form-check-label" for="inlineRadio1">SCHEDULED</label>
+                          </div>
+                          <div class="form-check">
+                            <input class="form-check-input" type="radio" name="27" id="inlineRadio2" value="option2">
+                            <label class="form-check-label" for="inlineRadio2">UNPLANNED</label>
+                          </div>
+                        </div>
+
+                        <div class="form-group pt-2">
+                          <h6><label for="firstName">27. </label></h6>
+                          <div class="form-check">
+                            <input class="form-check-input" type="radio" name="27" id="inlineRadio1" value="option1">
+                            <label class="form-check-label" for="inlineRadio1">SCHEDULED</label>
+                          </div>
+                          <div class="form-check">
+                            <input class="form-check-input" type="radio" name="27" id="inlineRadio2" value="option2">
+                            <label class="form-check-label" for="inlineRadio2">UNPLANNED</label>
+                          </div>
+                        </div>
+
+                        <div class="form-group pt-2">
+                          <h6><label for="firstName">27. </label></h6>
+                          <div class="form-check">
+                            <input class="form-check-input" type="radio" name="27" id="inlineRadio1" value="option1">
+                            <label class="form-check-label" for="inlineRadio1">SCHEDULED</label>
+                          </div>
+                          <div class="form-check">
+                            <input class="form-check-input" type="radio" name="27" id="inlineRadio2" value="option2">
+                            <label class="form-check-label" for="inlineRadio2">UNPLANNED</label>
+                          </div>
+                        </div>
+                      </div>
+                     <div class="col-3">
+                       B
+                    </div>
+
+                    <div class="col-3">
+                       C
+                    </div>
+                   
+                   </div>
 
 
                   
@@ -420,7 +601,14 @@ function changeStep(btn) {
             </script>
 
 
- 
+            <script>
+              var limit = 2;
+              $('input.single-checkbox').on('click', function (evt) {
+              if ($('.single-checkbox:checked').length > limit) {
+              this.checked = false;
+              }
+            });
+            </script>
     
     
     
