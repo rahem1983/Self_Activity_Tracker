@@ -39,4 +39,9 @@ class DailyHistoryController extends Controller
         $DH->save();
         return response()->json($DH);
     }
+    public function GetSessionUserTodayTask(Request $req)
+    {
+        $DH = Daily_history::where('user_id', session('user')->id)->all();
+
+    }
 }

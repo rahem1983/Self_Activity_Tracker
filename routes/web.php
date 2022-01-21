@@ -25,6 +25,8 @@ Route::post('login',[UserController::class,'login']);
 
 Route::view('Signup', 'Signup');
 Route::post('signup',[UserController::class,'signup']);
+Route::get('MoodGraph',[UserController::class,'moodGraph']);
+
 
 Route::get('Logout', function(){
     if (session()->has('user')) {  //check if there is any value in the user session or not
@@ -37,11 +39,13 @@ Route::get('Logout', function(){
 Route::view('weeklyTarget', 'WeeklyTarget');
 Route::view('Home', 'home');
 Route::view('dailyProgerss', 'DailyProgress');
-Route::view('endProject','EndProjectForm');
+Route::view('EndProject_form','EndProjectForm');
 
 Route::post('creatProject', [ProjectController::class, 'creatProject']);
 Route::get('GetSessionUserActiveProject', [ProjectController::class, 'GetSessionUserActiveProject']);
+Route::get('GetSessionUserAllProject', [ProjectController::class, 'GetSessionUserAllProject']);
 Route::post('completeProject', [ProjectController::class, 'completeProject']);
+Route::post('EndProject', [ProjectController::class, 'EndProject']);
 
 Route::get('DH', [DailyHistoryController::class, 'getData']);
 Route::post('postWeeklyTarget', [DailyHistoryController::class, 'postData']);

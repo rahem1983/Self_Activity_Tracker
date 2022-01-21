@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Self Activity Tracker</title>
-   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
     <script
       src="https://kit.fontawesome.com/64d58efce2.js"
       crossorigin="anonymous"></script>
@@ -15,7 +15,6 @@
 
       <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
 
-    <!--Chart JS link-->
       <script
       src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js">
       </script>
@@ -66,13 +65,13 @@
                     <div class="card-body text-center">
                         <img  class="card-img-top gol-img" src="https://icon-library.com/images/default-profile-icon/default-profile-icon-1.jpg" alt="Avatar"><br>
                         <a href="#"><button type="button" class="mt-2 btn btn-light btn-sm">Edit Profile</button></a>
-                      <h4 class="pt-2">Mashrur Jamil Rafin</h4>
-                      <h5>Web Developer</h5>
+                      <h4 class="pt-2">{{session('user')->name}}</h4>
+                      <h5>{{session('user')->designation}}</h5>
 
                       <div class="p-2">
                         <a href="{{url('NewProject')}}"><button type="button" class="btn wht-btn btn-sm">Start New Project</button></a>
                         <a href="{{url('weeklyTarget')}}"><button type="button" class="btn wht-btn btn-sm">Set Weekly Target</button></a>
-                        <a href="{{url('endProject')}}"><button type="button" class="btn wht-btn btn-sm mt-1">End A project</button></a>
+                        <a href="{{url('EndProject_form')}}"><button type="button" class="btn wht-btn btn-sm mt-1">End A project</button></a>
                         </div>
                     </div>
                 </div> 
@@ -89,12 +88,12 @@
                 </div>       
         
                 <!-- Mood Graph -->
-            <div class="card mt-3 mb-2">
-                <div class="card-header text-center"><h5>Mood Graph</h5></div>
-                <div class="card-body">
-                  <canvas id="myDonutChart" style="width:100%; max-width:900px; display: block;margin-left: auto; margin-right: auto;"></canvas>      
-                </div>
-    
+                <div class="card mt-3 mb-2">
+                    <div class="card-header text-center"><h5>Mood Graph</h5></div>
+                    <div class="card-body">
+                    <canvas id="myDonutChart" style="width:100%; max-width:900px; display: block;margin-left: auto; margin-right: auto;"></canvas>      
+                    </div>
+        
                 </div>
         
         
@@ -120,8 +119,8 @@
                    
                    <div class="pt-4">   
                     <h5>Projects</h5>
-                        <div class="row">
-                            <div class="col-sm-6">
+                        <div class="row allProject">
+                            {{-- <div class="col-sm-6">
                                 <div class="card">
                                     <div class="card-body">
                                         <a href=""><h6 class="text-dark">Self Activity Tracker</h6></a>
@@ -138,10 +137,10 @@
                                         <small><p class="text-muted">5 days Ago</p></small>
                                     </div>
                                 </div>
-                            </div>
+                            </div> --}}
                         </div>
 
-                        <div class="row pt-2">
+                        {{-- <div class="row pt-2">
                             <div class="col-sm-6">
                                 <div class="card">
                                     <div class="card-body">
@@ -161,7 +160,7 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </div> --}}
                     </div>  
                     <div class="text-primary pt-1"><a href="#" style="text-decoration: none;">See all projects</a></div>
 
@@ -195,96 +194,12 @@
                 <!-- <div class="col-lg-2">
                       <div class=" p-2 text-danger">SOLD SOLD SOLD SOLD SOLD SOLD SOLD SOLD</div> 
                 </div>-->
-
         
         </div>
         
-
-
-
-
-
-
-
-
     </div>
 
-
-
-
-
-
     <!-- Mood Graph JS -->
-    <script>
-        var xValues = ["Angry😡", "Depressed😥", "Neutral😐", "Relieved😌", "Very Happy😃"];
-        var yValues = [5, 7, 9, 5, 4];
-        var barColors = [
-                        "#ff0000",
-                        "#fe7f00",
-                        "#ffff00",
-                        "#36f",
-                        "#63d867"
-                        
-      ];
-         
-      new Chart("myDonutChart", {
-      type: "doughnut",
-      data: {
-        labels: xValues,
-        datasets: [{
-          backgroundColor: barColors,
-          data: yValues,
-        }]
-      },
-      options: { 
-        legend: {
-        display: true,
-        position: 'bottom',
-        },
-        title: {
-          display: false,
-        },
-      
-      },
-      
-         
-      });
-      
-      
-         
-       </script>
-
-
-
-    <!--Monthy Attendance Report-->
-    <script>
-         var xValues = ["Absent", "Present"];
-         var yValues = [8, 15];
-         var barColors = ["#ff0000", "#63d867"];
-        
-        new Chart("myPieChart", {
-        type: "pie",
-        data: {
-        labels: xValues,
-        datasets: [{
-        backgroundColor: barColors,
-        data: yValues
-        }]
-  },
-        options: {
-        legend: {
-        display: true,
-        position: 'bottom',
-        },
-        title: {
-        display: false,
-        }
-    }
-    });
-
-
-     
-   </script>
   
   
   

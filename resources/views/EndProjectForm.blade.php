@@ -185,7 +185,7 @@ input[class="btn-scale-desc-1"]:checked{
         <h2 class="text-center pt-2" style="color: #002db3">Project Completion Form</h2>
 
         <form id="endForm" style="color:#002db3">
-            
+            @csrf
           <div class="form-row pt-4">
             <div class="form-group">
             <h6><label for="project">Choose a Running project to end</label></h6>
@@ -209,7 +209,7 @@ input[class="btn-scale-desc-1"]:checked{
             <div class="form-group">
             <h6><label for="target">How was your experience?</label></h6>
             
-            <textarea class="form-control post-text" id="shortdesc" rows="2" cols="2" placeholder="Please review your experience and any recommendation"></textarea>
+            <textarea class="form-control post-text" id="experience" rows="2" cols="2" placeholder="Please review your experience and any recommendation" required></textarea>
             </div>
           </div>
 
@@ -219,21 +219,22 @@ input[class="btn-scale-desc-1"]:checked{
             <div class="form-group">
             <h6><label for="target">Did you learn any new skill while doing this project?</label></h6>
               <div class="form-check form-check-inline">
-               <input class="form-check-input" type="radio" name="exampleRadios3" id="exampleRadios5" value="option1" checked>
-               <h6><label class="form-check-label" for="exampleRadios1">Yes</label></h6>
+               <input class="form-check-input" type="radio" name="exampleRadios3" id="skillRadiosY" value="Yes">
+               <h6><label class="form-check-label" for="skillRadiosY">Yes</label></h6>
              </div>
 
               <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="exampleRadios3" id="exampleRadios6" value="option2">
-                <h6><label class="form-check-label" for="exampleRadios2">No</label></h6>
+                <input class="form-check-input" type="radio" name="exampleRadios3" id="skillRadiosN" value="No" checked>
+                <h6><label class="form-check-label" for="skillRadiosN">No</label></h6>
               </div>
             </div>
 
-            <div class="form-row pt-4">
-              <div class="form-group">
-                {{-- IF YES... --}}
-              <textarea class="form-control post-text" id="day1" rows="2" cols="2" placeholder="Write the skills you have learned.."></textarea>
+            <div class="form-row pt-2">
+              
+                <div class="form-group newSkill">
+                  {{-- IF YES... --}}
                 </div>
+              
             </div>
           </div>
                   
@@ -241,20 +242,19 @@ input[class="btn-scale-desc-1"]:checked{
             <div class="form-group">
             <h6><label for="target">Did you finish the project within time?</label></h6>
               <div class="form-check form-check-inline">
-               <input class="form-check-input" type="radio" name="exampleRadios4" id="exampleRadios1" value="option1" checked>
-               <h6><label class="form-check-label" for="exampleRadios1">Yes</label></h6>
+               <input class="form-check-input" type="radio" name="exampleRadios4" id="finishRadiosY" value="Yes" checked>
+               <h6><label class="form-check-label" for="finishRadiosY">Yes</label></h6>
              </div>
 
               <div class="form-check form-check-inline">
-                <input class="form-check-input" type="radio" name="exampleRadios4" id="exampleRadios2" value="option2">
-                <h6><label class="form-check-label" for="exampleRadios2">No</label></h6>
+                <input class="form-check-input" type="radio" name="exampleRadios4" id="finishRadiosN" value="No">
+                <h6><label class="form-check-label" for="finishRadiosN">No</label></h6>
               </div>
             </div>
 
             <div class="form-row pt-4">
-              <div class="form-group">
+              <div class="form-group notComplete">
                 {{-- IF NO... --}}
-              <textarea class="form-control post-text" id="day1" rows="2" cols="2" placeholder="Write the reason of your delay.."></textarea>
                 </div>
             </div>
           </div>

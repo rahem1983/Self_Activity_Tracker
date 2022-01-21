@@ -113,36 +113,6 @@
                     {{-- <textarea class="form-control post-text" id="day1" rows="2" cols="2" placeholder="Write your target for this specific day"></textarea> --}}
                   </div><br>
                 </div>
-
-                <div class="daily">
-                  <div class="day"> </div>
-                  <div class="form-group inputOnDate">
-                    {{-- <div class="inputOnProject">
-                    <input type="checkbox" id="CBproject" >
-                    <label for="CBproject"> project 1</label><br>
-                    <div id="inputProject"></div>
-                    </div> --}}
-                    {{-- <input type="checkbox" id="CBproject2" >
-                    <label for="CBproject2"> project 2</label><br>
-                    <div id="inputProject2"></div> --}}
-                    {{-- <textarea class="form-control post-text" id="day1" rows="2" cols="2" placeholder="Write your target for this specific day"></textarea> --}}
-                  </div><br>
-                </div>
-
-                <div class="daily">
-                  <div class="day"> </div>
-                  <div class="form-group inputOnDate">
-                    {{-- <div class="inputOnProject">
-                    <input type="checkbox" id="CBproject" >
-                    <label for="CBproject"> project 1</label><br>
-                    <div id="inputProject"></div>
-                    </div> --}}
-                    {{-- <input type="checkbox" id="CBproject2" >
-                    <label for="CBproject2"> project 2</label><br>
-                    <div id="inputProject2"></div> --}}
-                    {{-- <textarea class="form-control post-text" id="day1" rows="2" cols="2" placeholder="Write your target for this specific day"></textarea> --}}
-                  </div><br>
-                </div>
               </div>
 
               <div class="pt-5 pb-5 text-center">

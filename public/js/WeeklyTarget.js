@@ -18,7 +18,9 @@ const inputProject1 = document.querySelector("#inputProject");
 //   week.push(day)
 // }
 // console.log(week);
+ let today = new Date;
 
+ let curr = new Date
 $.ajax({
     type: "GET",
     url: "GetSessionUserActiveProject",
@@ -26,9 +28,9 @@ $.ajax({
     success: function (response) {
         const projectOfSessionUser = response
         
-        let curr = new Date 
+         
         let week = []
-        for (let i = 0; i < 7; i++) {
+        for (let i = 0; i < 5; i++) {
             let first = curr.getDate() - curr.getDay() + i 
             let day = new Date(curr.setDate(first))
             week.push(day)
@@ -42,41 +44,80 @@ $.ajax({
         const dayName = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
 
         for (const d of day) {
-            d.children[0].innerHTML = "Day-" + (dayindex+1) +": "+ week[dayindex].getDate() + " "+ monthNames[week[dayindex].getMonth()] +" "+ week[dayindex].getFullYear()+ "-" +  dayName[week[dayindex].getDay()];
-            d.children[0].style.fontWeight = "600";
-
-            for (const project of projectOfSessionUser) {
-                
+            if(today.getDay() < week[dayindex].getDay()){
+                console.log(today.getDay()+"<="+week[dayindex].getDay());
+                d.children[0].innerHTML = "Day-" + (dayindex+1) +": "+ week[dayindex].getDate() + " "+ monthNames[week[dayindex].getMonth()] +" "+ week[dayindex].getFullYear()+ "-" +  dayName[week[dayindex].getDay()];
+                d.children[0].style.fontWeight = "600";
+                for (const project of projectOfSessionUser) {
+                    const projectTarget = document.createElement("div");
+                    projectTarget.className = "inputOnProject"
+                    projectTarget.innerHTML = `
+                        <input type="checkbox" class="projectCBox" id="CBproject`+week[dayindex].getDate()+``+project.id+`" >
+                        <label for="CBproject`+week[dayindex].getDate()+``+project.id+`">`+project.project_title+`</label>
+                        <br>
+                        <input type="date" name="assignedDate" id="assignedDate" value="`+week[dayindex].getFullYear()+`-`+zeroAdder(week[dayindex].getMonth()+1)+`-`+zeroAdder(week[dayindex].getDate())+`" hidden >
+                        <input type="number" name="proId" id="proId" value="`+project.id+`" hidden >
+                        <div id="inputProject`+week[dayindex].getDate()+``+project.id+`"></div>`
+    
+                    d.children[1].append(projectTarget);
+                    
+                    const CBproject1 = document.querySelector("#CBproject"+week[dayindex].getDate()+""+project.id+"");
+                    const inputProject1 = document.querySelector("#inputProject"+week[dayindex].getDate()+""+project.id+"");
+    
+    
+                    CBproject1.addEventListener("click", function(){
+                        if($(this).is(":checked")){
+                        const inputproject = document.createElement("input");
+                        inputproject.type = "text"
+                        inputproject.id = "day"+CBproject1.id+"";
+                        inputproject.className = "form-control post-text"
+                        inputproject.placeholder = "Write your target for this specific day"
+                        inputProject1.append(inputproject);
+                        }
+                        else{
+                            const inputproject = document.querySelector("#day"+CBproject1.id+"");
+                            inputproject.remove();
+                        }    
+                    })
+                }
+            }
+            
+            if(today.getDay() >= week[dayindex].getDay()){
                 const projectTarget = document.createElement("div");
-                projectTarget.className = "inputOnProject"
-                projectTarget.innerHTML = `
-                    <input type="checkbox" class="projectCBox" id="CBproject`+week[dayindex].getDate()+``+project.id+`" >
-                    <label for="CBproject`+week[dayindex].getDate()+``+project.id+`">`+project.project_title+`</label>
-                    <br>
-                    <input type="date" name="assignedDate" id="assignedDate" value="`+week[dayindex].getFullYear()+`-`+zeroAdder(week[dayindex].getMonth()+1)+`-`+zeroAdder(week[dayindex].getDate())+`" hidden >
-                    <input type="number" name="proId" id="proId" value="`+project.id+`" hidden >
-                    <div id="inputProject`+week[dayindex].getDate()+``+project.id+`"></div>`
-
-                d.children[1].append(projectTarget);
-                
-                const CBproject1 = document.querySelector("#CBproject"+week[dayindex].getDate()+""+project.id+"");
-                const inputProject1 = document.querySelector("#inputProject"+week[dayindex].getDate()+""+project.id+"");
-
-
-                CBproject1.addEventListener("click", function(){
-                    if($(this).is(":checked")){
-                    const inputproject = document.createElement("input");
-                    inputproject.type = "text"
-                    inputproject.id = "day"+CBproject1.id+"";
-                    inputproject.className = "form-control post-text"
-                    inputproject.placeholder = "Write your target for this specific day"
-                    inputProject1.append(inputproject);
-                    }
-                    else{
-                        const inputproject = document.querySelector("#day"+CBproject1.id+"");
-                        inputproject.remove();
-                    }    
-                })
+                d.children[0].innerHTML = "Day-" + (dayindex+1) +": "+ week[dayindex].getDate() + " "+ monthNames[week[dayindex].getMonth()] +" "+ week[dayindex].getFullYear()+ "-" +  dayName[week[dayindex].getDay()];
+                d.children[0].style.fontWeight = "600";
+                for (const project of projectOfSessionUser) {
+                    const projectTarget = document.createElement("div");
+                    projectTarget.className = "inputOnProject"
+                    projectTarget.innerHTML = `
+                        <input type="checkbox" class="projectCBox" id="CBproject`+week[dayindex].getDate()+``+project.id+`" disabled>
+                        <label for="CBproject`+week[dayindex].getDate()+``+project.id+`">`+project.project_title+`</label>
+                        <br>
+                        <input type="date" name="assignedDate" id="assignedDate" value="`+week[dayindex].getFullYear()+`-`+zeroAdder(week[dayindex].getMonth()+1)+`-`+zeroAdder(week[dayindex].getDate())+`" hidden >
+                        <input type="number" name="proId" id="proId" value="`+project.id+`" hidden >
+                        <div id="inputProject`+week[dayindex].getDate()+``+project.id+`"></div>`
+    
+                    d.children[1].append(projectTarget);
+                    
+                    const CBproject1 = document.querySelector("#CBproject"+week[dayindex].getDate()+""+project.id+"");
+                    const inputProject1 = document.querySelector("#inputProject"+week[dayindex].getDate()+""+project.id+"");
+    
+    
+                    CBproject1.addEventListener("click", function(){
+                        if($(this).is(":checked")){
+                        const inputproject = document.createElement("input");
+                        inputproject.type = "text"
+                        inputproject.id = "day"+CBproject1.id+"";
+                        inputproject.className = "form-control post-text"
+                        inputproject.placeholder = "Write your target for this specific day"
+                        inputProject1.append(inputproject);
+                        }
+                        else{
+                            const inputproject = document.querySelector("#day"+CBproject1.id+"");
+                            inputproject.remove();
+                        }    
+                    })
+                }
             }
             dayindex++;
         }

@@ -136,7 +136,7 @@ $("#newProjectForm").submit(function(e){
             
             // const project = JSON.parse(response);
             alert("New project "+ response.project_title +" is created");
-            // window.location.replace("weeklyTarget");
+            window.location.replace("Home");
         }
     });
 })
