@@ -51,4 +51,9 @@ class ProjectController extends Controller
         $project->save();
         return response()->json($project);
     }
+    public function oneProject(Request $req)
+    {
+        $project = Project::where('id', $req->projectId)->first();
+        return response()->json($project);
+    }
 }

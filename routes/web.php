@@ -25,10 +25,16 @@ Route::view('EndProject_form','EndProjectForm');
 Route::view('Signup', 'Signup');
 Route::view('Login', 'login');
 Route::view('Calendar', 'calendar');
+Route::view('AllPtoject', 'allProjects');
+
 // Route::view('dailyProgerssForm', 'DailyProgress');
 Route::get('dailyProgerssForm/{id?}',function($id)
 {
     return View::make('DailyProgress')->with('id',$id);
+});
+Route::get('ProjectOverview/{id?}',function($id)
+{
+    return View::make('projectOverview')->with('id',$id);
 });
 
 Route::post('login',[UserController::class,'login']);
@@ -47,6 +53,7 @@ Route::get('GetSessionUserActiveProject', [ProjectController::class, 'GetSession
 Route::get('GetSessionUserAllProject', [ProjectController::class, 'GetSessionUserAllProject']);
 Route::post('completeProject', [ProjectController::class, 'completeProject']);
 Route::post('EndProject', [ProjectController::class, 'EndProject']);
+Route::post('oneProject', [ProjectController::class, 'oneProject']);
 
 Route::get('DH', [DailyHistoryController::class, 'getData']);
 Route::post('postWeeklyTarget', [DailyHistoryController::class, 'postData']);

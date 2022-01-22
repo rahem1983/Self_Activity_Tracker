@@ -40,11 +40,11 @@ button1.addEventListener("click", function(){  //if user click yes for colaborat
     colabDiv.innerHTML = `<div class="form-group">
         <label>Collaborators</label>
         <div class="form-control">
-            <input class="colab" type="checkbox" id="colab1" name="colab1" value="WebDeveloper">
+            <input class="colab" type="checkbox" id="colab1" name="colab1" value="Web Developer">
             <label for="colab1"> Web Developer</label><br>
-            <input class="colab" type="checkbox" id="colab2" name="colab2" value="AppDeveloper">
+            <input class="colab" type="checkbox" id="colab2" name="colab2" value="App Developer">
             <label for="colab2"> App Developer</label><br>
-            <input class="colab" type="checkbox" id="colab3" name="colab3" value="GraphicDesigner">
+            <input class="colab" type="checkbox" id="colab3" name="colab3" value="Graphic Designer">
             <label for="colab3"> Graphic Designer</label><br>
             <input class="colab" type="checkbox" id="colab4" name="colab4" value="HR">
             <label for="colab4"> HR</label><br>
@@ -83,10 +83,22 @@ $("#newProjectForm").submit(function(e){
         $(".skillreq").each(function(){  //saving the skill requirment in an array 
             skillreq.push($(this).val().trim().toUpperCase());
         })
+        if(skillreq.length <= 0){  
+            skillreq = "NO";
+        }
+        else{  
+            skillreq = skillreq.toString();
+        }
 
         $(".newskillreq").each(function(){   //saving the new skill requirment in an array
             newskillreq.push($(this).val().trim().toUpperCase());
         })
+        if(newskillreq.length <= 0){  
+            newskillreq = "NO";
+        }
+        else{  
+            newskillreq = newskillreq.toString();
+        }
 
         var radiocheck = $('input[type="radio"]:checked');   //taking the radio button value that is checked (yes/no)
 

@@ -12,7 +12,7 @@
       <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
      
       <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
-      
+      <Script src="{{url('js/allProjects.js')}}" defer></Script>
     
     <style>
 
@@ -25,9 +25,9 @@
     <div class="container">
         
 
-     <div class="row mt-5">
+     <div class="row mt-5 allProject">
         <h3 class="text-center pb-4">All Projects</h3>
-        <div class="col-4">
+        {{-- <div class="col-4">
             <div class="card"> 
                 <div class="card-body">
                     <a href="projectOverview.blade.php"><h6 class="text-dark">Self Activity Tracker</h6></a>
@@ -55,11 +55,11 @@
                     <small><p class="text-muted">5 days Ago</p></small>
                 </div>
             </div>
-        </div>    
+        </div>     --}}
      </div>
 
 
-     <div class="row pt-2">
+     {{-- <div class="row pt-2">
         <div class="col-4">
             <div class="card">
                 <div class="card-body">
@@ -89,7 +89,7 @@
                 </div>
             </div>
         </div>
-
+     </div> --}}
 
 
     </div>

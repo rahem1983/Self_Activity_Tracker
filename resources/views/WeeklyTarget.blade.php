@@ -12,7 +12,7 @@
       <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
      
       <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
-      <Script src="{{url('/public/js/WeeklyTarget.js')}}" defer></Script>
+      <Script src="./js/WeeklyTarget.js" defer></Script>
       
     
     <style>

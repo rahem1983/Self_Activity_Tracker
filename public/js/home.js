@@ -78,14 +78,15 @@ function HumanRead(date){
       success: function (response) {
           const projectOfSessionUser = response;
           i=0
+          const projectCard = document.querySelector(".allProject")
           for (const project of projectOfSessionUser) {
-            const projectCard = document.querySelector(".allProject")
+            
             const projectTarget = document.createElement("div");
             projectTarget.className = "col-sm-6 pb-3"
             projectTarget.innerHTML = `
             <div class="card"  style="width:260px; height:180px">
               <div class="card-body">
-                <a href=""><h6 class="text-dark">`+ project.project_title +`</h6></a>
+                <a href="ProjectOverview/`+ project.id +`"><h6 class="text-dark">`+ project.project_title +`</h6></a>
                 <p>`+project.description.slice(0,80)+`...</p>
                 <small><p class="text-muted" style="vertical-align:bottom">`+HumanRead(project.created_at)+`</p></small>
               </div>

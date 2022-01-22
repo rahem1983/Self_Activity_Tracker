@@ -163,7 +163,7 @@
                             </div>
                         </div> --}}
                     </div>  
-                    <div class="text-primary pt-1"><a href="#" style="text-decoration: none;">See all projects</a></div>
+                    <div class="text-primary pt-1"><a href="./AllPtoject" style="text-decoration: none;">See all projects</a></div>
 
 
                         <div class="card mt-3 mb-2">
