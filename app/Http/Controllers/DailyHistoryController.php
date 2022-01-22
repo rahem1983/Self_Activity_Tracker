@@ -16,6 +16,7 @@ class DailyHistoryController extends Controller
 
         $DH->user_id=session('user')->id;
         $DH->project_id=$req->projectId;
+        $DH->project_title=$req->projectTitle;
         $DH->status="incomplete";
         $DH->assigned_date=$req->assignedDate;
         $DH->todo=$req->todo;
@@ -39,9 +40,16 @@ class DailyHistoryController extends Controller
         $DH->save();
         return response()->json($DH);
     }
-    public function GetSessionUserTodayTask(Request $req)
+    public function GetSessionUserTodayTask()
     {
-        $DH = Daily_history::where('user_id', session('user')->id)->all();
+        $date = date('Y-m-d');
+        $DH = Daily_history::where('user_id', session('user')->id)->where('assigned_date',$date)->get();
+        return response()->json($DH);
+    }
 
+    public function GetSessionUserincompleteTask()
+    {
+        $DH = Daily_history::where('user_id', session('user')->id)->where('status',"incomplete")->orderBy('assigned_date', 'DESC')->get();
+        return response()->json($DH);
     }
 }

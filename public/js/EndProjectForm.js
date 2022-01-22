@@ -132,7 +132,7 @@ $.ajax({
                     _token:_token
                 },
                 success: function (response) {
-                    console.log(response);
+                    // console.log(response);
                     alert("আলহামদুলিল্লাহ শেষ");
                     window.location.replace("Home");
                 }

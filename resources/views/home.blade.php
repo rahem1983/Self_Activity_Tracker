@@ -80,7 +80,7 @@
                     <!-- <img class="card-img-top" src="..." alt="Card image cap"> --}} -->
                     <div class="card-header text-center"><h5>Achievements 🏆</h5></div>
                     <div class="card-body">
-                        <img title="Achievements Badges" class="card-img" src="trophies.jpg" alt="">
+                        <img title="Achievements Badges" class="card-img" src="image/trophies.jpg" alt="">
                         <!-- <h6>• Sample Tasks lorem ipsum </h6>
                             <h6>• Random Tasks lorem ipsum </h6>
                             <h6>• Sample Tasks lorem ipsum </h6> -->
@@ -104,10 +104,11 @@
                         <!-- <img class="card-img-top" src="..." alt="Card image cap"> --}} -->
                         <div class="card-header text-center"><h5>Today's Tasks</h5></div>
                         <div class="card-body">
-                            <h6 class="text-danger">• Sample Tasks lorem ipsum </h6>
-                            <h6 class="text-danger">• Random Tasks lorem ipsum </h6>
-                            <h6 class="text-success">• Sample Tasks lorem ipsum </h6>
-
+                            <div class="todayTaskDiv">
+                                {{-- <h6 class="text-danger">• Sample Tasks lorem ipsum </h6>
+                                <h6 class="text-danger">• Random Tasks lorem ipsum </h6>
+                                <h6 class="text-success">• Sample Tasks lorem ipsum </h6> --}}
+                            </div>
                             <div class="d-flex flex-row-reverse">
                                <small>
                                    <span class="text-danger">🟥 Incomplete</span>&nbsp;
@@ -180,10 +181,10 @@
                                 Incomplete Pending Tasks</a></h5> 
                             </div>
                             <div id="collapseOne" class="collapse" data-parent="">
-                              <div class="card-body">
-                                <h6 class="text-danger">• Sample Tasks lorem ipsum <small>1 day Ago</small></h6>
+                              <div class="card-body incompleteTaskDiv">
+                                {{-- <h6 class="text-danger">• Sample Tasks lorem ipsum <small>1 day Ago</small></h6>
                                 <h6 class="text-danger">• Random Tasks lorem ipsum <small>3 days Ago</small></h6>
-                                <h6 class="text-danger">• Sample Tasks lorem ipsum <small>5 days Ago</small></h6>
+                                <h6 class="text-danger">• Sample Tasks lorem ipsum <small>5 days Ago</small></h6> --}}
                               </div>
                             </div>
                           </div>

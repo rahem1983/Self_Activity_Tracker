@@ -95,6 +95,7 @@ $.ajax({
                         <br>
                         <input type="date" name="assignedDate" id="assignedDate" value="`+week[dayindex].getFullYear()+`-`+zeroAdder(week[dayindex].getMonth()+1)+`-`+zeroAdder(week[dayindex].getDate())+`" hidden >
                         <input type="number" name="proId" id="proId" value="`+project.id+`" hidden >
+                        <input type="text" name="proTitle" id="proTitle" value="`+project.project_title+`" hidden >
                         <div id="inputProject`+week[dayindex].getDate()+``+project.id+`"></div>`
     
                     d.children[1].append(projectTarget);
@@ -145,12 +146,14 @@ $.ajax({
                             data: {
                                 assignedDate:this.children[3].value,
                                 projectId:this.children[4].value,
-                                todo:this.children[5].children[0].value,
+                                projectTitle:this.children[5].value,
+                                todo:this.children[6].children[0].value,
                                 _token:$("input[name = _token]").val()
                             },
                             dataType: "json",
                             success: function (response) {
-                                console.log(response);
+                                // console.log(response);
+                                window.location.replace("./Home");
                             }
                         });
                     }

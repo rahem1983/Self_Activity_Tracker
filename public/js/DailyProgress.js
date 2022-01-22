@@ -91,11 +91,12 @@ $("#dailyProgress").submit(function(e){
                 mood = this.value;
             }
         })
+        
 
 
     $.ajax({
         
-        url: "dailyProgress",
+        url: "../dailyProgress",
         type: "POST",
         dataType: "json",
         data: {
@@ -109,7 +110,7 @@ $("#dailyProgress").submit(function(e){
             _token:_token
         },
         success: function (response) {
-            console.log(response);
+            window.location.replace("../Home");
         }
     });
 })

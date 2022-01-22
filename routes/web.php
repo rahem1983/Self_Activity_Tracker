@@ -19,15 +19,21 @@ Route::get('/', function () {
     return view('welcome');
 });
 Route::view('NewProject', 'NewProject');
-
-Route::view('Login', 'login');
-Route::post('login',[UserController::class,'login']);
-
+Route::view('weeklyTarget', 'WeeklyTarget');
+Route::view('Home', 'home');
+Route::view('EndProject_form','EndProjectForm');
 Route::view('Signup', 'Signup');
+Route::view('Login', 'login');
+Route::view('Calendar', 'calendar');
+// Route::view('dailyProgerssForm', 'DailyProgress');
+Route::get('dailyProgerssForm/{id?}',function($id)
+{
+    return View::make('DailyProgress')->with('id',$id);
+});
+
+Route::post('login',[UserController::class,'login']);
 Route::post('signup',[UserController::class,'signup']);
 Route::get('MoodGraph',[UserController::class,'moodGraph']);
-
-
 Route::get('Logout', function(){
     if (session()->has('user')) {  //check if there is any value in the user session or not
 
@@ -35,11 +41,6 @@ Route::get('Logout', function(){
     }
     return redirect('Login');  // redirects to home
 });
-
-Route::view('weeklyTarget', 'WeeklyTarget');
-Route::view('Home', 'home');
-Route::view('dailyProgerss', 'DailyProgress');
-Route::view('EndProject_form','EndProjectForm');
 
 Route::post('creatProject', [ProjectController::class, 'creatProject']);
 Route::get('GetSessionUserActiveProject', [ProjectController::class, 'GetSessionUserActiveProject']);
@@ -50,4 +51,5 @@ Route::post('EndProject', [ProjectController::class, 'EndProject']);
 Route::get('DH', [DailyHistoryController::class, 'getData']);
 Route::post('postWeeklyTarget', [DailyHistoryController::class, 'postData']);
 Route::post('dailyProgress', [DailyHistoryController::class, 'dailyProgress']);
-
+Route::get('GetSessionUserTodayTask', [DailyHistoryController::class, 'GetSessionUserTodayTask']);
+Route::get('GetSessionUserincompleteTask', [DailyHistoryController::class, 'GetSessionUserincompleteTask']);

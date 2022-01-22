@@ -12,7 +12,7 @@
       <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
      
       <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
-      <Script src="./js/DailyProgress.js" defer></Script>
+      <Script src="{{url('js/DailyProgress.js')}}" defer></Script>
     
     <style>
         .post-text{
@@ -142,7 +142,7 @@
             </div>
           </div> --}}
 
-          <input type="" value="4" id="Tid">
+          <input type="number" value="{{$id}}" id="Tid" hidden>
  
           <div class="form-row pt-4">
             <div class="form-group">

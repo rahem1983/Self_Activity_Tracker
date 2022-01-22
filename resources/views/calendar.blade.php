@@ -18,8 +18,8 @@
       <!-- <link rel="stylesheet" href="evo-calendar.min.css">
       <link rel="stylesheet" href="evo-calendar.midnight-blue.css"> -->
       
-      <link rel="stylesheet" href="../../public/css/evo-calendar.min.css">
-      <link rel="stylesheet" href="../../public/css/evo-calendar.midnight-blue.css">
+      <link rel="stylesheet" href="./css/evo-calendar.min.css">
+      <link rel="stylesheet" href="./css/evo-calendar.midnight-blue.css">
     
     <style>
         * {
@@ -101,23 +101,11 @@
                 
             </div>
           </div>
-            
-            
-
-
-
-
-
-
-
-
-
-
  
           <!-- EVO calendar JS -->
         <script src="https://cdn.jsdelivr.net/npm/jquery@3.4.1/dist/jquery.min.js"></script>
         <!-- <script src="evo-calendar.min.js"></script> -->
-        <script src="../../public/js/evo-calendar.min.js"></script>
+        <script src="./js/evo-calendar.min.js" defer></script>
 
         
         <script>
@@ -132,11 +120,20 @@
                     {
                      id: 'event1', // Event's ID (required)
                      name: "New Year", // Event name (required)
-                     date: "January/1/2022", // Event date (required)
-                     description: "Happy New Year!!!!",
+                     date: "2022/01/01", // Event date (required)
+                     description: "Happy New Y0-=-ear!!!!",
                      type: "holiday", // Event type (required)
                      everyYear: true, // Same event every year (optional)
                      color: "red",
+                     },
+                     {
+                     id: 'event2', // Event's ID (required)
+                     name: "Ne", // Event name (required)
+                     date: "January/1/2022", // Event date (required)
+                     description: "Happy!!!!",
+                     type: "event", // Event type (required)
+                     everyYear: false, // Same event every year (optional)
+                     color: "blue",
                      },
                      {
                        name: "Vacation Leave",
@@ -147,15 +144,34 @@
                        color: "#63d867" // Event custom color (optional)
                    },
                    {
-                     id: 'event1', // Event's ID (required)
+                     id: 'event3', // Event's ID (required)
                      name: "Project Submission", // Event name (required)
                      //badge: "Important", // Event badge (optional)
                      date: "December/1/2021", // Event date (required)
                      description: "Project Estimated End Date",
                      type: "Event", // Event type (required)
                      color: "orange",
+                    },
+                    {
+                     id: 'event1', // Event's ID (required)
+                     name: "New Year", // Event name (required)
+                     date: "2022/01/01", // Event date (required)
+                     description: "nice day",
+                     type: "holiday", // Event type (required)
+                     everyYear: true, // Same event every year (optional)
+                     color: "green",
+                     },
+                     {
+                     id: 'event2', // Event's ID (required)
+                     name: "Ne", // Event name (required)
+                     date: "January/1/2022", // Event date (required)
+                     description: "Happy sdfsdf sdf sdf !!!!",
+                     type: "event", // Event type (required)
+                     everyYear: false, // Same event every year (optional)
+                     color: "gray",
                      }
                  ]
+                 
                      })
                 })  
         </script>
