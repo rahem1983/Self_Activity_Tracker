@@ -422,7 +422,7 @@ button.submit-btn {
                     <h6><label for="firstName">25. (IF TWO ANSWERS ARE TRUE, CHECK BOTH BOXES) IN YOUR DAILY WORK, DO YOU-</label></h6>
                     <div class="form-check">
                         <input class="form-check-input single-checkbox" type="checkbox" name="q25" id="1op1" value="1op1">
-                        <label class="form-check-label" for="1op1">A. USUALLY PLAN YOUR WORK SO YOU WON’T NEED TOWORK UNDER PRESSURE,</label>
+                        <label class="form-check-label" for="1op1">A. USUALLY PLAN YOUR WORK SO YOU WON'T NEED TOWORK UNDER PRESSURE</label>
                       </div>
                       <div class="form-check">
                         <input class="form-check-input single-checkbox" type="checkbox" name="q25" id="1op2" value="1op2">
@@ -557,7 +557,7 @@ button.submit-btn {
                       <h6><label for="firstName">34. </label></h6>
                       <div class="form-check">
                         <input class="form-check-input" type="radio" name="q34" id="inlineRadio1" value="option1">
-                        <label class="form-check-label" for="inlineRadio1">A. SYSTEMATIC/label>
+                        <label class="form-check-label" for="inlineRadio1">A. SYSTEMATIC</label>
                       </div>
                       <div class="form-check">
                         <input class="form-check-input" type="radio" name="q34" id="inlineRadio2" value="option2">
@@ -657,50 +657,50 @@ button.submit-btn {
                     </div>
 
                       <div class="form-group pt-2">
-                        <h6><label for="firstName">29. </label></h6>
+                        <h6><label for="firstName">41. </label></h6>
                         <div class="form-check">
-                          <input class="form-check-input" type="radio" name="29" id="inlineRadio1" value="option1">
-                          <label class="form-check-label" for="inlineRadio1">QUIET</label>
+                          <input class="form-check-input" type="radio" name="41" id="inlineRadio1" value="option1">
+                          <label class="form-check-label" for="inlineRadio1">A. SYSTEMATIC</label>
                         </div>
                         <div class="form-check">
-                          <input class="form-check-input" type="radio" name="29" id="inlineRadio2" value="option2">
-                          <label class="form-check-label" for="inlineRadio2">HEARTY</label>
-                        </div>
-                      </div>
-
-                      <div class="form-group pt-2">
-                        <h6><label for="firstName">30. </label></h6>
-                        <div class="form-check">
-                          <input class="form-check-input" type="radio" name="30" id="inlineRadio1" value="option1">
-                          <label class="form-check-label" for="inlineRadio1">A. CONVINCING</label>
-                        </div>
-                        <div class="form-check">
-                          <input class="form-check-input" type="radio" name="30" id="inlineRadio2" value="option2">
-                          <label class="form-check-label" for="inlineRadio2">B. TOUCHING</label>
+                          <input class="form-check-input" type="radio" name="41" id="inlineRadio2" value="option2">
+                          <label class="form-check-label" for="inlineRadio2">B. CASUAL</label>
                         </div>
                       </div>
 
                       <div class="form-group pt-2">
-                        <h6><label for="firstName">31. </label></h6>
+                        <h6><label for="firstName">42. </label></h6>
                         <div class="form-check">
-                          <input class="form-check-input" type="radio" name="31" id="inlineRadio1" value="option1">
-                          <label class="form-check-label" for="inlineRadio1">A. IMAGINATIVE</label>
+                          <input class="form-check-input" type="radio" name="42" id="inlineRadio1" value="option1">
+                          <label class="form-check-label" for="inlineRadio1">A. CERTAINTY</label>
                         </div>
                         <div class="form-check">
-                          <input class="form-check-input" type="radio" name="31" id="inlineRadio2" value="option2">
-                          <label class="form-check-label" for="inlineRadio2">B. MATTER-OF-FACT</label>
+                          <input class="form-check-input" type="radio" name="42" id="inlineRadio2" value="option2">
+                          <label class="form-check-label" for="inlineRadio2">B. THEORY </label>
                         </div>
                       </div>
 
                       <div class="form-group pt-2">
-                        <h6><label for="firstName">32. </label></h6>
+                        <h6><label for="firstName">43. </label></h6>
                         <div class="form-check">
-                          <input class="form-check-input" type="radio" name="32" id="inlineRadio1" value="option1">
-                          <label class="form-check-label" for="inlineRadio1">A. BENEFITS</label>
+                          <input class="form-check-input" type="radio" name="43" id="inlineRadio1" value="option1">
+                          <label class="form-check-label" for="inlineRadio1">A. CALM</label>
                         </div>
                         <div class="form-check">
-                          <input class="form-check-input" type="radio" name="27" id="inlineRadio2" value="option2">
-                          <label class="form-check-label" for="inlineRadio2">B. BLESSINGS</label>
+                          <input class="form-check-input" type="radio" name="43" id="inlineRadio2" value="option2">
+                          <label class="form-check-label" for="inlineRadio2">B. LIVELY</label>
+                        </div>
+                      </div>
+
+                      <div class="form-group pt-2">
+                        <h6><label for="firstName">44. </label></h6>
+                        <div class="form-check">
+                          <input class="form-check-input" type="radio" name="44" id="inlineRadio1" value="option1">
+                          <label class="form-check-label" for="inlineRadio1">A. JUSTICE</label>
+                        </div>
+                        <div class="form-check">
+                          <input class="form-check-input" type="radio" name="44" id="inlineRadio2" value="option2">
+                          <label class="form-check-label" for="inlineRadio2">B. MERCY</label>
                         </div>
                       </div>
                     </div>
@@ -710,75 +710,75 @@ button.submit-btn {
 
                  <div class="col-6">
                     <div class="form-group pt-2">
-                      <h6><label for="firstName">33. </label></h6>
+                      <h6><label for="firstName">45. </label></h6>
                       <div class="form-check">
-                        <input class="form-check-input" type="radio" name="32" id="inlineRadio1" value="option1">
-                        <label class="form-check-label" for="inlineRadio1">A. PEACEMAKER</label>
+                        <input class="form-check-input" type="radio" name="45" id="inlineRadio1" value="option1">
+                        <label class="form-check-label" for="inlineRadio1">A. FASCINATING</label>
                       </div>
                       <div class="form-check">
-                        <input class="form-check-input" type="radio" name="27" id="inlineRadio2" value="option2">
-                        <label class="form-check-label" for="inlineRadio2">B. JUDGE</label>
+                        <input class="form-check-input" type="radio" name="45" id="inlineRadio2" value="option2">
+                        <label class="form-check-label" for="inlineRadio2">B. SENSIBLE</label>
                       </div>
                     </div>
                   
 
                   <div class="form-group pt-2">
-                    <h6><label for="firstName">34. </label></h6>
+                    <h6><label for="firstName">46. </label></h6>
                     <div class="form-check">
-                      <input class="form-check-input" type="radio" name="32" id="inlineRadio1" value="option1">
-                      <label class="form-check-label" for="inlineRadio1">A. SYSTEMATIC/label>
+                      <input class="form-check-input" type="radio" name="46" id="inlineRadio1" value="option1">
+                      <label class="form-check-label" for="inlineRadio1">A. FIRM-MINDED</label>
                     </div>
                     <div class="form-check">
-                      <input class="form-check-input" type="radio" name="27" id="inlineRadio2" value="option2">
-                      <label class="form-check-label" for="inlineRadio2">B. SPONTANEOUS</label>
+                      <input class="form-check-input" type="radio" name="46" id="inlineRadio2" value="option2">
+                      <label class="form-check-label" for="inlineRadio2">B. WARM HEARTED</label>
                     </div>
                   </div>
                     
                       <div class="form-group pt-2">
-                        <h6><label for="firstName">35. </label></h6>
+                        <h6><label for="firstName">47. </label></h6>
                         <div class="form-check">
-                          <input class="form-check-input" type="radio" name="27" id="inlineRadio1" value="option1">
-                          <label class="form-check-label" for="inlineRadio1">A. STATEMENT</label>
+                          <input class="form-check-input" type="radio" name="47" id="inlineRadio1" value="option1">
+                          <label class="form-check-label" for="inlineRadio1">A. FEELING</label>
                         </div>
                         <div class="form-check">
-                          <input class="form-check-input" type="radio" name="27" id="inlineRadio2" value="option2">
-                          <label class="form-check-label" for="inlineRadio2">B. CONCEPT</label>
-                        </div>
-                      </div>
-
-                      <div class="form-group pt-2">
-                        <h6><label for="firstName">36. </label></h6>
-                        <div class="form-check">
-                          <input class="form-check-input" type="radio" name="28" id="inlineRadio1" value="option1">
-                          <label class="form-check-label" for="inlineRadio1">A. RESERVED</label>
-                        </div>
-                        <div class="form-check">
-                          <input class="form-check-input" type="radio" name="28" id="inlineRadio2" value="option2">
-                          <label class="form-check-label" for="inlineRadio2">B. TALAKATIVE</label>
+                          <input class="form-check-input" type="radio" name="47" id="inlineRadio2" value="option2">
+                          <label class="form-check-label" for="inlineRadio2">B. THINKING</label>
                         </div>
                       </div>
 
                       <div class="form-group pt-2">
-                        <h6><label for="firstName">37. </label></h6>
+                        <h6><label for="firstName">48. </label></h6>
                         <div class="form-check">
-                          <input class="form-check-input" type="radio" name="29" id="inlineRadio1" value="option1">
-                          <label class="form-check-label" for="inlineRadio1">A. ANALYZE</label>
+                          <input class="form-check-input" type="radio" name="48" id="inlineRadio1" value="option1">
+                          <label class="form-check-label" for="inlineRadio1">A. LITERAL</label>
                         </div>
                         <div class="form-check">
-                          <input class="form-check-input" type="radio" name="29" id="inlineRadio2" value="option2">
-                          <label class="form-check-label" for="inlineRadio2">B. SYMPATHIZE</label>
+                          <input class="form-check-input" type="radio" name="48" id="inlineRadio2" value="option2">
+                          <label class="form-check-label" for="inlineRadio2">B. FIGURATIVE</label>
                         </div>
                       </div>
 
                       <div class="form-group pt-2">
-                        <h6><label for="firstName">38. </label></h6>
+                        <h6><label for="firstName">49. </label></h6>
                         <div class="form-check">
-                          <input class="form-check-input" type="radio" name="30" id="inlineRadio1" value="option1">
-                          <label class="form-check-label" for="inlineRadio1">A. CREATE</label>
+                          <input class="form-check-input" type="radio" name="49" id="inlineRadio1" value="option1">
+                          <label class="form-check-label" for="inlineRadio1">A. ANTICIPATION</label>
                         </div>
                         <div class="form-check">
-                          <input class="form-check-input" type="radio" name="30" id="inlineRadio2" value="option2">
-                          <label class="form-check-label" for="inlineRadio2">B. MAKE</label>
+                          <input class="form-check-input" type="radio" name="49" id="inlineRadio2" value="option2">
+                          <label class="form-check-label" for="inlineRadio2">B. COMPASSION</label>
+                        </div>
+                      </div>
+
+                      <div class="form-group pt-2">
+                        <h6><label for="firstName">50. </label></h6>
+                        <div class="form-check">
+                          <input class="form-check-input" type="radio" name="50" id="inlineRadio1" value="option1">
+                          <label class="form-check-label" for="inlineRadio1">A. HARD</label>
+                        </div>
+                        <div class="form-check">
+                          <input class="form-check-input" type="radio" name="50" id="inlineRadio2" value="option2">
+                          <label class="form-check-label" for="inlineRadio2">B. SOFT</label>
                         </div>
                       </div>
 
