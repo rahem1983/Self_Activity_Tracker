@@ -4,6 +4,8 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\ProjectController;
 use App\Http\Controllers\DailyHistoryController;
+
+use App\Http\Controllers\PersonalityController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -62,3 +64,6 @@ Route::post('postWeeklyTarget', [DailyHistoryController::class, 'postData']);
 Route::post('dailyProgress', [DailyHistoryController::class, 'dailyProgress']);
 Route::get('GetSessionUserTodayTask', [DailyHistoryController::class, 'GetSessionUserTodayTask']);
 Route::get('GetSessionUserincompleteTask', [DailyHistoryController::class, 'GetSessionUserincompleteTask']);
+
+
+Route::post('personalityForm',[PersonalityController::class,'PersonalityFnc']);
