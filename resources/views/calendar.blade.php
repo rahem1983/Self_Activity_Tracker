@@ -20,6 +20,7 @@
       
       <link rel="stylesheet" href="./css/evo-calendar.min.css">
       <link rel="stylesheet" href="./css/evo-calendar.midnight-blue.css">
+      <Script src="{{url('js/calendar.js')}}" defer></Script>
     
     <style>
         * {
@@ -85,7 +86,7 @@
         }
 
     </style>
-
+    
 
 </head>
 <body>
@@ -110,70 +111,6 @@
         
         <script>
                 
-                // Initialize evo-calendar in your script file or an inline <script> tag
-                $(document).ready(function() {
-                $('#calendar').evoCalendar({  
-
-                    'todayHighlight': true,
-                    
-                    calendarEvents: [
-                    {
-                     id: 'event1', // Event's ID (required)
-                     name: "New Year", // Event name (required)
-                     date: "2022/01/01", // Event date (required)
-                     description: "Happy New Y0-=-ear!!!!",
-                     type: "holiday", // Event type (required)
-                     everyYear: true, // Same event every year (optional)
-                     color: "red",
-                     },
-                     {
-                     id: 'event2', // Event's ID (required)
-                     name: "Ne", // Event name (required)
-                     date: "January/1/2022", // Event date (required)
-                     description: "Happy!!!!",
-                     type: "event", // Event type (required)
-                     everyYear: false, // Same event every year (optional)
-                     color: "blue",
-                     },
-                     {
-                       name: "Vacation Leave",
-                       badge: "02/13 - 02/15", // Event badge (optional)
-                       date: ["December/24/2021", "December/25/2021"], // Date range
-                       description: "Vacation leave for 2 days.", // Event description (optional)
-                       type: "event",
-                       color: "#63d867" // Event custom color (optional)
-                   },
-                   {
-                     id: 'event3', // Event's ID (required)
-                     name: "Project Submission", // Event name (required)
-                     //badge: "Important", // Event badge (optional)
-                     date: "December/1/2021", // Event date (required)
-                     description: "Project Estimated End Date",
-                     type: "Event", // Event type (required)
-                     color: "orange",
-                    },
-                    {
-                     id: 'event1', // Event's ID (required)
-                     name: "New Year", // Event name (required)
-                     date: "2022/01/01", // Event date (required)
-                     description: "nice day",
-                     type: "holiday", // Event type (required)
-                     everyYear: true, // Same event every year (optional)
-                     color: "green",
-                     },
-                     {
-                     id: 'event2', // Event's ID (required)
-                     name: "Ne", // Event name (required)
-                     date: "January/1/2022", // Event date (required)
-                     description: "Happy sdfsdf sdf sdf !!!!",
-                     type: "event", // Event type (required)
-                     everyYear: false, // Same event every year (optional)
-                     color: "gray",
-                     }
-                 ]
-                 
-                     })
-                })  
         </script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>

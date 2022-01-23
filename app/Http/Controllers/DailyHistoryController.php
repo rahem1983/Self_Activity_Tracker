@@ -47,6 +47,12 @@ class DailyHistoryController extends Controller
         return response()->json($DH);
     }
 
+    public function GetSessionUserAllTask()
+    {
+        $DH = Daily_history::where('user_id', session('user')->id)->get();
+        return response()->json($DH);
+    }
+
     public function GetSessionUserincompleteTask()
     {
         $DH = Daily_history::where('user_id', session('user')->id)->where('status',"incomplete")->orderBy('assigned_date', 'DESC')->get();

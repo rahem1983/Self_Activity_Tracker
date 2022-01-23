@@ -7,6 +7,9 @@ use Illuminate\Http\Request;
 
 class ProjectController extends Controller
 {
+    public function getData(){
+        return Project::all();
+    }
     public function creatProject(Request $req){
         $project = new Project;
 
