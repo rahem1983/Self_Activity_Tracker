@@ -70,16 +70,16 @@
 </head>
 <body style="background-color: #ccccff;">
     
-    <div>
     
-        <div class="row pt-5 pb-3 justify-content center" style="align-items: center;">
+    
+        <div class="row pt-5 pb-3" style="align-items: center;">
             
             <div class="col-lg-6" style="align-items: center;">
-                <img src="{{url('./image/undraw_online_ad_re_ol62.svg')}}" style="width: 900px;" alt="">
+                <img src="{{url('./image/undraw_online_ad_re_ol62.svg')}}" style="width: 100%;" alt="">
             </div>
 
             <div class="col-lg-6" style="align-items: center;">
-                <div class="container" style="box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px; width: 700px; max-height: 100%; background: white; margin-top: 70px;">
+                <div class="p-3" style="box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px; width: 90%; max-height: 100%; background: white; margin-top: 70px; margin-left: 10px;">
                    
                     <h2 class="text-center pt-2" style="color: #002db3">Signup</h2>
 
@@ -157,8 +157,7 @@
                     
                 </div>
             </div>
-        </div>
-    </div>
+
  
     
     
