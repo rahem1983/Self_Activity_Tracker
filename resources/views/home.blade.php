@@ -178,7 +178,7 @@
                         <div class="card mt-4 mb-5">
                             <div class="card-header text-center">
                               <h5><a style="text-decoration:none;" class="card-link text-dark" data-toggle="collapse" href="#collapseOne">
-                                Incomplete Pending Tasks</a></h5> 
+                                Incomplete Tasks</a></h5> 
                             </div>
                             <div id="collapseOne" class="collapse" data-parent="">
                               <div class="card-body incompleteTaskDiv">

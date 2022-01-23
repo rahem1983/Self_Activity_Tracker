@@ -45,7 +45,6 @@ $.ajax({
 
         for (const d of day) {
             if(today.getDay() <= week[dayindex].getDay()){
-                console.log(today.getDay()+"<="+week[dayindex].getDay());
                 d.children[0].innerHTML = "Day-" + (dayindex+1) +": "+ week[dayindex].getDate() + " "+ monthNames[week[dayindex].getMonth()] +" "+ week[dayindex].getFullYear()+ "-" +  dayName[week[dayindex].getDay()];
                 d.children[0].style.fontWeight = "600";
                 for (const project of projectOfSessionUser) {
@@ -57,6 +56,7 @@ $.ajax({
                         <br>
                         <input type="date" name="assignedDate" id="assignedDate" value="`+week[dayindex].getFullYear()+`-`+zeroAdder(week[dayindex].getMonth()+1)+`-`+zeroAdder(week[dayindex].getDate())+`" hidden >
                         <input type="number" name="proId" id="proId" value="`+project.id+`" hidden >
+                        <input type="text" name="proTitle" id="proTitle" value="`+project.project_title+`" hidden >
                         <div id="inputProject`+week[dayindex].getDate()+``+project.id+`"></div>`
     
                     d.children[1].append(projectTarget);

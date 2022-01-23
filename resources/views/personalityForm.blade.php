@@ -840,17 +840,17 @@ function changeStep(btn) {
   steps[index].classList.add("active");
 }
 
-            </script>
+    </script>
 
 
-            <script>
-              var limit = 2;
-              $('input.single-checkbox').on('click', function (evt) {
+          <script>
+            var limit = 2;
+            $('input.single-checkbox').on('click', function (evt) {
               if ($('.single-checkbox:checked').length > limit) {
               this.checked = false;
               }
             });
-            </script>
+          </script>
     
     
     
