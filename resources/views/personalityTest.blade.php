@@ -107,7 +107,7 @@ button.submit-btn {
                         which applies to you, by circling to either “A” or “B”.</p></h5>
                     
                   <div class="text-center">
-                    <a href="personalityForm.blade.php"><button type="button" class="btn btn-outline-info btn-lg">Proceed</button></a>
+                    <a href="./PersonalityForm"><button type="button" class="btn btn-outline-info btn-lg">Proceed</button></a>
                   </div>
                   
                 </div>

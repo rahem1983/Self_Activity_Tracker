@@ -44,7 +44,7 @@ $.ajax({
         const dayName = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
 
         for (const d of day) {
-            if(today.getDay() < week[dayindex].getDay()){
+            if(today.getDay() <= week[dayindex].getDay()){
                 console.log(today.getDay()+"<="+week[dayindex].getDay());
                 d.children[0].innerHTML = "Day-" + (dayindex+1) +": "+ week[dayindex].getDate() + " "+ monthNames[week[dayindex].getMonth()] +" "+ week[dayindex].getFullYear()+ "-" +  dayName[week[dayindex].getDay()];
                 d.children[0].style.fontWeight = "600";
@@ -82,7 +82,7 @@ $.ajax({
                 }
             }
             
-            if(today.getDay() >= week[dayindex].getDay()){
+            if(today.getDay() > week[dayindex].getDay()){
                 const projectTarget = document.createElement("div");
                 d.children[0].innerHTML = "Day-" + (dayindex+1) +": "+ week[dayindex].getDate() + " "+ monthNames[week[dayindex].getMonth()] +" "+ week[dayindex].getFullYear()+ "-" +  dayName[week[dayindex].getDay()];
                 d.children[0].style.fontWeight = "600";

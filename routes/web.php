@@ -26,6 +26,8 @@ Route::view('Signup', 'Signup');
 Route::view('Login', 'login');
 Route::view('Calendar', 'calendar');
 Route::view('AllPtoject', 'allProjects');
+Route::view('PersonalityTest', 'personalityTest');
+Route::view('PersonalityForm', 'personalityForm');
 
 // Route::view('dailyProgerssForm', 'DailyProgress');
 Route::get('dailyProgerssForm/{id?}',function($id)
