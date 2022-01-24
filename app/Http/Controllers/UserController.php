@@ -15,13 +15,13 @@ class UserController extends Controller
     public function signup(Request $req)
     {
         $req->validate([
-            'name' => 'required | alpha',  //The field under validation must be entirely alphabetic characters.
+            'name' => 'required | regex:/^[a-zA-Z ]*$/',  //The field under validation must be entirely alphabetic characters.
             'email' => 'required | email | unique:users',  // the field should be an email an should not match to existing email
             'password' => 'required',
             'gender' => 'required | alpha',
-            'designation' => 'required | alpha',
+            'designation' => 'required | regex:/^[a-zA-Z ]*$/',
             'agree' => 'required',
-            'phone' => 'required | alpha_num'  //The field under validation must be entirely alpha-numeric characters.
+            'phone' => 'required | alpha_num | digits:11'  //The field under validation must be entirely alpha-numeric characters.
         ]);
 
         $user = new User; //user object declared
