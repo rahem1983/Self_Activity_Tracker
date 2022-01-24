@@ -62,6 +62,9 @@ Route::group(['middleware'=>['userHaveAccess']],function(){
     Route::get('GetSessionUserAllTask', [DailyHistoryController::class, 'GetSessionUserAllTask']);
     Route::get('GetSessionUserincompleteTask', [DailyHistoryController::class, 'GetSessionUserincompleteTask']);
 
+
+    Route::post('personalityPost',[PersonalityController::class,'PersonalityFnc']);
+
 });
 
 Route::view('Signup', 'Signup');
@@ -74,4 +77,4 @@ Route::get('/', function () {
 });
 
 
-Route::post('personalityForm',[PersonalityController::class,'PersonalityFnc']);
+

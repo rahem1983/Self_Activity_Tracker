@@ -88,8 +88,9 @@ button.submit-btn {
     
         <section>
             <div class="container">
-              <form>
-          
+              
+              <form action="personalityForm" method="post">
+                @csrf
                 <div class="step step-1 active">
                   <h6 style="text-decoration: underline;">PART 1: Which answer comes closer to telling how you usually feel or act?</h6>
                   <div class="form-group pt-3">
