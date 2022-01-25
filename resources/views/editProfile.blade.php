@@ -25,7 +25,7 @@
         .pic-btn{
             display: flex;
             justify-content: center;
-            align-items: center;  
+            align-items: center;
         }
 
         .center {
@@ -35,42 +35,84 @@
             width: 20%;
         }
 
+        .gol-img
+        {
+            border-radius: 50%;
+            width: 200px;
+            height: 200px;
+        }
+
+        .upload-btn
+        {   
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid;
+            border-color: grey;
+            background: white;
+        }
+        
+        .upload-btn:hover
+        {
+            background: #002db3;
+            color: white;
+        }
+
     </style>
 
 </head>
 <body>
     
-    <div class="container" style="align-items: center;">
+    <div class="container mb-5" style="align-items: center;">
 
-        <div class="p-3 center-rad" style="box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px; width: 80%; max-height: 100%; background: white; margin-top: 70px;">
+        <div class="p-3 center-rad" style="box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;; width: 60%; max-height: 100%; background: white; margin-top: 70px;">
                    
             <h3 class="text-center pt-2" style="color: #002db3">Edit Profile</h2>
-         
-                <div class="center mt-5">
-
-                <input style="display:none" id="input-image-hidden" onchange="document.getElementById('image-preview').src = window.URL.createObjectURL(this.files[0])" type="file" accept="image/jpeg, image/png">
-                <img id="image-preview"  style="height:200px; width:200px;"  src="" > <br>
                 
-                <button class="mt-3" onclick="HandleBrowseClick('input-image-hidden');" >UPLOAD IMAGE</button>
 
-                  <div class="pt-4 text-center pb-5">
-                    <button type="submit" class="btn btn-primary" style="background-color: #002db3">Submit</button>
-                  </div>
+                <div class="center mt-5">
+                <input style="display:none" id="input-image-hidden" onchange="document.getElementById('image-preview').src = window.URL.createObjectURL(this.files[0])" type="file" accept="image/jpeg, image/png">
+                <img id="image-preview" class="gol-img" style="height: 100%; width:100%;"  src="https://icon-library.com/images/default-profile-icon/default-profile-icon-1.jpg" > <br>
+                    <div class="pic-btn mt-3">
+                    <button class="btn upload-btn form-control" onclick="HandleBrowseClick('input-image-hidden');"><i class="far fa-edit">&nbsp;</i>UPLOAD</button>
+                    </div>                        
                 </div>
-            
+
+                <form action="">
+                  <div class="form-row pt-5">
+                    <h5><label for="title">Change Mobile No.</label></h5>
+                    <p class="pt-1 text-secondary">Your Current Mobile No. is: <span>0112345567890</span></p>
+                    <div class="form-group">                     
+                      <input type="number" class="form-control" id="mobile" name="phone" placeholder="New Mobile No.">
+                    </div>
+                  </div>
+
+
+                  <div class="form-row pt-5">
+                    <div class="form-group">
+                      <h5><label for="title">Change Password</label></h5>
+                      <input type="password" class="form-control mt-4" id="pass" name="password" placeholder="Current Password">
+                    </div>
+
+                    <div class="form-group pt-3">
+                        <input type="password" class="form-control" id="pass" name="password" placeholder="New Password">
+                      </div>
+                  </div>
+
+
+                  <div class="pt-5 pb-3 pic-btn">
+                    <button type="submit" class="btn btn-primary" style="background-color: #002db3">Save Changes</button>
+                </div>
+
+            </form> 
             
             </div>
           
 
-
-
-
-
-
-
-
     </div>
- 
+
+
+   <!-- Image JS--> 
     <script type="text/javascript">
         function HandleBrowseClick(input_image)
         {
