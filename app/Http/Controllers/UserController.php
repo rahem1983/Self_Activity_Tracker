@@ -33,6 +33,7 @@ class UserController extends Controller
         $user->designation = $req->designation;
         $user->type = "general";
         $user->active = 0;  //
+        $user->image = "https://icon-library.com/images/default-profile-icon/default-profile-icon-1.jpg";
         $user->password = Hash::make($req->password); // the value from the request is saved to the user object
         // return $user;
         $user->save(); //user is saved to database

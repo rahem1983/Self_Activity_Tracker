@@ -72,7 +72,7 @@
 
                 <div class="center mt-5">
                 <input style="display:none" id="input-image-hidden" onchange="document.getElementById('image-preview').src = window.URL.createObjectURL(this.files[0])" type="file" accept="image/jpeg, image/png">
-                <img id="image-preview" class="gol-img" style="height: 100%; width:100%;"  src="https://icon-library.com/images/default-profile-icon/default-profile-icon-1.jpg" > <br>
+                <img id="image-preview" class="gol-img" style="height: 100%; width:100%;"  src="{{session('user')->image}}" > <br>
                     <div class="pic-btn mt-3">
                     <button class="btn upload-btn form-control" onclick="HandleBrowseClick('input-image-hidden');"><i class="far fa-edit">&nbsp;</i>UPLOAD</button>
                     </div>                        
@@ -81,9 +81,9 @@
                 <form action="">
                   <div class="form-row pt-5">
                     <h5><label for="title">Change Mobile No.</label></h5>
-                    <p class="pt-1 text-secondary">Your Current Mobile No. is: <span>0112345567890</span></p>
+                    <p class="pt-1 text-secondary">Your Current Mobile No. is: <span>{{session('user')->phone}}</span></p>
                     <div class="form-group">                     
-                      <input type="number" class="form-control" id="mobile" name="phone" placeholder="New Mobile No.">
+                      <input type="number" class="form-control" id="phone" name="phone" placeholder="New Mobile No." min="0">
                     </div>
                   </div>
 
@@ -91,11 +91,11 @@
                   <div class="form-row pt-5">
                     <div class="form-group">
                       <h5><label for="title">Change Password</label></h5>
-                      <input type="password" class="form-control mt-4" id="pass" name="password" placeholder="Current Password">
+                      <input type="password" class="form-control mt-4" id="currentPass" name="currentPass" placeholder="Current Password">
                     </div>
 
                     <div class="form-group pt-3">
-                        <input type="password" class="form-control" id="pass" name="password" placeholder="New Password">
+                        <input type="password" class="form-control" id="newPass" name="newPass" placeholder="New Password">
                       </div>
                   </div>
 

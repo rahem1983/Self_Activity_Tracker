@@ -23,7 +23,7 @@ Route::group(['middleware'=>['userHaveAccess']],function(){
     Route::view('weeklyTarget', 'WeeklyTarget');
     Route::view('Home', 'home');
     Route::view('EndProject_form','EndProjectForm');
-
+    Route::view('EditProfile','editProfile');
     Route::view('Calendar', 'calendar');
     Route::view('AllPtoject', 'allProjects');
     Route::view('PersonalityTest', 'personalityTest');
