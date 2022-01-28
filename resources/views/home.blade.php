@@ -100,15 +100,15 @@
                     <!-- <img class="card-img-top" src="..." alt="Card image cap"> --}} -->
                     <div class="card-header text-center"><h5>User Details</h5></div>
                     <div class="card-body text-center">
-                        <img  class="card-img-top gol-img" src="https://icon-library.com/images/default-profile-icon/default-profile-icon-1.jpg" alt="Avatar"><br>
-                        <a href="#"><button type="button" class="mt-2 btn btn-light btn-sm">Edit Profile</button></a>
+                        <img  class="card-img-top gol-img" src="{{session('user')->image}}" alt="Avatar"><br>
+                        <a href="./EditProfile"><button type="button" class="mt-2 btn btn-light btn-sm">Edit Profile</button></a>
                       <h4 class="pt-2">{{session('user')->name}}</h4>
                       <h5>{{session('user')->designation}}</h5>
 
                       <div class="p-2">
-                        <a href="{{url('NewProject')}}"><button type="button" class="btn wht-btn btn-sm">Start New Project</button></a>
-                        <a href="{{url('weeklyTarget')}}"><button type="button" class="btn wht-btn btn-sm">Set Weekly Target</button></a>
-                        <a href="{{url('EndProject_form')}}"><button type="button" class="btn wht-btn btn-sm mt-1">End A project</button></a>
+                        <a href="{{url('NewProject')}}"><button type="button" class="btn wht-btn btn-sm  m-1">Start New Project</button></a>
+                        <a href="{{url('weeklyTarget')}}"><button type="button" class="btn wht-btn btn-sm m-1">Set Weekly Target</button></a>
+                        <a href="{{url('EndProject_form')}}"><button type="button" class="btn wht-btn btn-sm m-1">End A project</button></a>
                         </div>
                     </div>
                 </div> 
