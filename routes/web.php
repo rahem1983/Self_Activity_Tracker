@@ -23,7 +23,7 @@ Route::group(['middleware'=>['userHaveAccess']],function(){
     Route::view('weeklyTarget', 'WeeklyTarget');
     Route::view('Home', 'home');
     Route::view('EndProject_form','EndProjectForm');
-    Route::view('EditProfile','editProfile');
+    Route::view('EditProfileForm','editProfile');
     Route::view('Calendar', 'calendar');
     Route::view('AllPtoject', 'allProjects');
     Route::view('PersonalityTest', 'personalityTest');
@@ -39,7 +39,6 @@ Route::group(['middleware'=>['userHaveAccess']],function(){
         return View::make('projectOverview')->with('id',$id);
     });
 
-    Route::get('MoodGraph',[UserController::class,'moodGraph']);
     Route::get('Logout', function(){
         if (session()->has('user')) {  //check if there is any value in the user session or not
 
@@ -47,6 +46,9 @@ Route::group(['middleware'=>['userHaveAccess']],function(){
         }
         return redirect('Login');  // redirects to home
     });
+
+    Route::get('MoodGraph',[UserController::class,'moodGraph']);
+    Route::post('EditProfile',[UserController::class,'EditProfile']);
 
     Route::post('creatProject', [ProjectController::class, 'creatProject']);
     Route::get('GetSessionUserActiveProject', [ProjectController::class, 'GetSessionUserActiveProject']);
