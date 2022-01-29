@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use PhpParser\Node\Stmt\Foreach_;
 
 class PersonalityController extends Controller
 {
@@ -20,12 +21,11 @@ class PersonalityController extends Controller
         $p=0;
 
         $x=0;
-        for($x=1;$x<=50;$x++)
-        {
-            echo $req($x);
+        // foreach ($req as $reqs) {
+        //     echo $req;
+        // }
 
-        }
-
+        echo $req->input('50');
         
 
     }

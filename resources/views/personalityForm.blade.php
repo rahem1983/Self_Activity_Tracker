@@ -1,4 +1,3 @@
-@include('header')
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -90,7 +89,7 @@ button.submit-btn {
         <section>
             <div class="container">
               
-              <form action="personalityForm" method="post">
+              <form action="personalityPost" method="post">
                 @csrf
                 <div class="step step-1 active">
                   <h6 style="text-decoration: underline;">PART 1: Which answer comes closer to telling how you usually feel or act?</h6>
@@ -163,7 +162,7 @@ button.submit-btn {
                 
                 </div>
           
-                {{-- <div class="step step-2">
+                <div class="step step-2">
                   <div class="form-group pt-3">
                     <h6><label for="firstName">6. AMONG YOUR FRIENDS ARE YOU-</label></h6>
                     <div class="form-check">
@@ -623,7 +622,7 @@ button.submit-btn {
                 
                 <button type="button" class="previous-btn">Prev</button>
                 <button type="button" class="next-btn">Next</button>
-              </div> --}}
+              </div>
                    
 
 
@@ -818,16 +817,16 @@ prevBtn.forEach((button) => {
   });
 });
 
-form.addEventListener("submit", (e) => {
-  e.preventDefault();
-  const inputs = [];
-  form.querySelectorAll("input").forEach((input) => {
-    const { name, value } = input;
-    inputs.push({ name, value });
-  });
-  console.log(inputs);
-  form.reset();
-});
+// form.addEventListener("submit", (e) => {
+//   e.preventDefault();
+//   const inputs = [];
+//   form.querySelectorAll("input").forEach((input) => {
+//     const { name, value } = input;
+//     inputs.push({ name, value });
+//   });
+//   console.log(inputs);
+//   form.reset();
+// });
 
 function changeStep(btn) {
   let index = 0;
