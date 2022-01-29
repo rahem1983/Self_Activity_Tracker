@@ -37,7 +37,7 @@ $.ajax({
             skillRiq.append(li);
         });
 
-        var newskill_require = response.new_skill_require .split(',');
+        var newskill_require = response.new_skill_require.split(',');
         newskill_require.forEach( function(value) {
             li = document.createElement('li');
             li.innerHTML = value;

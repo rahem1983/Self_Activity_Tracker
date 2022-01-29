@@ -94,6 +94,7 @@ class UserController extends Controller
         $moodArr = [$an, $de,$ne,$re,$vh];
         return response()->json($moodArr);
     }
+
     public function EditProfile(Request $req)
     {
         $user = User::where('id', session('user')->id)->first();
@@ -124,9 +125,9 @@ class UserController extends Controller
                 return redirect('./EditProfileForm')->with('passwordError',"please provide current password if you want to change your password");
             }
         }
+        
         session()->pull('user');
         $req->session()->put('user', $user);
-        return $user;
+        return redirect('./Home');
     }
-
 }

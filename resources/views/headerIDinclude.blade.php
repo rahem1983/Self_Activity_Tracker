@@ -33,13 +33,13 @@
       @if (session('user'))
       <ul class="navbar-nav">
         <li class="nav-item active">
-          <a class="nav-link" href="./Home">Home <span class="sr-only">(current)</span></a>
+          <a class="nav-link" href="../Home">Home <span class="sr-only">(current)</span></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="./AllPtoject">Projects</a>
+          <a class="nav-link" href="../AllPtoject">Projects</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="./Calendar">Calendar</a>
+          <a class="nav-link" href="../Calendar">Calendar</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#">Personality</a>
