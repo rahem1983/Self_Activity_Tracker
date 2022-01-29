@@ -64,7 +64,7 @@
                     <div class="card-header text-center"><h5>User Details</h5></div>
                     <div class="card-body text-center">
                         <img  class="card-img-top gol-img" src="{{session('user')->image}}" alt="Avatar"><br>
-                        <a href="./EditProfile"><button type="button" class="mt-2 btn btn-light btn-sm">Edit Profile</button></a>
+                        <a href="./EditProfileForm"><button type="button" class="mt-2 btn btn-light btn-sm">Edit Profile</button></a>
                       <h4 class="pt-2">{{session('user')->name}}</h4>
                       <h5>{{session('user')->designation}}</h5>
 

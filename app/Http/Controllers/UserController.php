@@ -94,5 +94,39 @@ class UserController extends Controller
         $moodArr = [$an, $de,$ne,$re,$vh];
         return response()->json($moodArr);
     }
+    public function EditProfile(Request $req)
+    {
+        $user = User::where('id', session('user')->id)->first();
+        if ($req->hasfile('image')) {
+            $file = $req->file('image');
+            $extension = $file->getClientOriginalExtension();
+            $fileName = time() .".". $extension;
+            $file->move('image/',$fileName);
+            $user->image = "image/" . $fileName;
+            $user->save(); 
+        }
+        if(!empty($req->input('phone'))){
+            $req->validate([
+                'phone' => 'alpha_num | digits:11'  //The field under validation must be entirely alpha-numeric characters.
+            ]);
+            $user->phone = $req('phone');
+        }
+        if(!empty($req->input('newPass'))){
+            if(!empty($req->input('currentPass'))){
+                if(Hash::check($req->input('currentPass'), $user->password) && Hash::check($req->input('currentPass'), session('user')->password)){
+                    $user->password = $req->input('newPass');
+                }
+                else{
+                    return redirect('./EditProfileForm')->with('passwordError',"Password dosn't match");
+                }
+            }
+            else{
+                return redirect('./EditProfileForm')->with('passwordError',"please provide current password if you want to change your password");
+            }
+        }
+        session()->pull('user');
+        $req->session()->put('user', $user);
+        return $user;
+    }
 
 }
