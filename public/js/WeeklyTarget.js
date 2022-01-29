@@ -152,14 +152,13 @@ $.ajax({
                             },
                             dataType: "json",
                             success: function (response) {
-                                // console.log(response);
-                                window.location.replace("./Home");
+                                console.log(response);
                             }
                         });
                     }
                 });
-
             });
+            window.location.replace("./Home");
         });
     }
 });        

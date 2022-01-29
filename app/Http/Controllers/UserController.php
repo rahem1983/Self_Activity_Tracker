@@ -106,6 +106,7 @@ class UserController extends Controller
             $user->image = "image/" . $fileName;
             $user->save(); 
         }
+        
         if(!empty($req->input('phone'))){
             $req->validate([
                 'phone' => 'alpha_num | digits:11'  //The field under validation must be entirely alpha-numeric characters.
