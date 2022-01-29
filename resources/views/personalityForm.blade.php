@@ -96,11 +96,11 @@ button.submit-btn {
                   <div class="form-group pt-3">
                     <h6><label for="firstName">1. WHEN YOU GO SOMEWHERE FOR THE DAY, WOULD YOU RATHER-</label></h6>
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="q1" id="inlineRadio1" value="j2">
+                        <input class="form-check-input" type="radio" name="1" id="inlineRadio1" value="j2">
                         <label class="form-check-label" for="inlineRadio1">A. PLAN WHAT YOU WILL DO AND WHEN</label>
                       </div>
                       <div class="form-check">
-                        <input class="form-check-input" type="radio" name="q1" id="inlineRadio2" value="p2">
+                        <input class="form-check-input" type="radio" name="1" id="inlineRadio2" value="p2">
                         <label class="form-check-label" for="inlineRadio2">B. JUST GO!!</label>
                       </div>
                   </div>
@@ -108,11 +108,11 @@ button.submit-btn {
                   <div class="form-group pt-3">
                     <h6><label for="firstName">2. IF YOU WERE A TEACHER, WOULD YOU RATHER TEACH-</label></h6>
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="q2" id="2op1" value="s2">
+                        <input class="form-check-input" type="radio" name="2" id="2op1" value="s2">
                         <label class="form-check-label" for="2op1">A. FACTS-BASED COURSES</label>
                       </div>
                       <div class="form-check">
-                        <input class="form-check-input" type="radio" name="q2" id="2op2" value="n2">
+                        <input class="form-check-input" type="radio" name="2" id="2op2" value="n2">
                         <label class="form-check-label" for="2op2">B. COURSES INVOLVING OPINION OR THEORY!</label>
                       </div>
                   </div>
@@ -120,22 +120,22 @@ button.submit-btn {
                   <div class="form-group pt-3">
                     <h6><label for="firstName">3. ARE YOU USUALLY-</label></h6>
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="q3" id="inlineRadio1" value="e2">
+                        <input class="form-check-input" type="radio" name="3" id="inlineRadio1" value="e2">
                         <label class="form-check-label" for="inlineRadio1">A. A “GOOD MIXER” WITH GROUPS OF PEOPLE</label>
                       </div>
                       <div class="form-check">
-                        <input class="form-check-input" type="radio" name="q3" id="inlineRadio2" value="i2">
+                        <input class="form-check-input" type="radio" name="3" id="inlineRadio2" value="i2">
                         <label class="form-check-label" for="inlineRadio2">B. RATHER QUIET AND RESERVED</label>
                       </div>
                   </div>
                   <div class="form-group pt-3">
                     <h6><label for="firstName">4. DO YOU MORE OFTEN LET-</label></h6>
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="q4" id="inlineRadio1" value="f1">
+                        <input class="form-check-input" type="radio" name="4" id="inlineRadio1" value="f1">
                         <label class="form-check-label" for="inlineRadio1">A. YOUR HEART RULE YOUR HEAD</label>
                       </div>
                       <div class="form-check">
-                        <input class="form-check-input" type="radio" name="q4" id="inlineRadio2" value="t2">
+                        <input class="form-check-input" type="radio" name="4" id="inlineRadio2" value="t2">
                         <label class="form-check-label" for="inlineRadio2">B. YOUR HEAD RULE YOUR HEART</label>
                       </div>
                   </div>
@@ -145,11 +145,11 @@ button.submit-btn {
                     <h6><label for="firstName">5.IN DOING SOMETHING THAT MANY OTHER PEOPLE DO, WOULD YOU
                       RATHER-</label></h6>
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="q5" id="1op1" value="n1">
+                        <input class="form-check-input" type="radio" name="5" id="1op1" value="n1">
                         <label class="form-check-label" for="1op1">A. INVENT A WAY OF YOUR OWN</label>
                       </div>
                       <div class="form-check">
-                        <input class="form-check-input" type="radio" name="q5" id="1op2" value="s2">
+                        <input class="form-check-input" type="radio" name="5" id="1op2" value="s2">
                         <label class="form-check-label" for="1op2">B. DO IT IN THE ACCEPTED WAY?</label>
                       </div>
                   </div>
@@ -162,15 +162,15 @@ button.submit-btn {
                 
                 </div>
           
-                <div class="step step-2">
+                {{-- <div class="step step-2">
                   <div class="form-group pt-3">
                     <h6><label for="firstName">6. AMONG YOUR FRIENDS ARE YOU-</label></h6>
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="q6" id="inlineRadio1" value="e2">
+                        <input class="form-check-input" type="radio" name="6" id="inlineRadio1" value="e2">
                         <label class="form-check-label" for="inlineRadio1">A. FULL OF NEWS ABOUT EVERYBODY</label>
                       </div>
                       <div class="form-check">
-                        <input class="form-check-input" type="radio" name="q6" id="inlineRadio2" value="i1">
+                        <input class="form-check-input" type="radio" name="6" id="inlineRadio2" value="i1">
                         <label class="form-check-label" for="inlineRadio2">B. ONE OF THE LAST TO HEAR WHAT IS GOING ON?</label>
                       </div>
                   </div>
@@ -179,15 +179,15 @@ button.submit-btn {
                     <h6><label for="firstName">7. DOES THE IDEA OF MAKING A LIST OF WHAT YOU SHOULD GET DONE
                       OVER A WEEKEND-</label></h6>
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="q7" id="2op1" value="j1">
+                        <input class="form-check-input" type="radio" name="7" id="2op1" value="j1">
                         <label class="form-check-label" for="2op1">A. HELP YOU</label>
                       </div>
                       <div class="form-check">
-                        <input class="form-check-input" type="radio" name="q7" id="2op2" value="p1">
+                        <input class="form-check-input" type="radio" name="7" id="2op2" value="p1">
                         <label class="form-check-label" for="2op2">B. STRESS YOU</label>
                       </div>
                       <div class="form-check">
-                        <input class="form-check-input" type="radio" name="q7" id="2op3" value="p1">
+                        <input class="form-check-input" type="radio" name="7" id="2op3" value="p1">
                         <label class="form-check-label" for="2op3">C. POSITIVELY DEPRESS YOU</label>
                       </div>
                   </div>
@@ -195,22 +195,22 @@ button.submit-btn {
                   <div class="form-group pt-3">
                     <h6><label for="firstName">8. WHEN YOU HAVE A SPECIAL JOB TO DO, DO YOU LIKE TO-</label></h6>
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="q8" id="inlineRadio1" value="j1">
+                        <input class="form-check-input" type="radio" name="8" id="inlineRadio1" value="j1">
                         <label class="form-check-label" for="inlineRadio1">A. ORGANIZE IT CAREFULLY BEFORE YOU START</label>
                       </div>
                       <div class="form-check">
-                        <input class="form-check-input" type="radio" name="q8" id="inlineRadio2" value="p2">
+                        <input class="form-check-input" type="radio" name="8" id="inlineRadio2" value="p2">
                         <label class="form-check-label" for="inlineRadio2">B. FIND OUT WHAT IS NECESSARY AS YOU GO ALONG</label>
                       </div>
                   </div>
                   <div class="form-group pt-3">
                     <h6><label for="firstName">9. DO YOU TEND TO HAVE-</label></h6>
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="q9" id="inlineRadio1" value="e2">
+                        <input class="form-check-input" type="radio" name="9" id="inlineRadio1" value="e2">
                         <label class="form-check-label" for="inlineRadio1">A. BROAD FRIENDSHIPS WITH MANY DIFFERENT PEOPLE</label>
                       </div>
                       <div class="form-check">
-                        <input class="form-check-input" type="radio" name="q9" id="inlineRadio2" value="i1">
+                        <input class="form-check-input" type="radio" name="9" id="inlineRadio2" value="i1">
                         <label class="form-check-label" for="inlineRadio2">B. DEEP FRIENDSHIP WITH VERY FEW PEOPLE</label>
                       </div>
                   </div>
@@ -219,11 +219,11 @@ button.submit-btn {
                   <div class="form-group pt-3">
                     <h6><label for="firstName">10.DO YOU ADMIRE MORE THE PEOPLE WHO ARE-</label></h6>
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="q10" id="1op1" value="s1">
+                        <input class="form-check-input" type="radio" name="10" id="1op1" value="s1">
                         <label class="form-check-label" for="1op1">A. NORMAL-ACTING TO NEVER MAKE THEMSELVES THE CENTER OF ATTENTION,</label>
                       </div>
                       <div class="form-check">
-                        <input class="form-check-input" type="radio" name="q10" id="1op2" value="n2">
+                        <input class="form-check-input" type="radio" name="10" id="1op2" value="n2">
                         <label class="form-check-label" for="1op2">B. TOO ORIGINAL AND INDIVIDUAL TO CARE WHETHER THEY
                           ARE THE CENTER OF ATTENTION OR NOT </label>
                       </div>
@@ -237,11 +237,11 @@ button.submit-btn {
                   <div class="form-group pt-3">
                     <h6><label for="firstName">11. DO YOU PREFER TO-</label></h6>
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="q11" id="inlineRadio1" value="j2">
+                        <input class="form-check-input" type="radio" name="11" id="inlineRadio1" value="j2">
                         <label class="form-check-label" for="inlineRadio1">A. ARRANGE PICNICS, PARTIES ETC, WELL IN ADVANCE</label>
                       </div>
                       <div class="form-check">
-                        <input class="form-check-input" type="radio" name="q11" id="inlineRadio2" value="p1">
+                        <input class="form-check-input" type="radio" name="11" id="inlineRadio2" value="p1">
                         <label class="form-check-label" for="inlineRadio2">B. BE FREE TO DO WHATEVER TO LOOKS LIKE FUN WHENTHE TIME COMES?</label>
                       </div>
                   </div>
@@ -249,11 +249,11 @@ button.submit-btn {
                   <div class="form-group pt-3">
                     <h6><label for="firstName">12. DO YOU USUALLY GET ALONG BETTER WITH-</label></h6>
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="q12" id="2op1" value="s1">
+                        <input class="form-check-input" type="radio" name="12" id="2op1" value="s1">
                         <label class="form-check-label" for="2op1">A. REALISTIC PEOPLE</label>
                       </div>
                       <div class="form-check">
-                        <input class="form-check-input" type="radio" name="q12" id="2op2" value="n2">
+                        <input class="form-check-input" type="radio" name="12" id="2op2" value="n2">
                         <label class="form-check-label" for="2op2">B. IMAGINATIVE PEOPLE</label>
                       </div>
                   </div>
@@ -261,22 +261,22 @@ button.submit-btn {
                   <div class="form-group pt-3">
                     <h6><label for="firstName">13. WHEN YOU ARE WITH THE GROUP OF PEOPLE, WOULD YOU USUALLY RATHER-</label></h6>
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="q13" id="inlineRadio1" value="e1">
+                        <input class="form-check-input" type="radio" name="13" id="inlineRadio1" value="e1">
                         <label class="form-check-label" for="inlineRadio1">A. JOIN IN THE TALK OF THE GROUP</label>
                       </div>
                       <div class="form-check">
-                        <input class="form-check-input" type="radio" name="q13" id="inlineRadio2" value="i2">
+                        <input class="form-check-input" type="radio" name="13" id="inlineRadio2" value="i2">
                         <label class="form-check-label" for="inlineRadio2">B. STAND BACK AND LISTEN FIRST</label>
                       </div>
                   </div>
                   <div class="form-group pt-3">
                     <h6><label for="firstName">14. IS IT A HIGHER COMPLIMENT TO BE CALLED-</label></h6>
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="q14" id="inlineRadio1" value="f1">
+                        <input class="form-check-input" type="radio" name="14" id="inlineRadio1" value="f1">
                         <label class="form-check-label" for="inlineRadio1">A. A PERSON OF REAL FEELING</label>
                       </div>
                       <div class="form-check">
-                        <input class="form-check-input" type="radio" name="q14" id="inlineRadio2" value="t2">
+                        <input class="form-check-input" type="radio" name="14" id="inlineRadio2" value="t2">
                         <label class="form-check-label" for="inlineRadio2">B. A CONSISTENTLY REASONABLE PERSON</label>
                       </div>
                   </div>
@@ -285,11 +285,11 @@ button.submit-btn {
                   <div class="form-group pt-3">
                     <h6><label for="firstName">15. IN READING FOR PLEASURE, DO YOU-</label></h6>
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="q15" id="1op1" value="n0">
+                        <input class="form-check-input" type="radio" name="15" id="1op1" value="n0">
                         <label class="form-check-label" for="1op1">A. ENJOY ODD OR ORIGINAL WAYS OF SAYING THINGS</label>
                       </div>
                       <div class="form-check">
-                        <input class="form-check-input" type="radio" name="q15" id="1op2" value="s1">
+                        <input class="form-check-input" type="radio" name="15" id="1op2" value="s1">
                         <label class="form-check-label" for="1op2">B. LIKE WRITERS TO SAY EXACTLY WHAT THEY MEAN</label>
                       </div>
                   </div>
@@ -304,12 +304,12 @@ button.submit-btn {
                   <div class="form-group pt-3">
                     <h6><label for="firstName">16. DO YOU-</label></h6>
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="q16" id="inlineRadio1" value="e2">
+                        <input class="form-check-input" type="radio" name="16" id="inlineRadio1" value="e2">
                         <label class="form-check-label" for="inlineRadio1">A.TALK EASILY TO ALMOST ANYONE FOR AS LONG AS YOU
                           HAVE TO</label>
                       </div>
                       <div class="form-check">
-                        <input class="form-check-input" type="radio" name="q16" id="inlineRadio2" value="i2">
+                        <input class="form-check-input" type="radio" name="16" id="inlineRadio2" value="i2">
                         <label class="form-check-label" for="inlineRadio2">B. FIND A LOT TO SAY ONLY TO CERTAIN PEOPLE OR UNDER
                           CERTAIN CONDITIONS</label>
                       </div>
@@ -318,11 +318,11 @@ button.submit-btn {
                   <div class="form-group pt-3">
                     <h6><label for="firstName">17. DOES FOLLOWING A SCHEDULE-</label></h6>
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="q17" id="2op1" value="option1">
+                        <input class="form-check-input" type="radio" name="17" id="2op1" value="option1">
                         <label class="form-check-label" for="2op1">A. APPEAL TO YOU</label>
                       </div>
                       <div class="form-check">
-                        <input class="form-check-input" type="radio" name="q17" id="2op2" value="option2">
+                        <input class="form-check-input" type="radio" name="17" id="2op2" value="option2">
                         <label class="form-check-label" for="2op2">B. CRAMP YOU</label>
                       </div>
                   </div>
@@ -331,22 +331,22 @@ button.submit-btn {
                     <h6><label for="firstName">18. WHEN IT IS SETTLED WELL IN ADVANCE THAT YOU WILL DO A
                       CERTAIN THING AT A CERTAIN TIME,DO YOU FIND IT-</label></h6>
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="q18" id="inlineRadio1" value="j2">
+                        <input class="form-check-input" type="radio" name="18" id="inlineRadio1" value="j2">
                         <label class="form-check-label" for="inlineRadio1">A. NICE TO BE ABLE TO PLAN ACCORDINGLY</label>
                       </div>
                       <div class="form-check">
-                        <input class="form-check-input" type="radio" name="q18" id="inlineRadio2" value="p2">
+                        <input class="form-check-input" type="radio" name="18" id="inlineRadio2" value="p2">
                         <label class="form-check-label" for="inlineRadio2">B. A LITTLE UNPLEASANT TO BE TIED DOWN</label>
                       </div>
                   </div>
                   <div class="form-group pt-3">
                     <h6><label for="firstName">19. ARE YOU MORE SUCCESSFUL-</label></h6>
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="q19" id="inlineRadio1" value="j1">
+                        <input class="form-check-input" type="radio" name="19" id="inlineRadio1" value="j1">
                         <label class="form-check-label" for="inlineRadio1">A. AT FOLLOWING A CAREFULLY WORKED OUT PLAN</label>
                       </div>
                       <div class="form-check">
-                        <input class="form-check-input" type="radio" name="q19" id="inlineRadio2" value="p1">
+                        <input class="form-check-input" type="radio" name="19" id="inlineRadio2" value="p1">
                         <label class="form-check-label" for="inlineRadio2">B. AT DEALING WITH THE UNEXPECTED AND SEEING
                           QUICKLY WHAT SHOULD BE DONE</label>
                       </div>
@@ -356,11 +356,11 @@ button.submit-btn {
                   <div class="form-group pt-3">
                     <h6><label for="firstName">20. WOULD YOU RATHER BE CONSIDERED-</label></h6>
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="q20" id="1op1" value="s2">
+                        <input class="form-check-input" type="radio" name="20" id="1op1" value="s2">
                         <label class="form-check-label" for="1op1">A. A PRACTICAL PERSON</label>
                       </div>
                       <div class="form-check">
-                        <input class="form-check-input" type="radio" name="q20" id="1op2" value="n2">
+                        <input class="form-check-input" type="radio" name="20" id="1op2" value="n2">
                         <label class="form-check-label" for="1op2">B. AN OUT-OF-THE-BOX-THINKING PERSON</label>
                       </div>
                   </div>
@@ -374,11 +374,11 @@ button.submit-btn {
                   <div class="form-group pt-3">
                     <h6><label for="firstName">21. IN A LARGE GROUP, DO YOU MORE OFTEN-</label></h6>
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="q21" id="inlineRadio1" value="e2">
+                        <input class="form-check-input" type="radio" name="21" id="inlineRadio1" value="e2">
                         <label class="form-check-label" for="inlineRadio1">A. INTRODUCE OTHERS</label>
                       </div>
                       <div class="form-check">
-                        <input class="form-check-input" type="radio" name="q21" id="inlineRadio2" value="i2">
+                        <input class="form-check-input" type="radio" name="21" id="inlineRadio2" value="i2">
                         <label class="form-check-label" for="inlineRadio2">B. GET INTRODUCED</label>
                       </div>
                   </div>
@@ -386,11 +386,11 @@ button.submit-btn {
                   <div class="form-group pt-3">
                     <h6><label for="firstName">22. DO YOU USUALLY-</label></h6>
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="q22" id="2op1" value="f2">
+                        <input class="form-check-input" type="radio" name="22" id="2op1" value="f2">
                         <label class="form-check-label" for="2op1">A. VALUE EMOTION MORE THAN LOGIC</label>
                       </div>
                       <div class="form-check">
-                        <input class="form-check-input" type="radio" name="q22" id="2op2" value="t2">
+                        <input class="form-check-input" type="radio" name="22" id="2op2" value="t2">
                         <label class="form-check-label" for="2op2">B. VALUE LOGIC MORE THAN FEELINGS</label>
                       </div>
                   </div>
@@ -398,22 +398,22 @@ button.submit-btn {
                   <div class="form-group pt-3">
                     <h6><label for="firstName">23. WOULD YOU RATHER HAVE AS A FRIEND-</label></h6>
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="q23" id="inlineRadio1" value="n1">
+                        <input class="form-check-input" type="radio" name="23" id="inlineRadio1" value="n1">
                         <label class="form-check-label" for="inlineRadio1">A. SOMEONE WHO IS ALWAYS COMING UP WITH NEW IDEAS</label>
                       </div>
                       <div class="form-check">
-                        <input class="form-check-input" type="radio" name="q23" id="inlineRadio2" value="s2">
+                        <input class="form-check-input" type="radio" name="23" id="inlineRadio2" value="s2">
                         <label class="form-check-label" for="inlineRadio2">B. SOMEONE WHO HAS BOTH FEET ON THE GROUND</label>
                       </div>
                   </div>
                   <div class="form-group pt-3">
                     <h6><label for="firstName">24. CAN THE NEW PEOPLE YOU MEET TELL WHAT YOU ARE INTERESTED IN-</label></h6>
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="q24" id="inlineRadio1" value="e1">
+                        <input class="form-check-input" type="radio" name="24" id="inlineRadio1" value="e1">
                         <label class="form-check-label" for="inlineRadio1">A. RIGHT AWAY</label>
                       </div>
                       <div class="form-check">
-                        <input class="form-check-input" type="radio" name="q24" id="inlineRadio2" value="i1">
+                        <input class="form-check-input" type="radio" name="24" id="inlineRadio2" value="i1">
                         <label class="form-check-label" for="inlineRadio2">B. ONLY AFTER THEY REALLY GET TO KNOW YOU</label>
                       </div>
                   </div>
@@ -422,16 +422,16 @@ button.submit-btn {
                   <div class="form-group pt-3">
                     <h6><label for="firstName">25. (IF TWO ANSWERS ARE TRUE, CHECK BOTH BOXES) IN YOUR DAILY WORK, DO YOU-</label></h6>
                     <div class="form-check">
-                        <input class="form-check-input single-checkbox" type="checkbox" name="q25" id="1op1" value="j1">
+                        <input class="form-check-input single-checkbox" type="checkbox" name="25" id="1op1" value="j1">
                         <label class="form-check-label" for="1op1">A. USUALLY PLAN YOUR WORK SO YOU WON'T NEED TOWORK UNDER PRESSURE</label>
                       </div>
                       <div class="form-check">
-                        <input class="form-check-input single-checkbox" type="checkbox" name="q25" id="1op2" value="p1">
+                        <input class="form-check-input single-checkbox" type="checkbox" name="25" id="1op2" value="p1">
                         <label class="form-check-label" for="1op2">B. RATHER ENJOY AN EMERGENCY THAT MAKES YOU WORK
                           AGAINST TIME </label>
                       </div>
                       <div class="form-check">
-                        <input class="form-check-input single-checkbox" type="checkbox" name="q25" id="1op3" value="j0">
+                        <input class="form-check-input single-checkbox" type="checkbox" name="25" id="1op3" value="j0">
                         <label class="form-check-label" for="1op3">C. HATE TO WORK UNDER PRESSURE</label>
                       </div>
                   </div>
@@ -449,11 +449,11 @@ button.submit-btn {
                   <div class="form-group pt-3">
                     <h6><label for="firstName">26. DO YOU USUALLY-</label></h6>
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="q26" id="inlineRadio1" value="e1">
+                        <input class="form-check-input" type="radio" name="26" id="inlineRadio1" value="e1">
                         <label class="form-check-label" for="inlineRadio1">A. SHOW YOUR FEELINGS FREELY</label>
                       </div>
                       <div class="form-check">
-                        <input class="form-check-input" type="radio" name="q26" id="inlineRadio2" value="i0">
+                        <input class="form-check-input" type="radio" name="26" id="inlineRadio2" value="i0">
                         <label class="form-check-label" for="inlineRadio2">B. KEEP YOUR FEELINGS TO YOURSELF</label>
                       </div>
                   </div>
@@ -467,11 +467,11 @@ button.submit-btn {
                         <div class="form-group pt-2">
                           <h6><label for="firstName">27. </label></h6>
                           <div class="form-check">
-                            <input class="form-check-input" type="radio" name="q27" id="inlineRadio1" value="j2">
+                            <input class="form-check-input" type="radio" name="27" id="inlineRadio1" value="j2">
                             <label class="form-check-label" for="inlineRadio1">A. SCHEDULED</label>
                           </div>
                           <div class="form-check">
-                            <input class="form-check-input" type="radio" name="q27" id="inlineRadio2" value="p2">
+                            <input class="form-check-input" type="radio" name="27" id="inlineRadio2" value="p2">
                             <label class="form-check-label" for="inlineRadio2">B. UNPLANNED</label>
                           </div>
                         </div>
@@ -479,11 +479,11 @@ button.submit-btn {
                         <div class="form-group pt-2">
                           <h6><label for="firstName">28. </label></h6>
                           <div class="form-check">
-                            <input class="form-check-input" type="radio" name="q28" id="inlineRadio1" value="option1">
+                            <input class="form-check-input" type="radio" name="28" id="inlineRadio1" value="option1">
                             <label class="form-check-label" for="inlineRadio1">A. FACTS</label>
                           </div>
                           <div class="form-check">
-                            <input class="form-check-input" type="radio" name="q28" id="inlineRadio2" value="option2">
+                            <input class="form-check-input" type="radio" name="28" id="inlineRadio2" value="option2">
                             <label class="form-check-label" for="inlineRadio2">B. IDEAS</label>
                           </div>
                         </div>
@@ -491,11 +491,11 @@ button.submit-btn {
                         <div class="form-group pt-2">
                           <h6><label for="firstName">29. </label></h6>
                           <div class="form-check">
-                            <input class="form-check-input" type="radio" name="q29" id="inlineRadio1" value="s2">
+                            <input class="form-check-input" type="radio" name="29" id="inlineRadio1" value="s2">
                             <label class="form-check-label" for="inlineRadio1">A. QUIET</label>
                           </div>
                           <div class="form-check">
-                            <input class="form-check-input" type="radio" name="q29" id="inlineRadio2" value="n1">
+                            <input class="form-check-input" type="radio" name="29" id="inlineRadio2" value="n1">
                             <label class="form-check-label" for="inlineRadio2">B. HEARTY</label>
                           </div>
                         </div>
@@ -503,11 +503,11 @@ button.submit-btn {
                         <div class="form-group pt-2">
                           <h6><label for="firstName">30. </label></h6>
                           <div class="form-check">
-                            <input class="form-check-input" type="radio" name="q30" id="inlineRadio1" value="t2">
+                            <input class="form-check-input" type="radio" name="30" id="inlineRadio1" value="t2">
                             <label class="form-check-label" for="inlineRadio1">A. CONVINCING</label>
                           </div>
                           <div class="form-check">
-                            <input class="form-check-input" type="radio" name="q30" id="inlineRadio2" value="f1">
+                            <input class="form-check-input" type="radio" name="30" id="inlineRadio2" value="f1">
                             <label class="form-check-label" for="inlineRadio2">B. TOUCHING</label>
                           </div>
                         </div>
@@ -515,11 +515,11 @@ button.submit-btn {
                         <div class="form-group pt-2">
                           <h6><label for="firstName">31. </label></h6>
                           <div class="form-check">
-                            <input class="form-check-input" type="radio" name="q31" id="inlineRadio1" value="n0">
+                            <input class="form-check-input" type="radio" name="31" id="inlineRadio1" value="n0">
                             <label class="form-check-label" for="inlineRadio1">A. IMAGINATIVE</label>
                           </div>
                           <div class="form-check">
-                            <input class="form-check-input" type="radio" name="q31" id="inlineRadio2" value="s2">
+                            <input class="form-check-input" type="radio" name="31" id="inlineRadio2" value="s2">
                             <label class="form-check-label" for="inlineRadio2">B. MATTER-OF-FACT</label>
                           </div>
                         </div>
@@ -527,11 +527,11 @@ button.submit-btn {
                         <div class="form-group pt-2">
                           <h6><label for="firstName">32. </label></h6>
                           <div class="form-check">
-                            <input class="form-check-input" type="radio" name="q32" id="inlineRadio1" value="t1">
+                            <input class="form-check-input" type="radio" name="32" id="inlineRadio1" value="t1">
                             <label class="form-check-label" for="inlineRadio1">A. BENEFITS</label>
                           </div>
                           <div class="form-check">
-                            <input class="form-check-input" type="radio" name="q32" id="inlineRadio2" value="f1">
+                            <input class="form-check-input" type="radio" name="32" id="inlineRadio2" value="f1">
                             <label class="form-check-label" for="inlineRadio2">B. BLESSINGS</label>
                           </div>
                         </div>
@@ -544,11 +544,11 @@ button.submit-btn {
                       <div class="form-group pt-2">
                         <h6><label for="firstName">33. </label></h6>
                         <div class="form-check">
-                          <input class="form-check-input" type="radio" name="q33" id="inlineRadio1" value="f0">
+                          <input class="form-check-input" type="radio" name="33" id="inlineRadio1" value="f0">
                           <label class="form-check-label" for="inlineRadio1">A. PEACEMAKER</label>
                         </div>
                         <div class="form-check">
-                          <input class="form-check-input" type="radio" name="q33" id="inlineRadio2" value="t2">
+                          <input class="form-check-input" type="radio" name="33" id="inlineRadio2" value="t2">
                           <label class="form-check-label" for="inlineRadio2">B. JUDGE</label>
                         </div>
                       </div>
@@ -557,11 +557,11 @@ button.submit-btn {
                     <div class="form-group pt-2">
                       <h6><label for="firstName">34. </label></h6>
                       <div class="form-check">
-                        <input class="form-check-input" type="radio" name="q34" id="inlineRadio1" value="j2">
+                        <input class="form-check-input" type="radio" name="34" id="inlineRadio1" value="j2">
                         <label class="form-check-label" for="inlineRadio1">A. SYSTEMATIC</label>
                       </div>
                       <div class="form-check">
-                        <input class="form-check-input" type="radio" name="q34" id="inlineRadio2" value="p2">
+                        <input class="form-check-input" type="radio" name="34" id="inlineRadio2" value="p2">
                         <label class="form-check-label" for="inlineRadio2">B. SPONTANEOUS</label>
                       </div>
                     </div>
@@ -572,11 +572,11 @@ button.submit-btn {
                         <div class="form-group pt-2">
                           <h6><label for="firstName">35. </label></h6>
                           <div class="form-check">
-                            <input class="form-check-input" type="radio" name="q35" id="inlineRadio1" value="s2">
+                            <input class="form-check-input" type="radio" name="35" id="inlineRadio1" value="s2">
                             <label class="form-check-label" for="inlineRadio1">A. STATEMENT</label>
                           </div>
                           <div class="form-check">
-                            <input class="form-check-input" type="radio" name="q35" id="inlineRadio2" value="n1">
+                            <input class="form-check-input" type="radio" name="35" id="inlineRadio2" value="n1">
                             <label class="form-check-label" for="inlineRadio2">B. CONCEPT</label>
                           </div>
                         </div>
@@ -584,11 +584,11 @@ button.submit-btn {
                         <div class="form-group pt-2">
                           <h6><label for="firstName">36. </label></h6>
                           <div class="form-check">
-                            <input class="form-check-input" type="radio" name="q36" id="inlineRadio1" value="i1">
+                            <input class="form-check-input" type="radio" name="36" id="inlineRadio1" value="i1">
                             <label class="form-check-label" for="inlineRadio1">A. RESERVED</label>
                           </div>
                           <div class="form-check">
-                            <input class="form-check-input" type="radio" name="q36" id="inlineRadio2" value="e2">
+                            <input class="form-check-input" type="radio" name="36" id="inlineRadio2" value="e2">
                             <label class="form-check-label" for="inlineRadio2">B. TALAKATIVE</label>
                           </div>
                         </div>
@@ -596,11 +596,11 @@ button.submit-btn {
                         <div class="form-group pt-2">
                           <h6><label for="firstName">37. </label></h6>
                           <div class="form-check">
-                            <input class="form-check-input" type="radio" name="q37" id="inlineRadio1" value="t1">
+                            <input class="form-check-input" type="radio" name="37" id="inlineRadio1" value="t1">
                             <label class="form-check-label" for="inlineRadio1">A. ANALYZE</label>
                           </div>
                           <div class="form-check">
-                            <input class="form-check-input" type="radio" name="q37" id="inlineRadio2" value="f2">
+                            <input class="form-check-input" type="radio" name="37" id="inlineRadio2" value="f2">
                             <label class="form-check-label" for="inlineRadio2">B. SYMPATHIZE</label>
                           </div>
                         </div>
@@ -608,11 +608,11 @@ button.submit-btn {
                         <div class="form-group pt-2">
                           <h6><label for="firstName">38. </label></h6>
                           <div class="form-check">
-                            <input class="form-check-input" type="radio" name="q38" id="inlineRadio1" value="n0">
+                            <input class="form-check-input" type="radio" name="38" id="inlineRadio1" value="n0">
                             <label class="form-check-label" for="inlineRadio1">A. CREATE</label>
                           </div>
                           <div class="form-check">
-                            <input class="form-check-input" type="radio" name="q38" id="inlineRadio2" value="s2">
+                            <input class="form-check-input" type="radio" name="38" id="inlineRadio2" value="s2">
                             <label class="form-check-label" for="inlineRadio2">B. MAKE</label>
                           </div>
                         </div>
@@ -622,7 +622,7 @@ button.submit-btn {
                 
                 <button type="button" class="previous-btn">Prev</button>
                 <button type="button" class="next-btn">Next</button>
-              </div>
+              </div> --}}
                    
 
 

@@ -8,7 +8,7 @@ class PersonalityController extends Controller
 {
     //
 
-    function  PersonalityFnc()
+    function  PersonalityFnc(Request $req)
     {
         $e=0;
         $i=0;
@@ -18,6 +18,13 @@ class PersonalityController extends Controller
         $f=0;
         $j=0;
         $p=0;
+
+        $x=0;
+        for($x=1;$x<=50;$x++)
+        {
+            echo $req($x);
+
+        }
 
         
 
