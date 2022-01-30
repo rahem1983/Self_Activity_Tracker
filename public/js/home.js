@@ -1,4 +1,5 @@
 let mood = [];
+var currentDate = new Date().toISOString().slice(0,10);
 
 const todayTaskDiv = document.querySelector(".todayTaskDiv");
 const incompleteTaskDiv = document.querySelector(".incompleteTaskDiv");
@@ -169,12 +170,15 @@ $.ajax({
   success: function (response) {
       const taskOfSessionUser = response;
       for (const task of taskOfSessionUser) {
-        const taskAt = document.createElement("h6");
+        if (currentDate >= task.assigned_date) {
+          const taskAt = document.createElement("h6");
             taskAt.className = "text-danger" 
             taskAt.id = task.project_id
             taskAt.innerHTML = `
             • `+task.todo+` (`+ task.project_title +`) <small>`+ HumanRead(task.assigned_date)+`</small>`
             incompleteTaskDiv.append(taskAt);
+        }
+        
     }
   }
 });

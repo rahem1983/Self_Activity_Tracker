@@ -39,11 +39,12 @@ $.ajax({
         var dayindex = 0;
 
         const day = document.querySelectorAll(".daily")
-        
+
         const monthNames = ["Jan", "Feb", "Mar", "Apr", "May", "June","July", "Aug", "Sep", "Oct", "Nov", "Dec"];
         const dayName = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
 
         for (const d of day) {
+            
             if(today.getDay() <= week[dayindex].getDay()){
                 d.children[0].innerHTML = "Day-" + (dayindex+1) +": "+ week[dayindex].getDate() + " "+ monthNames[week[dayindex].getMonth()] +" "+ week[dayindex].getFullYear()+ "-" +  dayName[week[dayindex].getDay()];
                 d.children[0].style.fontWeight = "600";
@@ -134,7 +135,7 @@ $.ajax({
 
         $("#weekForm").submit(function (e) { 
             e.preventDefault();
-            
+            // console.log($("input[name = _token]").val());
             $(".inputOnDate").each(function () { 
                 // console.log(this.children[1]);
                 $(this.children).each(function(){
@@ -158,7 +159,7 @@ $.ajax({
                     }
                 });
             });
-            window.location.replace("./Home");
+            // window.location.replace("./Home");
         });
     }
 });        
