@@ -50,7 +50,7 @@ function HumanRead(date){
 
          var xValues = ["Absent", "Present"];
          var yValues = [8, 15];
-         var barColors = ["#ff0000", "#63d867"];
+         var barColors = ["#ff0000", "#0000ff"];
         
         new Chart("myPieChart", {
         type: "pie",
