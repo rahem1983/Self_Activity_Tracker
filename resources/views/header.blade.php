@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Demo</title>
+    <title>Self Activity Tracker</title>
    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
     <script
       src="https://kit.fontawesome.com/64d58efce2.js"
@@ -25,7 +25,10 @@
 <body>
     
   <nav class="px-5 container-fluid navbar navbar-expand-lg navbar-dark navbar-light" style="background-color: #70afdd;">
-    <a class="navbar-brand" href="./">Self Activity Tracker</a>
+    <a class="navbar-brand" href="./">
+      <img src="{{url('./image/SAT.png')}}" width="30" height="30" class="d-inline-block align-top" alt="">
+      Self Activity Tracker
+    </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>

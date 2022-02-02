@@ -25,7 +25,56 @@ class PersonalityController extends Controller
         //     echo $req;
         // }
 
-        echo $req->input('50');
+        for($x=25; $x<=25; $x++)
+        {
+            // switch  ($req->input($x)[0]) {
+            //     case 'e':
+            //         $e+= $req->input($x)[1];
+            //       break;
+            //     case 'i':
+            //         $i+= $req->input($x)[1];
+            //       break;
+            //     case 's':
+            //         $s+= $req->input($x)[1];
+            //       break;
+            //     case 'n':
+            //         $n+= $req->input($x)[1];
+            //       break;
+            //     case 't':
+            //         $t+= $req->input($x)[1];
+            //       break;
+            //     case 'f':
+            //         $f+= $req->input($x)[1];
+            //     break;
+            //     case 'j':
+            //         $j+= $req->input($x)[1];
+            //       break;
+            //     case 'p':
+            //         $p+= $req->input($x)[1];
+            //       break;
+
+            //     default:
+            //       break;
+            //   }
+            
+               echo $req->input($x);
+        }
+
+        // echo "e = " . $e;
+        // echo "<br>";
+        // echo "i = " . $i;
+        // echo "<br>";
+        // echo "s = " . $s;
+        // echo "<br>";
+        // echo "n = " . $n;
+        // echo "<br>";
+        // echo "t = " . $t;
+        // echo "<br>";
+        // echo "f = " . $f;
+        // echo "<br>";
+        // echo "j = " . $j;
+        // echo "<br>";
+        // echo "p = " . $p;
         
 
     }
