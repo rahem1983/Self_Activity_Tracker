@@ -59,4 +59,9 @@ class DailyHistoryController extends Controller
         $DH = Daily_history::where('user_id', session('user')->id)->where('status',"incomplete")->orderBy('assigned_date', 'DESC')->get();
         return response()->json($DH);
     }
+    public function workingHour()
+    {
+        $DH = Daily_history::where('id', 23)->get();
+        return response()->json($DH);
+    }
 }

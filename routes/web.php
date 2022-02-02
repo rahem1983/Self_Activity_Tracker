@@ -80,3 +80,5 @@ Route::get('/', function () {
 
 
 
+Route::get('test',[DailyHistoryController::class, 'workingHour']);
+Route::view('testCase','testCase');
