@@ -422,16 +422,16 @@ button.submit-btn {
                   <div class="form-group pt-3">
                     <h6><label for="firstName">25. (IF TWO ANSWERS ARE TRUE, CHECK BOTH BOXES) IN YOUR DAILY WORK, DO YOU-</label></h6>
                     <div class="form-check">
-                        <input class="form-check-input single-checkbox" type="checkbox" name="25" id="1op1" value="j1">
-                        <label class="form-check-label" for="1op1">A. USUALLY PLAN YOUR WORK SO YOU WON'T NEED TOWORK UNDER PRESSURE</label>
+                        <input class="form-check-input single-checkbox" type="checkbox" name="25[]" id="1op1" value="j1">
+                        <label class="form-check-label" for="1op1">A. USUALLY PLAN YOUR WORK SO YOU WON'T NEED TO WORK UNDER PRESSURE</label>
                       </div>
                       <div class="form-check">
-                        <input class="form-check-input single-checkbox" type="checkbox" name="25" id="1op2" value="p1">
+                        <input class="form-check-input single-checkbox" type="checkbox" name="25[]" id="1op2" value="p1">
                         <label class="form-check-label" for="1op2">B. RATHER ENJOY AN EMERGENCY THAT MAKES YOU WORK
                           AGAINST TIME </label>
                       </div>
                       <div class="form-check">
-                        <input class="form-check-input single-checkbox" type="checkbox" name="25" id="1op3" value="j0">
+                        <input class="form-check-input single-checkbox" type="checkbox" name="25[]" id="1op3" value="j0">
                         <label class="form-check-label" for="1op3">C. HATE TO WORK UNDER PRESSURE</label>
                       </div>
                   </div>
