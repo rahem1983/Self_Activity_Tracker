@@ -45,7 +45,7 @@
           <a class="nav-link" href="./Calendar">Calendar</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Personality</a>
+          <a class="nav-link" href="./PersonalityTest">Personality</a>
         </li>
       </ul>
       @endif

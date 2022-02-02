@@ -318,11 +318,11 @@ button.submit-btn {
                   <div class="form-group pt-3">
                     <h6><label for="firstName">17. DOES FOLLOWING A SCHEDULE-</label></h6>
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="17" id="2op1" value="option1">
+                        <input class="form-check-input" type="radio" name="17" id="2op1" value="j2">
                         <label class="form-check-label" for="2op1">A. APPEAL TO YOU</label>
                       </div>
                       <div class="form-check">
-                        <input class="form-check-input" type="radio" name="17" id="2op2" value="option2">
+                        <input class="form-check-input" type="radio" name="17" id="2op2" value="p2">
                         <label class="form-check-label" for="2op2">B. CRAMP YOU</label>
                       </div>
                   </div>
@@ -331,11 +331,11 @@ button.submit-btn {
                     <h6><label for="firstName">18. WHEN IT IS SETTLED WELL IN ADVANCE THAT YOU WILL DO A
                       CERTAIN THING AT A CERTAIN TIME,DO YOU FIND IT-</label></h6>
                     <div class="form-check">
-                        <input class="form-check-input" type="radio" name="18" id="inlineRadio1" value="j2">
+                        <input class="form-check-input" type="radio" name="18" id="inlineRadio1" value="j1">
                         <label class="form-check-label" for="inlineRadio1">A. NICE TO BE ABLE TO PLAN ACCORDINGLY</label>
                       </div>
                       <div class="form-check">
-                        <input class="form-check-input" type="radio" name="18" id="inlineRadio2" value="p2">
+                        <input class="form-check-input" type="radio" name="18" id="inlineRadio2" value="p1">
                         <label class="form-check-label" for="inlineRadio2">B. A LITTLE UNPLEASANT TO BE TIED DOWN</label>
                       </div>
                   </div>

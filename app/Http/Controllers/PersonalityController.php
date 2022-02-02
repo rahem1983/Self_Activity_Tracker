@@ -23,9 +23,8 @@ class PersonalityController extends Controller
 
         $x=0;
         $pers=array();
-        
-        
-        $user = User::where('id', session('user')->id)->get();
+ 
+        $user = User::where('id', session('user')->id)->first();
 
         for($x=1; $x<=50; $x++)
         {              
@@ -43,12 +42,10 @@ class PersonalityController extends Controller
                     {
                         $p+=1;
                     }
-                }
-                 
+                } 
             }
             else
             {
-                
                 switch  ($req->input($x)[0]) {
                     case 'e':
                         $e+= $req->input($x)[1];
@@ -119,8 +116,9 @@ class PersonalityController extends Controller
         $personality = implode(",", $pers);
         $user->personality = $personality;
         $user->save();
-        
-        //return $user;
+        session()->pull('user');
+        $req->session()->put('user', $user);
+        return $user;
 
         // echo "e = " . $e;
         // echo "<br>";
@@ -137,7 +135,5 @@ class PersonalityController extends Controller
         // echo "j = " . $j;
         // echo "<br>";
         // echo "p = " . $p;
-        
-
     }
 }

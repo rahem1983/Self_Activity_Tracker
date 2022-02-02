@@ -104,19 +104,20 @@ class UserController extends Controller
             $fileName = time() .".". $extension;
             $file->move('image/',$fileName);
             $user->image = "image/" . $fileName;
-            $user->save(); 
+            
         }
         
         if(!empty($req->input('phone'))){
             $req->validate([
                 'phone' => 'alpha_num | digits:11'  //The field under validation must be entirely alpha-numeric characters.
             ]);
-            $user->phone = $req('phone');
+            $user->phone = $req->input('phone');
+            
         }
         if(!empty($req->input('newPass'))){
             if(!empty($req->input('currentPass'))){
                 if(Hash::check($req->input('currentPass'), $user->password) && Hash::check($req->input('currentPass'), session('user')->password)){
-                    $user->password = $req->input('newPass');
+                    $user->password = Hash::make($req->input('newPass'));
                 }
                 else{
                     return redirect('./EditProfileForm')->with('passwordError',"Password dosn't match");
@@ -126,7 +127,7 @@ class UserController extends Controller
                 return redirect('./EditProfileForm')->with('passwordError',"please provide current password if you want to change your password");
             }
         }
-        
+        $user->save(); 
         session()->pull('user');
         $req->session()->put('user', $user);
         return redirect('./Home');
