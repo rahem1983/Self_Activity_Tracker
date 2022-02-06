@@ -13,9 +13,14 @@
      
       <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
 
+      <!-- Chart Js -->
       <script
       src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js">
       </script>
+
+      <!-- Slider JS -->
+      <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
+      <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
       
     
     <style>
@@ -37,51 +42,60 @@
 </head>
 <body>
     
+
     <div class="container">
-        
+
+
         <h3 class="text-center">Admin Panel</h3>
 
-        
-        <div class="card mt-3 m-5" style="padding-right: 20px;">
+        <div class="card" style="padding-right: 20px;">
             <div class="card-title mt-3" style="padding-left: 15px; border-left: 4px solid blue;"><h4>Monthly Work Report (In Hours)</h4>
             </div>
              
-            <canvas id="myBarChart" style="width:50%; padding: 40px;"></canvas>
+            
     
             </div>
-    </div>
 
+        <!-- Swiper -->
+      <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+
+            
+          </div>
+          <div class="swiper-slide">
+            
+          </div>
+          <div class="swiper-slide">
+            <canvas id="myBarChart" style="width:50%; padding: 40px;"></canvas>
+          </div>
+          <!--<div class="swiper-slide">Slide 4</div>
+          <div class="swiper-slide">Slide 5</div>
+          <div class="swiper-slide">Slide 6</div> -->
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+      </div>
+  
+   </div>
+   
+  
+  
+  
+      <!-- Initialize Swiper -->
+      <script>
+        var swiper = new Swiper(".mySwiper", {
+          navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
+          },
+          initialSlide: 2, // first active inializied to slide 3
+        });
+      </script>
 
     
-
-        <div class="container">
-
-            <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-           
-          </div>
-          <div class="carousel-item">
-            
-            <img class="d-block w-100" src="https://picsum.photos/id/237/200/300" alt="Second slide">
-          </div>
-          <div class="carousel-item">
-            <img class="d-block w-100" src="https://picsum.photos/200/300?grayscales" alt="Third slide">
-          </div>
-        </div>
-        <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="sr-only">Previous</span>
-        </a>
-        <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="sr-only">Next</span>
-        </a>
-      </div>
-             
-           </div>
       
-
+      <!-- Last Month Work Report-->
         <script>
             var xValues = ["Day 1", "Day 2", "Day 3", "Day 4", "Day 5", "Day 6", "Day 7", "Day 8", "Day 9", "Day 10", "Day 11", "Day 12",
             "Day 13", "Day 14", "Day 15", "Day 16", "Day 17", "Day 18", "Day 19", "Day 20", "Day 21", "Day 22", "Day 23", "Day 24", "Day 25", "Day 26", "Day 27", "Day 28", "Day 29", "Day 30", "Day 31" ];
