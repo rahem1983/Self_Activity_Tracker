@@ -35,11 +35,14 @@
           box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
           padding: 5px 10px 10px 0px;
           border-radius: 15px;
+          width: 90%;
+          align-items: center;
+          margin: auto;
         }
 
         .bx-1{
           box-shadow: rgba(255, 255, 255, 0.2) 0px 0px 0px 1px inset, #002db3 0px 0px 0px 1px;
-          padding: 8px 6px 8px 8px;
+          padding: 8px 8px 4px 8px;
           margin-right: 3px;
           margin-top: 3px;
         }
@@ -53,27 +56,31 @@
 
     <div class="container">
 
-
         <h3 class="text-center pt-3 pb-3">Admin Panel</h3>
 
-    <div class="bx">
-        <div class="card-title mt-3 mb-3" style="padding-left: 15px; border-left: 4px solid blue;"><h4>Monthly Work Report (In Hours)</h4>
+    <div class="bx mb-5">
+        <div class="card-title mt-3" style="padding-left: 15px; border-left: 4px solid blue;"><h4>Monthly Work Report (In Hours)</h4>
         </div>
-        <!-- Swiper -->
+      <!-- Swiper -->
       <div class="swiper mySwiper">
         <div class="swiper-wrapper">
           <div class="swiper-slide">
-            <div class="bx-1" style="float:right;"><h6 style="color: #002db3;">Total Working Hour &emsp;: 939 hrs <br> 
-                                                                                 Avg Working Hour &emsp;&nbsp;&nbsp;: 313 hrs</h6></div>
-            <canvas id="monthlyBar3" style="width:100%; padding: 10px;"></canvas>
+            <div class="bx-1" style="float:right;"><h6 style="color: #002db3;">Total Working Hour &emsp;: <span>939</span> hrs <br> 
+                                                                                 Avg Working Hour &emsp;&nbsp;&nbsp;: <span>31.3</span> hrs</h6></div>
+            <canvas id="monthlyBar3" style="width:50%; padding: 15px;"></canvas>
             <h5 class="text-center pt-3" style="color: #002db3;">November, 2021</h5>
           </div>
           <div class="swiper-slide">
-            <canvas id="monthlyBar2" style="width:100%; padding: 10px;"></canvas>
+            <div class="bx-1" style="float:right;"><h6 style="color: #002db3;">Total Working Hour &emsp;: <span>1007</span> hrs <br> 
+              Avg Working Hour &emsp;&nbsp;&nbsp;: <span>33.6</span> hrs</h6></div>
+              
+            <canvas id="monthlyBar2" style="width:50%; padding: 15px;"></canvas>
             <h5 class="text-center pt-3" style="color: #002db3;">December, 2021</h5>
           </div>
           <div class="swiper-slide">
-            <canvas id="monthlyBar1" style="width:100%; padding: 10px;"></canvas>
+            <div class="bx-1" style="float:right;"><h6 style="color: #002db3;">Total Working Hour &emsp;: <span>784</span> hrs <br> 
+              Avg Working Hour &emsp;&nbsp;&nbsp;: <span>26.13</span> hrs</h6></div>
+            <canvas id="monthlyBar1" style="width:50%; padding: 15px;"></canvas>
             <h5 class="text-center pt-3" style="color: #002db3;">January, 2022</h5>
           </div>
         </div>
@@ -82,6 +89,36 @@
       </div>
   
    </div>
+
+     
+
+
+   <div class="bx mb-5">
+    <div class="card-title mt-3" style="padding-left: 15px; border-left: 4px solid blue;"><h4>Individual Team Report (<span>January, 2022</span>)</h4>
+    </div>
+    <div class="row p-2">
+      <div class="col-4">
+        <div class="card">
+          <div class="card-title text-center pt-2"><h6>Web</h6></div>
+          <canvas id="myHoriBarChart" style="width:100%;"></canvas>
+        </div>
+      </div>
+      <div class="col-4">
+        <div class="card-header">Apps</div> 
+      </div>
+      <div class="col-4">
+        <div class="card-header">Graphic Design</div>
+      </div>
+    </div>
+  
+
+</div>
+
+
+
+
+
+
   </div>
   
   
@@ -93,7 +130,7 @@
             nextEl: ".swiper-button-next",
             prevEl: ".swiper-button-prev",
           },
-          initialSlide: 2, // first active inializied to slide 3
+          initialSlide: 2, // first active initialized to slide 3
         });
       </script>
 
@@ -137,7 +174,7 @@
                     suggestedMin: 0, 
                     //suggestedMax: 30,
                     callback: function(value){
-                    return value+ " hrs"; //For percentage
+                    return value+ " hrs"; //For unit hrs
                  }
                 }
             }]
@@ -197,7 +234,7 @@
                   suggestedMin: 0, 
                   //suggestedMax: 30,
                   callback: function(value){
-                  return value+ " hrs"; //For percentage
+                  return value+ " hrs"; //For unit hrs
                }
               }
           }]
@@ -257,7 +294,7 @@
                 suggestedMin: 0, 
                 //suggestedMax: 30,
                 callback: function(value){
-                return value+ " hrs"; //For percentage
+                return value+ " hrs"; //For unit hrs
              }
             }
         }]
@@ -276,6 +313,77 @@
 
    });
     </script>
+
+
+
+       <!-- Web Chart-->
+        <script>
+          var xValues = ["1", "2", "3", "4", "5", "6", "7", " 8", "9", "", "11", "12",
+        "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31" ];
+          var yValues = [6, 10, 9, 12, 2, 6, 7, 5, 0, 0, 4, 7, 4, 6, 9, 3, 2, 4, 6, 5, 0, 0, 5, 8, 1, 2, 4, 7, 5, 3, 4];
+          var barColors = "#4d4dff";
+
+          
+         //made the tooltip title blank  
+          const Titletooltip = (tooltipItems) => {
+            return ""; 
+          }
+
+        new Chart("myHoriBarChart", {
+        type: "bar",
+        data: {
+        labels: xValues,
+        datasets: [{
+        backgroundColor: barColors,
+        data: yValues
+        }]
+        },
+
+        options:{
+
+        legend:{
+          display: false,
+        },
+
+        title: {
+            display: false,
+            text: "Web",
+            fontSize: 20
+        },
+
+        scales: {
+        yAxes: [{
+            ticks: {
+                beginAtZero: true,
+                suggestedMin: 0, 
+                suggestedMax: 15,
+                //callback: function(value){
+                //return value+ " hrs"; //For unit hrs
+                //}
+                
+            }
+        }]
+
+    },
+
+        
+        tooltips: {
+        enabled: true,
+        mode: 'single',
+        displayColors:true,
+        callbacks: {
+          title: Titletooltip,
+         label: function(tooltipItems, data) {
+         return 'Day '+ tooltipItems.xLabel + ': ' + tooltipItems.yLabel + ' Hrs';
+         }
+     }
+ }
+        },
+
+        
+
+        });
+        </script>
 
 
 
