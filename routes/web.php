@@ -29,6 +29,8 @@ Route::group(['middleware'=>['userHaveAccess']],function(){
     Route::view('PersonalityTest', 'personalityTest');
     Route::view('PersonalityForm', 'personalityForm');
     Route::view('AdminPanel_1', 'AdminPanel_1');
+    Route::view('AdminPanel_2', 'AdminPanel_2');
+
 
     
 

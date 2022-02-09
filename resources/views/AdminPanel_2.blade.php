@@ -1,3 +1,4 @@
+@include('header')
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -26,15 +27,16 @@
 
         <h3 class="text-center pt-3 pb-3">Admin Panel</h3>
 
-        <table class="table table-hover table-bordered">
+        <table class="table table-hover table-bordered text-center">
             <thead>
               <tr>
                 <th>Name</th>
                 <th>Designation</th>
                 <th>Started From</th>
-                <th>Total Working hours</th>
-                <th>Attendance Ratio</th>
-                <th>Completed Project Ratio</th>
+                <th>Total Working Hours</th>
+                <th>Attendance Ratio (P/A)</th>
+                <th>Completed Task Ratio (C/I)</th>
+                <th>Completed Projects</th>
               </tr>
             </thead>
             <tbody>
@@ -43,40 +45,45 @@
                 <td>Junior Web Developer</td>
                 <td>1st Feb, 2022</td>
                 <td>15</td>
-                <td>0.7</td>
-                <td>0.6</td>
+                <td>7/10</td>
+                <td>6/10</td>
+                <td>12</td>
               </tr>
               <tr>
                 <td>Rahemul Islam</td>
                 <td>Junior Web Developer</td>
                 <td>1st Feb, 2022</td>
                 <td>25</td>
-                <td>0.8</td>
-                <td>0.9</td>
+                <td>8/10</td>
+                <td>9/10</td>
+                <td>15</td>
               </tr>
               <tr>
                 <td>Mahfuj Ahmed Jim</td>
                 <td>Senior Mobile App Developer</td>
                 <td>1st Feb, 2022</td>
                 <td>51</td>
-                <td>1.0</td>
-                <td>1.0</td>>
+                <td>100/100</td>
+                <td>100/100</td>
+                <td>17</td>
               </tr>
               <tr>
                 <td>Hasibul Islam Shanto</td>
                 <td>Graphic Designer</td>
                 <td>1st Oct, 2021</td>
                 <td>64</td>
-                <td>1.0</td>
-                <td>1.0</td>>
+                <td>130/130</td>
+                <td>130/130</td>
+                <td>19</td>
               </tr>
               <tr>
                 <td>Tawsif Mahmud</td>
                 <td>Junior Software Engineer</td>
                 <td>1st Feb, 2022</td>
                 <td>21</td>
-                <td>1.0</td>
-                <td>1.0</td>>
+                <td>27/27</td>
+                <td>24/24</td>
+                <td>21</td>
               </tr>
             </tbody>
           </table>
