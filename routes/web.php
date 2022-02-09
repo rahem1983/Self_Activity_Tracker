@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
-use App\Http\Controllers\ProjectController;
+use App\Http\Controllers\ProjectController; 
 use App\Http\Controllers\DailyHistoryController;
 
 use App\Http\Controllers\PersonalityController;
@@ -22,8 +22,8 @@ Route::group(['middleware'=>['userHaveAccess']],function(){
     Route::view('NewProject', 'NewProject');
     Route::view('weeklyTarget', 'WeeklyTarget');
     Route::view('Home', 'home');
-    Route::view('EndProject_form','EndProjectForm');
-    Route::view('EditProfileForm','editProfile');
+    Route::view('EndProject_form', 'EndProjectForm');
+    Route::view('EditProfileForm', 'editProfile');
     Route::view('Calendar', 'calendar');
     Route::view('AllPtoject', 'allProjects');
     Route::view('PersonalityTest', 'personalityTest');
@@ -34,6 +34,7 @@ Route::group(['middleware'=>['userHaveAccess']],function(){
     {
         return View::make('DailyProgress')->with('id',$id);
     });
+
     Route::get('ProjectOverview/{id?}',function($id)
     {
         return View::make('projectOverview')->with('id',$id);
@@ -50,18 +51,18 @@ Route::group(['middleware'=>['userHaveAccess']],function(){
     Route::get('MoodGraph',[UserController::class,'moodGraph']);
     Route::post('EditProfile',[UserController::class,'EditProfile']);
 
-    Route::post('creatProject', [ProjectController::class, 'creatProject']);
     Route::get('GetSessionUserActiveProject', [ProjectController::class, 'GetSessionUserActiveProject']);
     Route::get('GetSessionUserAllProject', [ProjectController::class, 'GetSessionUserAllProject']);
     Route::post('completeProject', [ProjectController::class, 'completeProject']);
+    Route::post('creatProject', [ProjectController::class, 'creatProject']);
     Route::post('EndProject', [ProjectController::class, 'EndProject']);
     Route::post('oneProject', [ProjectController::class, 'oneProject']);
 
     Route::get('DH', [DailyHistoryController::class, 'getData']);
-    Route::post('postWeeklyTarget', [DailyHistoryController::class, 'postData']);
     Route::post('dailyProgress', [DailyHistoryController::class, 'dailyProgress']);
-    Route::get('GetSessionUserTodayTask', [DailyHistoryController::class, 'GetSessionUserTodayTask']);
+    Route::post('postWeeklyTarget', [DailyHistoryController::class, 'postData']);
     Route::get('GetSessionUserAllTask', [DailyHistoryController::class, 'GetSessionUserAllTask']);
+    Route::get('GetSessionUserTodayTask', [DailyHistoryController::class, 'GetSessionUserTodayTask']);
     Route::get('GetSessionUserincompleteTask', [DailyHistoryController::class, 'GetSessionUserincompleteTask']);
 
 

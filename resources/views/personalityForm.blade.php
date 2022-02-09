@@ -15,77 +15,75 @@
       
     
     <style>
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-}
-/* body {
-  font-family: "Montserrat";
-} */
-section {
-  min-height: 100vh;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: aliceblue;
-}
-.container {
-  max-width: 600px;
-  width: 90%;
-  padding: 20px;
-  box-shadow: 0px 0px 20px #00000020;
-  border-radius: 8px;
-  background-color: white;
-}
-.step {
-  display: none;
-}
-.step.active {
-  display: block;
-}
-/* .form-group {
-  width: 100%;
-  margin-top: 20px;
-} */
-/* .form-group input {
-  width: 100%;
-  border: 1.5px solid rgba(128, 128, 128, 0.418);
-  padding: 5px;
-  font-size: 18px;
-  margin-top: 5px;
-  border-radius: 4px;
-} */
+      {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      /* body {
+        font-family: "Montserrat";
+      } */
+      section {
+        min-height: 100vh;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: aliceblue;
+      }
+      .container {
+        max-width: 600px;
+        width: 90%;
+        padding: 20px;
+        box-shadow: 0px 0px 20px #00000020;
+        border-radius: 8px;
+        background-color: white;
+      }
+      .step {
+        display: none;
+      }
+      .step.active {
+        display: block;
+      }
+      /* .form-group {
+        width: 100%;
+        margin-top: 20px;
+      } */
+      /* .form-group input {
+        width: 100%;
+        border: 1.5px solid rgba(128, 128, 128, 0.418);
+        padding: 5px;
+        font-size: 18px;
+        margin-top: 5px;
+        border-radius: 4px;
+      } */
 
-button.next-btn,
-button.previous-btn,
-button.submit-btn {
-  float: right;
-  margin-top: 20px;
-  padding: 10px 30px;
-  border: none;
-  outline: none;
-  background-color: rgb(180, 220, 255);
-  font-family: "Montserrat";
-  font-size: 18px;
-  cursor: pointer;
-  /* text-align: right; */
-}
-button.previous-btn {
-  float: left;
-}
-button.submit-btn {
-  background-color: aquamarine;
-}
-
-
+      button.next-btn,
+      button.previous-btn,
+      button.submit-btn {
+        float: right;
+        margin-top: 20px;
+        padding: 10px 30px;
+        border: none;
+        outline: none;
+        background-color: rgb(180, 220, 255);
+        font-family: "Montserrat";
+        font-size: 18px;
+        cursor: pointer;
+        /* text-align: right; */
+      }
+      button.previous-btn {
+        float: left;
+      }
+      button.submit-btn {
+        background-color: aquamarine;
+      }
     </style>
 
 </head>
 <body>
-    
-    
+
+
         <section>
             <div class="container">
               
@@ -852,10 +850,6 @@ function changeStep(btn) {
               }
             });
           </script>
-    
-    
-    
-
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
 
