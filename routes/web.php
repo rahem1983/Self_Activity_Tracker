@@ -28,6 +28,9 @@ Route::group(['middleware'=>['userHaveAccess']],function(){
     Route::view('AllPtoject', 'allProjects');
     Route::view('PersonalityTest', 'personalityTest');
     Route::view('PersonalityForm', 'personalityForm');
+    Route::view('AdminPanel_1', 'AdminPanel_1');
+
+    
 
     // Route::view('dailyProgerssForm', 'DailyProgress');
     Route::get('dailyProgerssForm/{id?}',function($id)

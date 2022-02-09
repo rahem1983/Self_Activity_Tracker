@@ -1,3 +1,4 @@
+@include('header')
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -146,9 +147,9 @@
 
 
         <div class="bx mb-5">
-          <div class="card-title mt-3" style="padding-left: 15px; border-left: 4px solid blue;"><h4>Work Overview</h4>
+          <div class="card-title mt-3 mb-4" style="padding-left: 15px; border-left: 4px solid blue;"><h4>Work Overview</h4>
           </div>
-          <canvas id="StackedBar-Chart" style="width:100%;"></canvas>
+          <canvas id="overviewBar" style="width:100%;"></canvas>
         
 
         </div>
@@ -572,56 +573,48 @@
               type: 'bar',
               data: {
                   labels: ["Web", "Apps", "Graphic Design"],
-                  datasets: [{
+                  datasets: 
+                  [{
                       label: "General Projects",
-                      backgroundColor: "rgba(16, 94, 172, 1.0)",
-                      data: [25, 50, 30],
-                      barThickness: 15,
-                      borderRadius: 15,
+                      backgroundColor: "#3333ff",
+                      data: [8, 11, 14],
+                      //barThickness: 45,
                   }, {
                       label: "Collabaration Works",
-                      backgroundColor: "rgba(247, 127, 7, 1.0)",
-                      data: [50, 5, 22],
-                      barThickness: 15,
-                      borderRadius: 15,
+                      backgroundColor: "#002db3",
+                      data: [11, 16, 9],
+                      //barThickness: 45,
                   }, {
                       label: "Mega Projects",
-                      backgroundColor: "#dbe2fc",
-                      data: [100, 100, 100],
-                      barThickness: 15,
-                      borderRadius: 15,
+                      backgroundColor: "#001966",
+                      data: [4, 7, 5],
+                      //barThickness: 45,
                   },]
               },
               options: {
                   legend: {
                       display: true,
                         position: 'bottom',
+                        labels: {
+                          fontSize: 12,
+                    }
                   },
                   // responsive: true,
                   scales: {
                       xAxes: [{
+                          barPercentage: 0.7,
                           //stacked: true,
                           ticks: {
-                              //min: 0,
-                             //max: 100,
-                              //suggestedMin: 0, 
-                              //suggestedMax: 15,
+                              min: 0
                           },
-                          gridLines: {
-                          display:true
-                        }
                       }],
                       yAxes: [{
                           //stacked: true,
                           ticks: {
-                              //min: 0,
-                              stepSize: 25,
+                            suggestedMin: 0,
+                               suggestedMax: 20,
                               //max: 100,
                           },
-                          gridLines: {
-                          display:true
-                        }
-
                       }]
                   },
                   tooltips: {
@@ -630,7 +623,7 @@
                   }
               }
               };
-              var ctx = document.getElementById("StackedBar-Chart").getContext("2d");
+              var ctx = document.getElementById("overviewBar").getContext("2d");
               new Chart(ctx, config);
               </script>
 

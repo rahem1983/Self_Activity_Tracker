@@ -16,8 +16,21 @@
     
     <style>
       .navbar-rght{
-        margin-left: 750px;
+        margin-left: 700px;
+        float: right;
+        align-items: right;
       }
+
+
+    .blink-1{
+		animation: blink 1s linear infinite;
+    color: #002db3;
+    }
+    @keyframes blink{
+    0%{opacity: 0;}
+    50%{opacity: .5;}
+    100%{opacity: 1;}
+    }
 
     </style>
 
@@ -46,6 +59,12 @@
         </li>
         <li class="nav-item">
           <a class="nav-link" href="./PersonalityTest">Personality</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="./PersonalityTest">Admin</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="./PersonalityTest"><span class="blink-1 blink">Attendance</span></a>
         </li>
       </ul>
       @endif
