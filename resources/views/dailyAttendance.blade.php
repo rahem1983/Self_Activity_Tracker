@@ -24,13 +24,14 @@
     
     <div class="container">
 
-        <h3 class="text-center pt-3 pb-3">Daily Attendance</h3>
-        <table class="table table-hover table-bordered text-center">
-            <thead>
+        <h5 class="text-center pt-3 pb-3">Daily Attendance</h5>
+        <table class="table table-hover table-bordered">
+            <thead style="background-color: #70afdd;">
               <tr>
                 <th>Name</th>
                 <th>Designation</th>
                 <th>Status</th>
+                <th>Today's Work</th>
               </tr>
             </thead>
             <tbody>
@@ -38,25 +39,52 @@
                 <td>Mashrur Jamil Rafin</td>
                 <td>Junior Web Developer</td>
                 <td class="text-danger">Absent</td>
+                <td class="text-muted">No work done</td>
               <tr>
                 <td>Rahemul Islam</td>
                 <td>Junior Web Developer</td>
                 <td class="text-success">Present</td>
+                <td>
+                  <ul>
+                    <li>Admin Page Created</li>
+                    <li>Attendance Updated</li>
+                    <li>Bug Fixed</li>
+                  </ul>
+                </td>
               </tr>
               <tr>
                 <td>Mahfuj Ahmed Jim</td>
                 <td>Senior Mobile App Developer</td>
                 <td class="text-success">Present</td>
+                <td>
+                  <ul>
+                    <li>Admin Page Created</li>
+                    <li>Bug Fixed</li>
+                  </ul>
+                </td>
               </tr>
               <tr>
                 <td>Hasibul Islam Shanto</td>
                 <td>Graphic Designer</td>
                 <td class="text-success">Present</td>
+                <td>
+                  <ul>
+                    <li>Admin Page Created</li>
+                  </ul>
+                </td>
               </tr>
               <tr>
                 <td>Tawsif Mahmud</td>
                 <td>Junior Software Engineer</td>
                 <td class="text-success">Present</td>
+                <td>
+                  <ul>
+                    <li>Admin Page Created</li>
+                    <li>Attendance Updated</li>
+                    <li>Bug Fixed</li>
+                    <li>lorem ipsum</li>
+                  </ul>
+                </td>
               </tr>
             </tbody>
           </table>

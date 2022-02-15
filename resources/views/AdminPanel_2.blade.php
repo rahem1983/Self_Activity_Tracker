@@ -25,10 +25,10 @@
     
     <div class="container">
 
-        <h3 class="text-center pt-3 pb-3">Admin Panel</h3>
+        <h5 class="text-center pt-3 pb-3">Admin Panel</h5>
 
-        <table class="table table-hover table-bordered text-center">
-            <thead>
+        <table class="table table-hover table-bordered text-center" style="">
+            <thead style="background-color: #70afdd;">
               <tr>
                 <th>Name</th>
                 <th>Designation</th>
