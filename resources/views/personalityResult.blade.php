@@ -27,7 +27,7 @@
     <div class="row">
       <div class="col-lg-6">
 
-        <img src="personality.svg" style="padding-top:30%; width: 100%;" alt="">
+        <img src="../../public/image/personality.svg" style="padding-top:30%; width: 100%;" alt="">
 
       </div>
       <div class="col-lg-6">

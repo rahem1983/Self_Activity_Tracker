@@ -40,7 +40,7 @@
                     <img src="../../public/image/SAT-w1.png" width="35%" class="d-inline-block align-top pt-2" alt="">
                 <h1><span  class="fw-bold" style="color:#002db3">Track</span> your work<br>
                 and be <span  class="fw-bold" style="color:#002db3">productive</span></h1>
-                <p class="pt-1 text-dark">Self Activity Tracker helps you to plan the activites you want to do and assists to keep track of your tasks. Collaborate with your co-workers and do productive things together!
+                <p class="pt-1 text-dark text-left">Self Activity Tracker helps you to plan the activites you want to do and assists to keep track of your tasks. Collaborate with your co-workers and do productive things together!
                 </p>
                 <button class="btn btn-lg login-btn">Login</button>
                 <p class="pt-3 text-dark">New in Accelerating Intelligence?&nbsp;&nbsp;<a href="" style="text-decoration: none; color:#002db3">Register</a></p>
