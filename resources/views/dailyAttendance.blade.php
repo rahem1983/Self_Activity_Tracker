@@ -1,4 +1,3 @@
-@include('header')
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -25,65 +24,67 @@
     
     <div class="container">
 
-        <h5 class="text-center pt-3 pb-3">Admin Panel</h5>
-
-        <table class="table table-hover table-bordered text-center" style="">
+        <h5 class="text-center pt-3 pb-3">Daily Attendance</h5>
+        <table class="table table-hover table-bordered">
             <thead style="background-color: #70afdd;">
               <tr>
                 <th>Name</th>
                 <th>Designation</th>
-                <th>Started From</th>
-                <th>Total Working Hours</th>
-                <th>Attendance Ratio (P/A)</th>
-                <th>Completed Task Ratio (C/I)</th>
-                <th>Completed Projects</th>
+                <th>Status</th>
+                <th>Today's Work</th>
               </tr>
             </thead>
             <tbody>
               <tr>
                 <td>Mashrur Jamil Rafin</td>
                 <td>Junior Web Developer</td>
-                <td>1st Feb, 2022</td>
-                <td>15</td>
-                <td>7/10</td>
-                <td>6/10</td>
-                <td>12</td>
-              </tr>
+                <td class="text-danger">Absent</td>
+                <td class="text-muted">No work done</td>
               <tr>
                 <td>Rahemul Islam</td>
                 <td>Junior Web Developer</td>
-                <td>1st Feb, 2022</td>
-                <td>25</td>
-                <td>8/10</td>
-                <td>9/10</td>
-                <td>15</td>
+                <td class="text-success">Present</td>
+                <td>
+                  <ul>
+                    <li>Admin Page Created</li>
+                    <li>Attendance Updated</li>
+                    <li>Bug Fixed</li>
+                  </ul>
+                </td>
               </tr>
               <tr>
                 <td>Mahfuj Ahmed Jim</td>
                 <td>Senior Mobile App Developer</td>
-                <td>1st Feb, 2022</td>
-                <td>51</td>
-                <td>100/100</td>
-                <td>100/100</td>
-                <td>17</td>
+                <td class="text-success">Present</td>
+                <td>
+                  <ul>
+                    <li>Admin Page Created</li>
+                    <li>Bug Fixed</li>
+                  </ul>
+                </td>
               </tr>
               <tr>
                 <td>Hasibul Islam Shanto</td>
                 <td>Graphic Designer</td>
-                <td>1st Oct, 2021</td>
-                <td>64</td>
-                <td>130/130</td>
-                <td>130/130</td>
-                <td>19</td>
+                <td class="text-success">Present</td>
+                <td>
+                  <ul>
+                    <li>Admin Page Created</li>
+                  </ul>
+                </td>
               </tr>
               <tr>
                 <td>Tawsif Mahmud</td>
                 <td>Junior Software Engineer</td>
-                <td>1st Feb, 2022</td>
-                <td>21</td>
-                <td>27/27</td>
-                <td>24/24</td>
-                <td>21</td>
+                <td class="text-success">Present</td>
+                <td>
+                  <ul>
+                    <li>Admin Page Created</li>
+                    <li>Attendance Updated</li>
+                    <li>Bug Fixed</li>
+                    <li>lorem ipsum</li>
+                  </ul>
+                </td>
               </tr>
             </tbody>
           </table>
