@@ -70,7 +70,13 @@ Route::group(['middleware'=>['userHaveAccess']],function(){
 
 
     Route::post('personalityPost',[PersonalityController::class,'PersonalityFnc']);
+    
+    Route::group(['middleware'=>['adminHaveAccess']],function(){
 
+        // Route::get('test',[DailyHistoryController::class, 'workingHour']);
+        // Route::view('testCase','testCase');
+        
+    });
 });
 
 Route::view('Signup', 'Signup');

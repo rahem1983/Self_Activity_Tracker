@@ -46,6 +46,9 @@ class Kernel extends HttpKernel
         ],
         'userHaveAccess' => [
             \App\Http\Middleware\UserMiddleware::class,
+        ],
+        'adminHaveAccess' => [
+            \App\Http\Middleware\adminMiddleware::class,
         ]
     ];
 

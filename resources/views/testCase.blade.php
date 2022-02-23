@@ -10,6 +10,6 @@
     <Script src="{{url('js/testCase.js')}}" defer></Script>
 </head>
 <body>
-    <time class="output"> lalal</time>
+    <time class="output"> lalal </time>
 </body>
 </html>

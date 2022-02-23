@@ -20,8 +20,8 @@ class DailyHistoryController extends Controller
         $DH->status="incomplete";
         $DH->assigned_date=$req->assignedDate;
         $DH->todo=$req->todo;
-        $DH->start_time=null;
-        $DH->end_time=null;
+        $DH->start_time="00:00:00";
+        $DH->end_time="00:00:00";
         $DH->mood=null;
         $DH->new_skill=null;
         $DH->save();
@@ -61,7 +61,12 @@ class DailyHistoryController extends Controller
     }
     public function workingHour()
     {
-        $DH = Daily_history::where('id', 23)->get();
+        $name = explode(" ", "mahfuj ahmmed jim");
+        $uid =  substr(time(),-4);
+        $firsebase = substr("euiweeikfskdjkjiusdkljklsfjnvkaopwsfkjs",0,2);
+        $DH = strtoupper($name[0]."".$uid."".$firsebase);
+
+        // $DH = Daily_history::where('user_id', 1)->get();
         return response()->json($DH);
     }
 }

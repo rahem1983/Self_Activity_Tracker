@@ -19,6 +19,16 @@
         margin-left: 750px;
       }
 
+      .blink-1{
+		animation: blink 1s linear infinite;
+    color: #002db3;
+    }
+    @keyframes blink{
+    0%{opacity: 0;}
+    50%{opacity: .5;}
+    100%{opacity: 1;}
+    }
+
     </style>
 
 </head>
@@ -46,6 +56,14 @@
         </li>
         <li class="nav-item">
           <a class="nav-link" href="../PersonalityTest">Personality</a>
+        </li>
+        @if (session('user') && session('user')->type == "admin")
+        <li class="nav-item">
+          <a class="nav-link" href="../AdminPanel_1">Admin</a>
+        </li>
+        @endif
+        <li class="nav-item">
+          <a class="nav-link" href="#"><span class="blink-1 blink">Attendance</span></a>
         </li>
       </ul>
       @endif
