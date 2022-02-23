@@ -87,7 +87,7 @@ Route::post('login',[UserController::class,'login']);
 Route::post('signup',[UserController::class,'signup']);
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('landing');
 });
 
 
