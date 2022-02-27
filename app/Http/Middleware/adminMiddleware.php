@@ -5,7 +5,7 @@ namespace App\Http\Middleware;
 use Closure;
 use Illuminate\Http\Request;
 use App\Models\User;
-class UserMiddleware
+class adminMiddleware
 {
     /**
      * Handle an incoming request.
@@ -19,7 +19,7 @@ class UserMiddleware
         if(session('user')){
             $id = session('user')->id;
             $user = User::where('id',$id)->first();
-            if($user != null){
+            if($user != null && $user->type == "admin"){
                 return $next($request);
             }
             else{
@@ -30,6 +30,5 @@ class UserMiddleware
         else{
             return redirect('/');
         }
-
     }
 }

@@ -51,7 +51,6 @@ class UserController extends Controller
         $user = DB::table('users')->where('email',$req->email)->first(); //gets the user form the database where the email matches
         if($user != null){
             if (Hash::check($req->password, $user->password)) {  //checks the request->password matches with the user password from database
-                $user->password;
                 $req->session()->put('user', $user);    //starts a session against the user after successful login
 
                 return redirect('Home');  //redirects to view teh posts in the home
@@ -62,13 +61,14 @@ class UserController extends Controller
         }
         else{
             return redirect('Login')->with('NoUser','no user found');  //throw error if the email does not matches with any user
-        }
+        }   
     }
     public function moodGraph()
     {
         $moods = Daily_history::select('mood')->where('user_id', session('user')->id)->get();
         $an = 0;
         $de = 0;
+        
         $ne = 0;
         $re = 0;
         $vh = 0;

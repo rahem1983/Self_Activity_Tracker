@@ -15,7 +15,7 @@ $.ajax({
             const projectTarget = document.createElement("div");
           projectTarget.className = "col-4 pb-5"
           projectTarget.innerHTML = `
-          <div class="card" style="height:180px;">
+          <div class="card" style="height:220px;">
             <div class="card-body">
               <a href="ProjectOverview/`+ project.id +`"><h6 class="text-dark">`+ project.project_title +`</h6></a>
               <p>`+project.description.slice(0,80)+`...</p>
@@ -29,7 +29,7 @@ $.ajax({
             const projectTarget = document.createElement("div");
           projectTarget.className = "col-4 pb-5"
           projectTarget.innerHTML = `
-          <div class="card" style="height:180px;">
+          <div class="card" style="height:220px;">
             <div class="card-body">
               <a href="ProjectOverview/`+ project.id +`"><h6 class="text-dark">`+ project.project_title +`</h6></a>
               <p>`+project.description.slice(0,80)+`...</p>
@@ -43,7 +43,7 @@ $.ajax({
             const projectTarget = document.createElement("div");
           projectTarget.className = "col-4 pb-5"
           projectTarget.innerHTML = `
-          <div class="card" style="height:180px;">
+          <div class="card" style="height:220px   ;">
             <div class="card-body">
               <a href="ProjectOverview/`+ project.id +`"><h6 class="text-dark">`+ project.project_title +`</h6></a>
               <p>`+project.description.slice(0,80)+`...</p>

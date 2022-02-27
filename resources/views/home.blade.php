@@ -114,16 +114,7 @@
                     </div>
                 </div> 
 
-                <div class="card mt-4">
-                    <!-- <img class="card-img-top" src="..." alt="Card image cap"> --}} -->
-                    <div class="card-header text-center"><h5>Achievements 🏆</h5></div>
-                    <div class="card-body">
-                        <img title="Achievements Badges" class="card-img" src="image/trophies.jpg" alt="">
-                        <!-- <h6>• Sample Tasks lorem ipsum </h6>
-                            <h6>• Random Tasks lorem ipsum </h6>
-                            <h6>• Sample Tasks lorem ipsum </h6> -->
-                    </div>
-                </div>       
+                       
         
                 <!-- Mood Graph -->
                 <div class="card mt-3 mb-2">

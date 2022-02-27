@@ -134,9 +134,10 @@ $.ajax({
         }
 
         $("#weekForm").submit(function (e) { 
+
             e.preventDefault();
             // console.log($("input[name = _token]").val());
-            $(".inputOnDate").each(function () { 
+            $(".inputOnDate").each(function () {
                 // console.log(this.children[1]);
                 $(this.children).each(function(){
                     if($(this.children[0]).is(":checked")){
@@ -153,13 +154,13 @@ $.ajax({
                             },
                             dataType: "json",
                             success: function (response) {
-                                console.log(response);
+                                
                             }
                         });
                     }
                 });
             });
-            // window.location.replace("./Home");
+            window.location.replace("./Home");
         });
     }
 });        

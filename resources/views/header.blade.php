@@ -60,11 +60,13 @@
         <li class="nav-item">
           <a class="nav-link" href="./PersonalityTest">Personality</a>
         </li>
+        @if (session('user') && session('user')->type == "admin")
         <li class="nav-item">
-          <a class="nav-link" href="./PersonalityTest">Admin</a>
+          <a class="nav-link" href="./AdminPanel_1">Admin</a>
         </li>
+        @endif
         <li class="nav-item">
-          <a class="nav-link" href="./PersonalityTest"><span class="blink-1 blink">Attendance</span></a>
+          <a class="nav-link" href="#"><span class="blink-1 blink">Attendance</span></a>
         </li>
       </ul>
       @endif
