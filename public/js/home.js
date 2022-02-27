@@ -2,6 +2,7 @@ let mood = [];
 var currentDate = new Date().toISOString().slice(0,10);
 
 const todayTaskDiv = document.querySelector(".todayTaskDiv");
+console.log(todayTaskDiv);
 const incompleteTaskDiv = document.querySelector(".incompleteTaskDiv");
 function HumanRead(date){
   var time = new Date(date);
@@ -152,6 +153,7 @@ function HumanRead(date){
           }
           if(task.status == "complete"){
             const taskAt = document.createElement("h6");
+            
             taskAt.className = "text-success"
             taskAt.id = task.project_id
             taskAt.innerHTML = `
