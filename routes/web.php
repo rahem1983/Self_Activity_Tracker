@@ -28,8 +28,7 @@ Route::group(['middleware'=>['userHaveAccess']],function(){
     Route::view('AllPtoject', 'allProjects');
     Route::view('PersonalityTest', 'personalityTest');
     Route::view('PersonalityForm', 'personalityForm');
-    Route::view('AdminPanel_1', 'AdminPanel_1');
-    Route::view('AdminPanel_2', 'AdminPanel_2');
+
 
 
     
@@ -55,6 +54,8 @@ Route::group(['middleware'=>['userHaveAccess']],function(){
 
     Route::get('MoodGraph',[UserController::class,'moodGraph']);
     Route::post('EditProfile',[UserController::class,'EditProfile']);
+    Route::get('attendance',[UserController::class,'attend']);
+
 
     Route::get('GetSessionUserActiveProject', [ProjectController::class, 'GetSessionUserActiveProject']);
     Route::get('GetSessionUserAllProject', [ProjectController::class, 'GetSessionUserAllProject']);
@@ -77,6 +78,8 @@ Route::group(['middleware'=>['userHaveAccess']],function(){
 
         // Route::get('test',[DailyHistoryController::class, 'workingHour']);
         // Route::view('testCase','testCase');
+        Route::view('AdminPanel_1', 'AdminPanel_1');
+        Route::view('AdminPanel_2', 'AdminPanel_2');
         
     });
 });
@@ -94,3 +97,4 @@ Route::get('/', function () {
 
 Route::get('test',[DailyHistoryController::class, 'workingHour']);
 Route::view('testCase','testCase');
+Route::get('getcookie',[UserController::class,'getcookie']);

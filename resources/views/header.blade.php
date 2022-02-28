@@ -49,7 +49,7 @@
       @if (session('user'))
       <ul class="navbar-nav">
         <li class="nav-item active">
-          <a class="nav-link" href="./Home">Home <span class="sr-only">(current)</span></a>
+          <a class="nav-link" href="./Home">Home <span class="sr-only"></span></a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="./AllPtoject">Projects</a>
@@ -60,14 +60,19 @@
         <li class="nav-item">
           <a class="nav-link" href="./PersonalityTest">Personality</a>
         </li>
+
         @if (session('user') && session('user')->type == "admin")
         <li class="nav-item">
           <a class="nav-link" href="./AdminPanel_1">Admin</a>
         </li>
         @endif
+
+        @if (!Cookie::get('attend'))
         <li class="nav-item">
-          <a class="nav-link" href="#"><span class="blink-1 blink">Attendance</span></a>
+          <a class="nav-link" href="{{url('attendance?id'.session('user')->id)}}"><span class="blink-1 blink">{{Cookie::get('attend')}}Attendance  </span></a>
         </li>
+        @endif
+
       </ul>
       @endif
       

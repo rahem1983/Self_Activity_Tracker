@@ -1,4 +1,6 @@
-
+@php
+    $user = Cookie::get('attend');
+@endphp
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,6 +12,6 @@
     <Script src="{{url('js/testCase.js')}}" defer></Script>
 </head>
 <body>
-    <time class="output"> lalal </time>
+    <time class="output"> lalal {{$user}} </time>
 </body>
 </html>
