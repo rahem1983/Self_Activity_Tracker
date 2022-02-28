@@ -6,6 +6,8 @@ use App\Http\Controllers\ProjectController;
 use App\Http\Controllers\DailyHistoryController;
 
 use App\Http\Controllers\PersonalityController;
+use App\Http\Controllers\testController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -96,5 +98,8 @@ Route::get('/', function () {
 
 
 Route::get('test',[DailyHistoryController::class, 'workingHour']);
+
 Route::view('testCase','testCase');
 Route::get('getcookie',[UserController::class,'getcookie']);
+
+

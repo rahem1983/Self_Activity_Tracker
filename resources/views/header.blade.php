@@ -69,7 +69,7 @@
 
         @if (!Cookie::get('attend'))
         <li class="nav-item">
-          <a class="nav-link" href="{{url('attendance?id'.session('user')->id)}}"><span class="blink-1 blink">{{Cookie::get('attend')}}Attendance  </span></a>
+          <a class="nav-link" href="{{url('attendance?id'.session('user')->id)}}"><span class="blink-1 blink"> Attendance  </span></a>
         </li>
         @endif
 

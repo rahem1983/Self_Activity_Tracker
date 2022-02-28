@@ -12,6 +12,14 @@
     <Script src="{{url('js/testCase.js')}}" defer></Script>
 </head>
 <body>
+<<<<<<< HEAD
     <time class="output"> lalal {{$user}} </time>
+=======
+<<<<<<< HEAD
+    <time class="output"> {{$name}}</time>
+=======
+    <time class="output"> lalal </time>
+>>>>>>> 1cc4e9ca6a2d3b7170c8101084fab054ffb5793a
+>>>>>>> deea142cb41e062db03bf9bdcc98969b5338d651
 </body>
 </html>
