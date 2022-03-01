@@ -50,29 +50,39 @@ function HumanRead(date){
     });
     
 
-         var xValues = ["Absent", "Present"];
-         var yValues = [8, 15];
+    //attendance graph starts
+    $.ajax({
+      type: "get",
+      url: "lastMonthAttendance",
+      dataType: "json",
+      success: function (response) {
+        var xValues = ["Absent", "Present"];
+         var yValues = response;
          var barColors = ["#ff0000", "#0000ff"];
         
         new Chart("myPieChart", {
-        type: "pie",
-        data: {
-        labels: xValues,
-        datasets: [{
-            backgroundColor: barColors,
-            data: yValues
-            }]
-        },
-        options: {
-        legend: {
-        display: true,
-        position: 'bottom',
-        },
-        title: {
-        display: false,
-        }
-    }
-    });
+          type: "pie",
+          data: {
+          labels: xValues,
+            datasets: [{
+                backgroundColor: barColors,
+                data: yValues
+                }]
+          },
+          options: {
+            legend: {
+              display: true,
+            position: 'bottom',
+            },
+            title: {
+              display: false,
+            }
+          }
+        });
+      }
+  });
+  //attendance graph ends
+         
 
     $.ajax({
       type: "GET",

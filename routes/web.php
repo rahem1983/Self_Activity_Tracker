@@ -3,7 +3,10 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\ProjectController; 
+use App\Http\Controllers\AttendanceController;
 use App\Http\Controllers\DailyHistoryController;
+
+
 
 use App\Http\Controllers\PersonalityController;
 use App\Http\Controllers\testController;
@@ -56,7 +59,11 @@ Route::group(['middleware'=>['userHaveAccess']],function(){
 
     Route::get('MoodGraph',[UserController::class,'moodGraph']);
     Route::post('EditProfile',[UserController::class,'EditProfile']);
-    Route::get('attendance',[UserController::class,'attend']);
+
+    
+    Route::get('attendance',[AttendanceController::class,'attend']);
+    Route::get('lastMonthAttendance',[AttendanceController::class,'lastMonthAttendance']);
+
 
 
     Route::get('GetSessionUserActiveProject', [ProjectController::class, 'GetSessionUserActiveProject']);
@@ -104,6 +111,6 @@ Route::get('/', function () {
 Route::get('test',[DailyHistoryController::class, 'workingHour']);
 
 Route::view('testCase','testCase');
-Route::get('getcookie',[UserController::class,'getcookie']);
+Route::get('getcookie',[AttendanceController::class,'getcookie']);
 
 

@@ -136,33 +136,5 @@ class UserController extends Controller
         return redirect('./Home');
     }
 
-    public function Attend()
-    {
-        $attend = new Attendance;
-        $attend->user_id = session('user')->id;
-        $attend->attend = 1;
-        $attend->save();
-
-
-        // $mins variable have the time in min ho much time left for today
-        $timezone=new DateTimeZone( 'Asia/Dhaka' );
-        $now=new DateTime( 'now', $timezone );
-        $midnight=new DateTime( date('Y-m-d H:i:s', strtotime('11.59pm') ), $timezone );
-        $diff = $now->diff( $midnight );
-        $mins=( intval( $diff->format('%h') ) * 60 ) + intval( $diff->format('%i') );
-
-        // $cookie = Cookie::make('attend', "1", 1 , "/");
-        // $lala = Cookie::get('name');
-        // $response = new Response("present");
-        // $response->withCookie(cookie('name', "user", 1));
-
-        return redirect('./Home')->withCookie(cookie('attend', 1, $mins));
-        
-    }
-
-    public function getcookie(Request $req)
-    {
-        $name = $req->cookie('attend');
-        return view('home');
-    }
+    
 }
