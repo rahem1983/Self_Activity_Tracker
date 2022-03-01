@@ -12,14 +12,15 @@
     <Script src="{{url('js/testCase.js')}}" defer></Script>
 </head>
 <body>
-<<<<<<< HEAD
-    <time class="output"> lalal {{$user}} </time>
-=======
-<<<<<<< HEAD
-    <time class="output"> {{$name}}</time>
-=======
-    <time class="output"> lalal </time>
->>>>>>> 1cc4e9ca6a2d3b7170c8101084fab054ffb5793a
->>>>>>> deea142cb41e062db03bf9bdcc98969b5338d651
+    <time class="output" id="la"> lalal</time>
+    <div class="inputOnProject">
+        <input type="checkbox" id="CBproject" >
+        <label for="CBproject"> project 1</label><br>
+        <div id="inputProject"></div>
+        <input type="checkbox" id="CBproject2" >
+        <label for="CBproject2"> project 2</label><br>
+        <div id="inputProject2"></div>
+        <button class=""></button>
+
 </body>
 </html>
