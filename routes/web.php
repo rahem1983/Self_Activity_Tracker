@@ -92,7 +92,11 @@ Route::post('login',[UserController::class,'login']);
 Route::post('signup',[UserController::class,'signup']);
 
 Route::get('/', function () {
-    return view('landing');
+    if (session('user')) {
+        return view('home');
+    } else {
+        return view('landing');
+    }
 });
 
 

@@ -38,10 +38,18 @@
 <body>
     
   <nav class="px-5 container-fluid navbar navbar-expand-lg navbar-dark navbar-light" style="background-color: #70afdd;">
-    <a class="navbar-brand" href="./">
-      <img src="{{url('./image/SAT.png')}}" width="30" height="30" class="d-inline-block align-top" alt="">
-      Self Activity Tracker
-    </a>
+    @if (session('user'))
+      <a class="navbar-brand" href="./Home">
+        <img src="{{url('./image/SAT.png')}}" width="30" height="30" class="d-inline-block align-top" alt="">
+        Self Activity Tracker
+      </a>
+    @else
+      <a class="navbar-brand" href="./">
+        <img src="{{url('./image/SAT.png')}}" width="30" height="30" class="d-inline-block align-top" alt="">
+        Self Activity Tracker
+      </a>
+    @endif
+    
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>

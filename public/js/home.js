@@ -14,6 +14,7 @@ function HumanRead(date){
         url: "MoodGraph",
         dataType: "json",
         success: function (response) {
+          //mood graph start 
           var xValues = ["Angry😡", "Depressed😥", "Neutral😐", "Relieved😌", "Very Happy😃"];
           var yValues = response;
           var barColors = [
@@ -44,7 +45,7 @@ function HumanRead(date){
             
             },
                     
-            });
+            }); //mood graph end
         }
     });
     
