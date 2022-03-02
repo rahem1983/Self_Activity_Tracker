@@ -2,10 +2,10 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\WorkController;
 use App\Http\Controllers\ProjectController; 
 use App\Http\Controllers\AttendanceController;
 use App\Http\Controllers\DailyHistoryController;
-
 
 
 use App\Http\Controllers\PersonalityController;
@@ -64,7 +64,7 @@ Route::group(['middleware'=>['userHaveAccess']],function(){
     Route::get('attendance',[AttendanceController::class,'attend']);
     Route::get('lastMonthAttendance',[AttendanceController::class,'lastMonthAttendance']);
 
-
+    Route::get('WorkOverview',[WorkController::class,'WorkOverview']);
 
     Route::get('GetSessionUserActiveProject', [ProjectController::class, 'GetSessionUserActiveProject']);
     Route::get('GetSessionUserAllProject', [ProjectController::class, 'GetSessionUserAllProject']);
@@ -79,6 +79,7 @@ Route::group(['middleware'=>['userHaveAccess']],function(){
     Route::get('GetSessionUserAllTask', [DailyHistoryController::class, 'GetSessionUserAllTask']);
     Route::get('GetSessionUserTodayTask', [DailyHistoryController::class, 'GetSessionUserTodayTask']);
     Route::get('GetSessionUserincompleteTask', [DailyHistoryController::class, 'GetSessionUserincompleteTask']);
+
 
 
     Route::post('personalityPost',[PersonalityController::class,'PersonalityFnc']);

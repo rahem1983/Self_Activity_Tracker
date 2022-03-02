@@ -198,7 +198,7 @@
 
         // <!-- Web Chart Start-->
 
-        var xValues = ["1", "2", "3", "4", "5", "6", "7", " 8", "9", "", "11", "12",
+        var xValues = ["1", "2", "3", "4", "5", "6", "7", " 8", "9", "10", "11", "12",
         "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31" ];
         var yValues = [6, 10, 9, 12, 2, 6, 7, 5, 0, 0, 4, 7, 4, 6, 9, 3, 2, 4, 6, 5, 0, 0, 5, 8, 1, 2, 4, 7, 5, 3, 4];
         var barColors = "#4d4dff";
@@ -269,7 +269,7 @@
 
 // <!-- Apps Chart Start-->
 
-            var xValues = ["1", "2", "3", "4", "5", "6", "7", " 8", "9", "", "11", "12",
+            var xValues = ["1", "2", "3", "4", "5", "6", "7", " 8", "9", "10", "11", "12",
           "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31" ];
             var yValues = [6, 10, 9, 13, 6, 6, 7, 5, 3, 8, 4, 15, 7, 8, 9, 4, 2, 4, 6, 5, 14, 0, 5, 8, 0, 2, 4, 7, 4, 4, 6];
             var barColors = "#4d4dff";
@@ -341,7 +341,7 @@
 
         // <!-- Graphics Chart Start-->
 
-        var xValues = ["1", "2", "3", "4", "5", "6", "7", " 8", "9", "", "11", "12",
+        var xValues = ["1", "2", "3", "4", "5", "6", "7", " 8", "9", "10", "11", "12",
         "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31" ];
         var yValues = [9, 7, 5, 15, 3, 8, 9, 5, 2, 0, 0, 7, 3, 6, 9, 4, 3, 7, 9, 5, 2, 0, 5, 0, 1, 2, 4, 7, 5, 3, 4];
         var barColors = "#4d4dff";
@@ -412,64 +412,72 @@
 
 
 
-
+        
         // Work Overview Graph Start
-        var config = {
-      type: 'bar',
-      data: {
-          labels: ["Web", "Apps", "Graphic Design"],
-          datasets: 
-          [{
-              label: "General Projects",
-              backgroundColor: "#3333ff",
-              data: [8, 11, 14],
-              //barThickness: 45,
-          }, {
-              label: "Collabaration Works",
-              backgroundColor: "#002db3",
-              data: [11, 16, 9],
-              //barThickness: 45,
-          }, {
-              label: "Mega Projects",
-              backgroundColor: "#001966",
-              data: [4, 7, 5],
-              //barThickness: 45,
-          },]
-      },
-      options: {
-          legend: {
-              display: true,
-                position: 'bottom',
-                labels: {
-                  fontSize: 12,
+        $.ajax({
+            type: "get",
+            url: "WorkOverview",
+            dataType: "json",
+            success: function (response) {
+                console.log(response.general_project);
+                var config = {
+                    type: 'bar',
+                    data: {
+                        labels: response.title,
+                        datasets: 
+                        [{
+                            label: "General Projects",
+                            backgroundColor: "#3333ff",
+                            data: response.general_project,
+                            //barThickness: 45,
+                        }, {
+                            label: "Collabaration Works",
+                            backgroundColor: "#002db3",
+                            data: response.collaborated_project,
+                            //barThickness: 45,
+                        }, {
+                            label: "Mega Projects",
+                            backgroundColor: "#001966",
+                            data: response.mega_project,
+                            //barThickness: 45,
+                        },]
+                    },
+                    options: {
+                        legend: {
+                            display: true,
+                              position: 'bottom',
+                              labels: {
+                                fontSize: 12,
+                          }
+                        },
+                        // responsive: true,
+                        scales: {
+                            xAxes: [{
+                                barPercentage: 0.7,
+                                //stacked: true,
+                                ticks: {
+                                    min: 0
+                                },
+                            }],
+                            yAxes: [{
+                                //stacked: true,
+                                ticks: {
+                                  suggestedMin: 0,
+                                     suggestedMax: 20,
+                                    //max: 100,
+                                },
+                            }]
+                        },
+                        tooltips: {
+                            enabled: true,
+                            mode: 'single',
+                        }
+                    }
+                    };
+                    var ctx = document.getElementById("overviewBar").getContext("2d");
+                    new Chart(ctx, config);
             }
-          },
-          // responsive: true,
-          scales: {
-              xAxes: [{
-                  barPercentage: 0.7,
-                  //stacked: true,
-                  ticks: {
-                      min: 0
-                  },
-              }],
-              yAxes: [{
-                  //stacked: true,
-                  ticks: {
-                    suggestedMin: 0,
-                       suggestedMax: 20,
-                      //max: 100,
-                  },
-              }]
-          },
-          tooltips: {
-              enabled: true,
-              mode: 'single',
-          }
-      }
-      };
-      var ctx = document.getElementById("overviewBar").getContext("2d");
-      new Chart(ctx, config);
+        });
 
         // Work Overview Graph End
 
