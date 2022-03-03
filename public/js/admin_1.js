@@ -11,196 +11,270 @@
 // Swiper JS end
 
 
-// Last Month Work Report Graph Start
-
-            var xValues = ["Day 1", "Day 2", "Day 3", "Day 4", "Day 5", "Day 6", "Day 7", "Day 8", "Day 9", "Day 10", "Day 11", "Day 12",
-            "Day 13", "Day 14", "Day 15", "Day 16", "Day 17", "Day 18", "Day 19", "Day 20", "Day 21", "Day 22", "Day 23", "Day 24", "Day 25", "Day 26", "Day 27", "Day 28", "Day 29", "Day 30", "Day 31" ];
-            var yValues = [10, 12, 23, 19, 9, 13, 7, 8, 21, 4, 15, 0, 0, 16, 9, 12, 23, 19, 9, 13, 7, 8, 0, 0, 16, 2, 4, 17, 15, 23, 11];
-            var barColors = "#4d4dff";
-   
-           new Chart("monthlyBar1", {
-           type: "bar",
-           data: {
-           labels: xValues,
-           datasets: [{
-           backgroundColor: barColors,
-           data: yValues,
-           barThickness: 20,
-           maxBarThickness: 20,
-           }]
-       },
-   
-       options:{
-       
-           legend:{
-            display: false,
-           },
-       
-           title: {
-               display: false,
-               text: "Monthly Work Report (In Hours)",
-               fontSize: 20
-           },
-
-           scales: {
-            yAxes: [{
-                ticks: {
-                    beginAtZero: true,
-                    suggestedMin: 0, 
-                    //suggestedMax: 30,
-                    callback: function(value){
-                    return value+ " hrs"; //For unit hrs
-                 }
-                }
-            }]
-
-        },
-        tooltips: {
-         enabled: true,
-         mode: 'single',
-         callbacks: {
-             label: function(tooltipItems, data) {
-                 return  'Total Working Time: ' + tooltipItems.yLabel + ' Hours';
-             }
-         }
-     }
-   }
-   
-       });
-
-
-// Last Month Work Report Graph End
-
-
-        // Second Last Month Work Report Graph Start
-
-        var xValues = ["Day 1", "Day 2", "Day 3", "Day 4", "Day 5", "Day 6", "Day 7", "Day 8", "Day 9", "Day 10", "Day 11", "Day 12",
-        "Day 13", "Day 14", "Day 15", "Day 16", "Day 17", "Day 18", "Day 19", "Day 20", "Day 21", "Day 22", "Day 23", "Day 24", "Day 25", "Day 26", "Day 27", "Day 28", "Day 29", "Day 30", "Day 31" ];
-        var yValues = [8, 12, 23, 19, 9, 13, 7, 8, 0, 6, 13, 17, 9, 26, 6, 12, 23, 19, 9, 4, 7, 8, 7, 6, 13, 2, 4, 19, 15, 26, 11];
-        var barColors = "#4d4dff";
-
-        new Chart("monthlyBar2", {
-        type: "bar",
-        data: {
-        labels: xValues,
-        datasets: [{
-        backgroundColor: barColors,
-        data: yValues,
-        barThickness: 20,
-        maxBarThickness: 20,
-        }]
-        },
-
-        options:{
-
-        legend:{
-        display: false,
-        },
-
-        title: {
-            display: false,
-            text: "Monthly Work Report (In Hours)",
-            fontSize: 20
-        },
-
-        scales: {
-        yAxes: [{
-            ticks: {
-                beginAtZero: true,
-                suggestedMin: 0, 
-                //suggestedMax: 30,
-                callback: function(value){
-                return value+ " hrs"; //For unit hrs
-            }
-            }
-        }]
-
-        },
-        tooltips: {
-        enabled: true,
-        mode: 'single',
-        callbacks: {
-        label: function(tooltipItems, data) {
-            return  'Total Working Time: ' + tooltipItems.yLabel + ' Hours';
-        }
-        }
-        }
-        }
-
-        });
-
-        // Second Last Month Work Report Graph End
-
-
-
-
-// Third Last Month Work Report Graph Start
-
-        var xValues = ["Day 1", "Day 2", "Day 3", "Day 4", "Day 5", "Day 6", "Day 7", "Day 8", "Day 9", "Day 10", "Day 11", "Day 12",
-        "Day 13", "Day 14", "Day 15", "Day 16", "Day 17", "Day 18", "Day 19", "Day 20", "Day 21", "Day 22", "Day 23", "Day 24", "Day 25", "Day 26", "Day 27", "Day 28", "Day 29", "Day 30", "Day 31" ];
-        var yValues = [12, 10, 21, 29, 18, 13, 7, 8, 0, 4, 15, 6, 3, 16, 9, 12, 23, 19, 9, 13, 7, 30, 5, 8, 34, 2, 4, 17, 15, 23, 11];
-        var barColors = "#4d4dff";
-
-       new Chart("monthlyBar3", {
-       type: "bar",
-       data: {
-       labels: xValues,
-       datasets: [{
-       backgroundColor: barColors,
-       data: yValues,
-       barThickness: 20,
-       maxBarThickness: 20,
-       }]
-   },
-
-   options:{
-
-       legend:{
-        display: false,
-       },
-   
-       title: {
-           display: false,
-           text: "Monthly Work Report (In Hours)",
-           fontSize: 20
-       },
-
-       scales: {
-        yAxes: [{
-            ticks: {
-                beginAtZero: true,
-                suggestedMin: 0, 
-                //suggestedMax: 30,
-                callback: function(value){
-                return value+ " hrs"; //For unit hrs
-             }
-            }
-        }]
-
-    },
-    tooltips: {
-     enabled: true,
-     mode: 'single',
-     callbacks: {
-         label: function(tooltipItems, data) {
-             return  'Total Working Time: ' + tooltipItems.yLabel + ' Hours';
-         }
-     }
- }
-}
-
-   });
-
-// Third Last Month Work Report Graph End
-
-
-let individualReport = document.querySelector('.individualReport');
-let monthYear = document.querySelector('.monthYear');
+let monthWorkReport = document.querySelector('.monthWorkReport');
 
 function getMonthName(month) {
     const monthNames = ["January", "February", "March", "April", "May", "June","July", "August", "September", "October", "November", "December"];
     return monthNames[month-1];
 }
+
+$.ajax({
+    type: "get",
+    url: "lstThreeMonthReport",
+    dataType: "json",
+    success: function (response) {
+        for (const IR of response) {
+            console.log(IR.totalWorkHr);
+            const individualGraphDiv = document.createElement("div");
+            individualGraphDiv.className = "swiper-slide"
+            individualGraphDiv.innerHTML = `
+            <div class="bx-1" style="float:right;"><h6 style="color: #002db3;">Total Working Hour &emsp;: <span>`+ IR.totalWorkHr +`</span> hrs <br> 
+                                                                                 Avg Working Hour &emsp;&nbsp;&nbsp;: <span>`+ IR.avgWorkHr.toFixed(2) +`</span> hrs</h6></div>
+            <canvas id="monthlyBar` +(IR.month[0])+`` +(IR.month[1]) + `" style="width:50%; padding: 15px;"></canvas>
+            <h5 class="text-center pt-3 monthWorkReportMY" style="color: #002db3;">` + getMonthName(IR.month[0]) + `, 20`+ IR.month[1] + `</h5>`
+            monthWorkReport.append(individualGraphDiv);
+
+            var xValues = IR.dayesOfMonth;
+            var yValues = IR.workHrArray;
+            var barColors = "#4d4dff";
+   
+            new Chart("monthlyBar"+(IR.month[0])+""+(IR.month[1])+"", {
+                type: "bar",
+                data: {
+                    labels: xValues,
+                    datasets: [{
+                        backgroundColor: barColors,
+                        data: yValues,
+                        barThickness: 20,
+                        maxBarThickness: 20,
+                    }]
+                },
+    
+                options:{
+            
+                legend:{
+                    display: false,
+                },
+            
+                title: {
+                    display: false,
+                    text: "Monthly Work Report (In Hours)",
+                    fontSize: 20
+                },
+
+                    scales: {
+                        yAxes: [{
+                            ticks: {
+                                beginAtZero: true,
+                                suggestedMin: 0, 
+                                //suggestedMax: 30,
+                                callback: function(value){
+                                    return value+ " hrs"; //For unit hrs
+                                }
+                            }
+                        }]
+                    },
+                    tooltips: {
+                        enabled: true,
+                        mode: 'single',
+                        callbacks: {
+                            label: function(tooltipItems, data) {
+                                return  'Total Working Time: ' + tooltipItems.yLabel + ' Hours';
+                            }
+                        }
+                    }
+                }
+   
+            });
+
+        }
+    }
+});
+// // Last Month Work Report Graph Start
+
+//             var xValues = ["Day 1", "Day 2", "Day 3", "Day 4", "Day 5", "Day 6", "Day 7", "Day 8", "Day 9", "Day 10", "Day 11", "Day 12",
+//             "Day 13", "Day 14", "Day 15", "Day 16", "Day 17", "Day 18", "Day 19", "Day 20", "Day 21", "Day 22", "Day 23", "Day 24", "Day 25", "Day 26", "Day 27", "Day 28", "Day 29", "Day 30", "Day 31" ];
+//             var yValues = [10, 12, 23, 19, 9, 13, 7, 8, 21, 4, 15, 0, 0, 16, 9, 12, 23, 19, 9, 13, 7, 8, 0, 0, 16, 2, 4, 17, 15, 23, 11];
+//             var barColors = "#4d4dff";
+   
+//            new Chart("monthlyBar1", {
+//            type: "bar",
+//            data: {
+//            labels: xValues,
+//            datasets: [{
+//            backgroundColor: barColors,
+//            data: yValues,
+//            barThickness: 20,
+//            maxBarThickness: 20,
+//            }]
+//        },
+   
+//        options:{
+       
+//            legend:{
+//             display: false,
+//            },
+       
+//            title: {
+//                display: false,
+//                text: "Monthly Work Report (In Hours)",
+//                fontSize: 20
+//            },
+
+//            scales: {
+//             yAxes: [{
+//                 ticks: {
+//                     beginAtZero: true,
+//                     suggestedMin: 0, 
+//                     //suggestedMax: 30,
+//                     callback: function(value){
+//                     return value+ " hrs"; //For unit hrs
+//                  }
+//                 }
+//             }]
+
+//         },
+//         tooltips: {
+//          enabled: true,
+//          mode: 'single',
+//          callbacks: {
+//              label: function(tooltipItems, data) {
+//                  return  'Total Working Time: ' + tooltipItems.yLabel + ' Hours';
+//              }
+//          }
+//      }
+//    }
+   
+//        });
+
+
+// // Last Month Work Report Graph End
+
+
+//         // Second Last Month Work Report Graph Start
+
+//         var xValues = ["Day 1", "Day 2", "Day 3", "Day 4", "Day 5", "Day 6", "Day 7", "Day 8", "Day 9", "Day 10", "Day 11", "Day 12",
+//         "Day 13", "Day 14", "Day 15", "Day 16", "Day 17", "Day 18", "Day 19", "Day 20", "Day 21", "Day 22", "Day 23", "Day 24", "Day 25", "Day 26", "Day 27", "Day 28", "Day 29", "Day 30", "Day 31" ];
+//         var yValues = [8, 12, 23, 19, 9, 13, 7, 8, 0, 6, 13, 17, 9, 26, 6, 12, 23, 19, 9, 4, 7, 8, 7, 6, 13, 2, 4, 19, 15, 26, 11];
+//         var barColors = "#4d4dff";
+
+//         new Chart("monthlyBar2", {
+//         type: "bar",
+//         data: {
+//         labels: xValues,
+//         datasets: [{
+//         backgroundColor: barColors,
+//         data: yValues,
+//         barThickness: 20,
+//         maxBarThickness: 20,
+//         }]
+//         },
+
+//         options:{
+
+//         legend:{
+//         display: false,
+//         },
+
+//         title: {
+//             display: false,
+//             text: "Monthly Work Report (In Hours)",
+//             fontSize: 20
+//         },
+
+//         scales: {
+//         yAxes: [{
+//             ticks: {
+//                 beginAtZero: true,
+//                 suggestedMin: 0, 
+//                 //suggestedMax: 30,
+//                 callback: function(value){
+//                 return value+ " hrs"; //For unit hrs
+//             }
+//             }
+//         }]
+
+//         },
+//         tooltips: {
+//         enabled: true,
+//         mode: 'single',
+//         callbacks: {
+//         label: function(tooltipItems, data) {
+//             return  'Total Working Time: ' + tooltipItems.yLabel + ' Hours';
+//         }
+//         }
+//         }
+//         }
+
+//         });
+
+//         // Second Last Month Work Report Graph End
+
+
+
+
+// // Third Last Month Work Report Graph Start
+
+//         var xValues = ["Day 1", "Day 2", "Day 3", "Day 4", "Day 5", "Day 6", "Day 7", "Day 8", "Day 9", "Day 10", "Day 11", "Day 12",
+//         "Day 13", "Day 14", "Day 15", "Day 16", "Day 17", "Day 18", "Day 19", "Day 20", "Day 21", "Day 22", "Day 23", "Day 24", "Day 25", "Day 26", "Day 27", "Day 28", "Day 29", "Day 30", "Day 31" ];
+//         var yValues = [12, 10, 21, 29, 18, 13, 7, 8, 0, 4, 15, 6, 3, 16, 9, 12, 23, 19, 9, 13, 7, 30, 5, 8, 34, 2, 4, 17, 15, 23, 11];
+//         var barColors = "#4d4dff";
+
+//        new Chart("monthlyBar3", {
+//        type: "bar",
+//        data: {
+//        labels: xValues,
+//        datasets: [{
+//        backgroundColor: barColors,
+//        data: yValues,
+//        barThickness: 20,
+//        maxBarThickness: 20,
+//        }]
+//    },
+
+//    options:{
+
+//        legend:{
+//         display: false,
+//        },
+   
+//        title: {
+//            display: false,
+//            text: "Monthly Work Report (In Hours)",
+//            fontSize: 20
+//        },
+
+//        scales: {
+//         yAxes: [{
+//             ticks: {
+//                 beginAtZero: true,
+//                 suggestedMin: 0, 
+//                 //suggestedMax: 30,
+//                 callback: function(value){
+//                 return value+ " hrs"; //For unit hrs
+//              }
+//             }
+//         }]
+
+//     },
+//     tooltips: {
+//      enabled: true,
+//      mode: 'single',
+//      callbacks: {
+//          label: function(tooltipItems, data) {
+//              return  'Total Working Time: ' + tooltipItems.yLabel + ' Hours';
+//          }
+//      }
+//  }
+// }
+
+//    });
+
+// // Third Last Month Work Report Graph End
+
+
+let individualReport = document.querySelector('.individualReport');
+let monthYear = document.querySelector('.monthYear');
 
 $.ajax({
     type: "get",

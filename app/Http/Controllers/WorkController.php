@@ -104,32 +104,26 @@ class WorkController extends Controller
 
     public function lstThreeMonthReport()
     {
-        $attendance = Attendance::whereMonth('created_at', '=', Carbon::now()->subMonth(1)->month)->get();   // gets only the data from previous month
-
-        $DaysInMonth = cal_days_in_month(CAL_GREGORIAN,$this->getMonth($attendance[0]->created_at),$this->getYear($attendance[0]->created_at));
-
-        $numberofFriday = $this->countAnydays($this->getMonth($attendance[0]->created_at),$this->getYear($attendance[0]->created_at), "fri");
-        $numberofSaturday = $this->countAnydays($this->getMonth($attendance[0]->created_at),$this->getYear($attendance[0]->created_at), "sat");
-
-        $totalWorkDay = $DaysInMonth - count($numberofFriday) - count($numberofSaturday);
-        $totalWorkHr = 0;
-        $avgWorkHr = 0;
-
         $individualReport = [];
-        $teamArray = [];
-        $workhour = [];
-        $dayesOfMonth = [];
+        for ($i=3; $i>0; $i--) {     
+            $attendance = Attendance::whereMonth('created_at', '=', Carbon::now()->subMonth($i)->month)->get();   // gets only the data from previous month
 
-        foreach ($teams as $team) {
-
-            array_push($teamArray, $team->title);
-            $reports = Attendance::select('attendances.*','users.team_id', 'teams.title')->join('users', 'attendances.user_id', '=', 'users.id')->join('teams', 'users.team_id', '=', 'teams.id')->whereMonth('attendances.created_at', '=', Carbon::now()->subMonth()->month)->where('team_id',$team->id);
+            $DaysInMonth = cal_days_in_month(CAL_GREGORIAN,$this->getMonth($attendance[0]->created_at),$this->getYear($attendance[0]->created_at));
+    
+            $numberofFriday = $this->countAnydays($this->getMonth($attendance[0]->created_at),$this->getYear($attendance[0]->created_at), "fri");
+            $numberofSaturday = $this->countAnydays($this->getMonth($attendance[0]->created_at),$this->getYear($attendance[0]->created_at), "sat");
+    
+            $totalWorkDay = $DaysInMonth - count($numberofFriday) - count($numberofSaturday);
+            $totalWorkHr = 0;
+            $avgWorkHr = 0;
+    
+            $workhour = [];
             $dayesOfMonth = [];
+            $months = Attendance::whereMonth('created_at', '=', Carbon::now()->subMonth($i)->month);
+            for ($j=0; $j < $DaysInMonth; $j++) { 
 
-            for ($i=0; $i < $DaysInMonth; $i++) { 
-
-                array_push($dayesOfMonth, ($i+1));
-                $sub = DB::table( DB::raw("({$reports->toSql()}) as sub"))->mergeBindings($reports->getQuery())->whereDay('created_at', '=', ($i+1))->count(); 
+                array_push($dayesOfMonth, ($j+1));
+                $sub = DB::table( DB::raw("({$months->toSql()}) as sub"))->mergeBindings($months->getQuery())->whereDay('created_at', '=', ($j+1))->count(); 
 
                 if ($sub != 0) {
                     array_push($workhour, ($sub*2));
@@ -141,35 +135,24 @@ class WorkController extends Controller
             }
 
             array_push($individualReport, [
-                'title' => $team->title,
+                'month' => [$this->getMonth($attendance[0]->created_at),$this->getYear($attendance[0]->created_at)],
                 'totalWorkHr' => $totalWorkHr,
                 'avgWorkHr' => $totalWorkHr/$totalWorkDay,
+                'dayesOfMonth' => $dayesOfMonth,
                 'workHrArray' => $workhour
             ]);
 
             $totalWorkHr = 0;
             $workhour = [];
         }
-
-        $response = [
-            'dayesOfMonth' => $dayesOfMonth,
-            'individualReport' => $individualReport
-        ];
-
-        return response()->json($response);
+        
+        return response()->json($individualReport);
     }
 
     public function getMonth($time)
     {
         $newtime = strtotime($time);
 	    $time->day = date('m',$newtime);
-        return $time->day;
-    }
-
-    public function getMonthName($time)
-    {
-        $newtime = strtotime($time);
-	    $time->day = date('M',$newtime);
         return $time->day;
     }
 
