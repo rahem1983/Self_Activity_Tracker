@@ -116,8 +116,8 @@
    <div class="bx mb-5">
     <div class="card-title mt-3" style="padding-left: 15px; border-left: 4px solid blue;"><h4 class="mb-4">Individual Team Report (<span>January, 2022</span>)</h4>
     </div>
-    <div class="row p-2">
-      <div class="col-4">
+    <div class="row p-2 individualReport">
+      {{-- <div class="col-4 ">
         <div class="card">
           <div class="card-title text-center pt-3" style="color:#002db3;"><h6>Web</h6></div>
           <div class="bx-2"> <p  class="bx-2-txt"style="color: #002db3;">Total Working Hour &emsp;: <span>333</span> hrs<br> 
@@ -140,7 +140,7 @@
             &nbsp;Avg Working Hour &emsp;&nbsp;&nbsp;&nbsp;: <span>15.5</span> hrs</p></div>
           <canvas id="graphicBar" style="width:100%;"></canvas>
         </div>
-      </div>
+      </div> --}}
     </div>
 </div>
 

@@ -194,11 +194,92 @@
 // Third Last Month Work Report Graph End
 
 
+let individualReport = document.querySelector('.individualReport');
+$.ajax({
+    type: "get",
+    url: "teamReport",
+    dataType: "json",
+    success: function (response) {
+        for (const IR of response.individualReport) {
+            const individualGraphDiv = document.createElement("div");
+            individualGraphDiv.className = "col-4"
+            individualGraphDiv.innerHTML = `
+            <div class="card">
+                <div class="card-title text-center pt-3" style="color:#002db3;"><h6>`+ IR.title +`</h6></div>
+                <div class="bx-2"> <p  class="bx-2-txt"style="color: #002db3;">Total Working Hour &emsp;: <span>`+ IR.totalWorkHr +`</span> hrs<br> 
+                    &nbsp;Avg Working Hour &emsp;&nbsp;&nbsp;: <span>`+ IR.avgWorkHr +`</span> hrs</p></div>
+                <canvas id="`+ IR.title +`Bar" style="width:100%;"></canvas>
+            </div>`
+            individualReport.append(individualGraphDiv);
 
 
+            var xValues = response.dayesOfMonth;
+            var yValues = IR.workHrArray;
+            var barColors = "#4d4dff";
+
+            
+            //made the tooltip title blank  
+            const Titletooltip = (tooltipItems) => {
+                return ""; 
+            }
+
+            new Chart("" + IR.title +"Bar", {
+                type: "bar",
+                data: {
+                    labels: xValues,
+                    datasets: [{
+                        backgroundColor: barColors,
+                        data: yValues
+                    }]
+                },
+
+                options:{
+
+                    legend:{
+                    display: false,
+                    },
+
+                    title: {
+                        display: false,
+                        text: IR.title,
+                        fontSize: 20
+                    },
+
+                    scales: {
+                        yAxes: [{
+                            ticks: {
+                                beginAtZero: true,
+                                suggestedMin: 0, 
+                                suggestedMax: 15,
+                                //callback: function(value){
+                                //return value+ " hrs"; //For unit hrs
+                                //}
+                                
+                            }
+                        }]
+
+                    },
+
+
+                    tooltips: {
+                        enabled: true,
+                        mode: 'single',
+                        displayColors:true,
+                        callbacks: {
+                            title: Titletooltip,
+                            label: function(tooltipItems, data) {
+                                return 'Day '+ tooltipItems.xLabel + ': ' + tooltipItems.yLabel + ' Hrs';
+                            }
+                        }           
+                    }
+                },
+            });
+        }
+    }
+});
         // <!-- Web Chart Start-->
-
-        var xValues = ["1", "2", "3", "4", "5", "6", "7", " 8", "9", "10", "11", "12",
+        
+        var xValues = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12",
         "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31" ];
         var yValues = [6, 10, 9, 12, 2, 6, 7, 5, 0, 0, 4, 7, 4, 6, 9, 3, 2, 4, 6, 5, 0, 0, 5, 8, 1, 2, 4, 7, 5, 3, 4];
         var barColors = "#4d4dff";
@@ -419,7 +500,6 @@
             url: "WorkOverview",
             dataType: "json",
             success: function (response) {
-                console.log(response.general_project);
                 var config = {
                     type: 'bar',
                     data: {

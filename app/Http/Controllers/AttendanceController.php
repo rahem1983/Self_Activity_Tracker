@@ -38,7 +38,7 @@ class AttendanceController extends Controller
 
     public function lastMonthAttendance()
     {
-        $attendance = Attendance::where("user_id", session('user')->id)->whereMonth('created_at', '=', Carbon::now()->subMonth()->month)->get();   // gets only the data from previous month
+        $attendance = Attendance::where("user_id", session('user')->id)->whereMonth('created_at', '=', Carbon::now()->subMonth(1)->month)->get();   // gets only the data from previous month
         $present = 0;
 
         $DaysInMonth = cal_days_in_month(CAL_GREGORIAN,$this->getMonth($attendance[0]->created_at),$this->getYear($attendance[0]->created_at));
