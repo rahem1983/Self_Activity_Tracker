@@ -66,6 +66,7 @@ Route::group(['middleware'=>['userHaveAccess']],function(){
 
     Route::get('WorkOverview',[WorkController::class,'WorkOverview']);
     Route::get('teamReport',[WorkController::class,'individualTeamReport']);
+    Route::get('lstThreeMonthReport',[WorkController::class,'lstThreeMonthReport']);
 
 
     Route::get('GetSessionUserActiveProject', [ProjectController::class, 'GetSessionUserActiveProject']);

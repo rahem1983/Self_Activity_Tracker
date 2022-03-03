@@ -195,11 +195,19 @@
 
 
 let individualReport = document.querySelector('.individualReport');
+let monthYear = document.querySelector('.monthYear');
+
+function getMonthName(month) {
+    const monthNames = ["January", "February", "March", "April", "May", "June","July", "August", "September", "October", "November", "December"];
+    return monthNames[month-1];
+}
+
 $.ajax({
     type: "get",
     url: "teamReport",
     dataType: "json",
     success: function (response) {
+        monthYear.innerHTML = ` `+ getMonthName(response.month[0]) +`, 20`+ response.month[1] +` `
         for (const IR of response.individualReport) {
             const individualGraphDiv = document.createElement("div");
             individualGraphDiv.className = "col-4"
@@ -207,7 +215,7 @@ $.ajax({
             <div class="card">
                 <div class="card-title text-center pt-3" style="color:#002db3;"><h6>`+ IR.title +`</h6></div>
                 <div class="bx-2"> <p  class="bx-2-txt"style="color: #002db3;">Total Working Hour &emsp;: <span>`+ IR.totalWorkHr +`</span> hrs<br> 
-                    &nbsp;Avg Working Hour &emsp;&nbsp;&nbsp;: <span>`+ IR.avgWorkHr +`</span> hrs</p></div>
+                    &nbsp;Avg Working Hour &emsp;&nbsp;&nbsp;: <span>`+ IR.avgWorkHr.toFixed(2) +`</span> hrs</p></div>
                 <canvas id="`+ IR.title +`Bar" style="width:100%;"></canvas>
             </div>`
             individualReport.append(individualGraphDiv);

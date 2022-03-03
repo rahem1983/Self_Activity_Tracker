@@ -44,59 +44,132 @@ class WorkController extends Controller
 
     public function individualTeamReport()
     {
-
-
         $teams = Team::orderby('id')->get();
-        $attendance = Attendance::whereMonth('created_at', '=', Carbon::now()->subMonth(1)->month)->get();   // gets only the data from previous month
+        $attendance = Attendance::whereMonth('created_at', '=', Carbon::now()->subMonth()->month)->get();   // gets only the data from previous month
 
         $DaysInMonth = cal_days_in_month(CAL_GREGORIAN,$this->getMonth($attendance[0]->created_at),$this->getYear($attendance[0]->created_at));
 
         $numberofFriday = $this->countAnydays($this->getMonth($attendance[0]->created_at),$this->getYear($attendance[0]->created_at), "fri");
         $numberofSaturday = $this->countAnydays($this->getMonth($attendance[0]->created_at),$this->getYear($attendance[0]->created_at), "sat");
+
         $totalWorkDay = $DaysInMonth - count($numberofFriday) - count($numberofSaturday);
         $totalWorkHr = 0;
         $avgWorkHr = 0;
 
         $individualReport = [];
-
         $teamArray = [];
         $workhour = [];
         $dayesOfMonth = [];
+
         foreach ($teams as $team) {
+
             array_push($teamArray, $team->title);
             $reports = Attendance::select('attendances.*','users.team_id', 'teams.title')->join('users', 'attendances.user_id', '=', 'users.id')->join('teams', 'users.team_id', '=', 'teams.id')->whereMonth('attendances.created_at', '=', Carbon::now()->subMonth()->month)->where('team_id',$team->id);
             $dayesOfMonth = [];
+
             for ($i=0; $i < $DaysInMonth; $i++) { 
+
                 array_push($dayesOfMonth, ($i+1));
                 $sub = DB::table( DB::raw("({$reports->toSql()}) as sub"))->mergeBindings($reports->getQuery())->whereDay('created_at', '=', ($i+1))->count(); 
+
                 if ($sub != 0) {
                     array_push($workhour, ($sub*2));
                     $totalWorkHr+=($sub*2);
-                } else {
+                } 
+                else {
                     array_push($workhour, 0);
                 }
             }
+
             array_push($individualReport, [
                 'title' => $team->title,
                 'totalWorkHr' => $totalWorkHr,
                 'avgWorkHr' => $totalWorkHr/$totalWorkDay,
                 'workHrArray' => $workhour
             ]);
+
             $totalWorkHr = 0;
             $workhour = [];
         }
+
+        $response = [
+            'month' => [$this->getMonth($attendance[0]->created_at),$this->getYear($attendance[0]->created_at)],
+            'dayesOfMonth' => $dayesOfMonth,
+            'individualReport' => $individualReport
+        ];
+
+        return response()->json($response);
+        
+    }
+
+    public function lstThreeMonthReport()
+    {
+        $attendance = Attendance::whereMonth('created_at', '=', Carbon::now()->subMonth(1)->month)->get();   // gets only the data from previous month
+
+        $DaysInMonth = cal_days_in_month(CAL_GREGORIAN,$this->getMonth($attendance[0]->created_at),$this->getYear($attendance[0]->created_at));
+
+        $numberofFriday = $this->countAnydays($this->getMonth($attendance[0]->created_at),$this->getYear($attendance[0]->created_at), "fri");
+        $numberofSaturday = $this->countAnydays($this->getMonth($attendance[0]->created_at),$this->getYear($attendance[0]->created_at), "sat");
+
+        $totalWorkDay = $DaysInMonth - count($numberofFriday) - count($numberofSaturday);
+        $totalWorkHr = 0;
+        $avgWorkHr = 0;
+
+        $individualReport = [];
+        $teamArray = [];
+        $workhour = [];
+        $dayesOfMonth = [];
+
+        foreach ($teams as $team) {
+
+            array_push($teamArray, $team->title);
+            $reports = Attendance::select('attendances.*','users.team_id', 'teams.title')->join('users', 'attendances.user_id', '=', 'users.id')->join('teams', 'users.team_id', '=', 'teams.id')->whereMonth('attendances.created_at', '=', Carbon::now()->subMonth()->month)->where('team_id',$team->id);
+            $dayesOfMonth = [];
+
+            for ($i=0; $i < $DaysInMonth; $i++) { 
+
+                array_push($dayesOfMonth, ($i+1));
+                $sub = DB::table( DB::raw("({$reports->toSql()}) as sub"))->mergeBindings($reports->getQuery())->whereDay('created_at', '=', ($i+1))->count(); 
+
+                if ($sub != 0) {
+                    array_push($workhour, ($sub*2));
+                    $totalWorkHr+=($sub*2);
+                } 
+                else {
+                    array_push($workhour, 0);
+                }
+            }
+
+            array_push($individualReport, [
+                'title' => $team->title,
+                'totalWorkHr' => $totalWorkHr,
+                'avgWorkHr' => $totalWorkHr/$totalWorkDay,
+                'workHrArray' => $workhour
+            ]);
+
+            $totalWorkHr = 0;
+            $workhour = [];
+        }
+
         $response = [
             'dayesOfMonth' => $dayesOfMonth,
             'individualReport' => $individualReport
         ];
+
         return response()->json($response);
-        
     }
 
     public function getMonth($time)
     {
         $newtime = strtotime($time);
 	    $time->day = date('m',$newtime);
+        return $time->day;
+    }
+
+    public function getMonthName($time)
+    {
+        $newtime = strtotime($time);
+	    $time->day = date('M',$newtime);
         return $time->day;
     }
 

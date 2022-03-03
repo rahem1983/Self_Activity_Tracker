@@ -114,7 +114,7 @@
 
 
    <div class="bx mb-5">
-    <div class="card-title mt-3" style="padding-left: 15px; border-left: 4px solid blue;"><h4 class="mb-4">Individual Team Report (<span>January, 2022</span>)</h4>
+    <div class="card-title mt-3" style="padding-left: 15px; border-left: 4px solid blue;"><h4 class="mb-4">Individual Team Report (<span class="monthYear">January, 2022</span>)</h4>
     </div>
     <div class="row p-2 individualReport">
       {{-- <div class="col-4 ">
