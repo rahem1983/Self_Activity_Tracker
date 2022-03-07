@@ -1,3 +1,4 @@
+@include('header')
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,6 +13,8 @@
       <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
      
       <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
+      <script src="./js/personalityResult.js" defer></script>
       
     
     <style>
@@ -31,8 +34,8 @@
 
       </div>
       <div class="col-lg-6">
-        <h4 class="text-center pt-5">Your Personality is <span class="text-primary">INTP</span></h4>
-        <h5 class="text-center pt-2">To learn more- <a href="https://www.youtube.com/watch?v=bfusRr20RWU" target="_blank">Click here</a></h5>
+        <h4 class="text-center pt-5 ">Your Personality is <span class="text-primary personality_type"></span></h4>
+        <h5 class="text-center pt-2">To learn more- <a class="youtube_link" href="" target="_blank">Click here</a></h5>
 
 
         <h5 class="text-center pt-3 fw-bold">Personality traits explained:</h5>
@@ -58,6 +61,8 @@
     
         
       </div>
+
+      
     </div>
    
 

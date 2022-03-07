@@ -33,6 +33,8 @@ Route::group(['middleware'=>['userHaveAccess']],function(){
     Route::view('AllPtoject', 'allProjects');
     Route::view('PersonalityTest', 'personalityTest');
     Route::view('PersonalityForm', 'personalityForm');
+    Route::view('personalityResult', 'personalityResult');
+
 
 
 
@@ -86,6 +88,8 @@ Route::group(['middleware'=>['userHaveAccess']],function(){
 
 
     Route::post('personalityPost',[PersonalityController::class,'PersonalityFnc']);
+    Route::get('getPersonalityResult',[PersonalityController::class,'getPersonalityResult']);
+
     
     Route::group(['middleware'=>['adminHaveAccess']],function(){
 

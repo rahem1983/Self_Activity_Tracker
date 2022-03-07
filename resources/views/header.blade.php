@@ -65,9 +65,16 @@
         <li class="nav-item">
           <a class="nav-link" href="./Calendar">Calendar</a>
         </li>
+        @if (session('user')->personality != null)
+        <li class="nav-item">
+          <a class="nav-link" href="./personalityResult">Personality</a>
+        </li> 
+        @else
         <li class="nav-item">
           <a class="nav-link" href="./PersonalityTest">Personality</a>
-        </li>
+        </li>           
+        @endif
+        
 
         @if (session('user') && session('user')->type == "admin")
         <li class="nav-item">

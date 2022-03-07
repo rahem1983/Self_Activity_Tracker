@@ -5,6 +5,9 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use PhpParser\Node\Stmt\Foreach_;
 use App\Models\User;
+use App\Models\Personalitie;
+
+
 
 class PersonalityController extends Controller
 {
@@ -113,12 +116,12 @@ class PersonalityController extends Controller
         
             
 
-        $personality = implode(",", $pers);
-        $user->personality = $personality;
+        //$personality = implode(",", $pers);
+        $user->personality = $pers;
         $user->save();
         session()->pull('user');
         $req->session()->put('user', $user);
-        return $user;
+        return redirect('personalityResult');
 
         // echo "e = " . $e;
         // echo "<br>";
@@ -135,5 +138,12 @@ class PersonalityController extends Controller
         // echo "j = " . $j;
         // echo "<br>";
         // echo "p = " . $p;
+    }
+
+    public function getPersonalityResult(Request $req)
+    {     
+        $personalitie = Personalitie::select('personality_type', 'youtube_link')->where('personality_type', session('user')->personality)->first();
+
+        return $personalitie;
     }
 }
