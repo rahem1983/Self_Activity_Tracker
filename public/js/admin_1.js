@@ -24,7 +24,7 @@ $.ajax({
     dataType: "json",
     success: function (response) {
         for (const IR of response) {
-            console.log(IR.totalWorkHr);
+
             const individualGraphDiv = document.createElement("div");
             individualGraphDiv.className = "swiper-slide"
             individualGraphDiv.innerHTML = `
@@ -37,7 +37,7 @@ $.ajax({
             var xValues = IR.dayesOfMonth;
             var yValues = IR.workHrArray;
             var barColors = "#4d4dff";
-   
+
             new Chart("monthlyBar"+(IR.month[0])+""+(IR.month[1])+"", {
                 type: "bar",
                 data: {
@@ -49,13 +49,13 @@ $.ajax({
                         maxBarThickness: 20,
                     }]
                 },
-    
+
                 options:{
-            
+
                 legend:{
                     display: false,
                 },
-            
+
                 title: {
                     display: false,
                     text: "Monthly Work Report (In Hours)",
@@ -84,9 +84,7 @@ $.ajax({
                         }
                     }
                 }
-   
             });
-
         }
     }
 });

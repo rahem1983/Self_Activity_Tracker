@@ -2,7 +2,7 @@ let mood = [];
 var currentDate = new Date().toISOString().slice(0,10);
 
 const todayTaskDiv = document.querySelector(".todayTaskDiv");
-console.log(todayTaskDiv);
+
 const incompleteTaskDiv = document.querySelector(".incompleteTaskDiv");
 function HumanRead(date){
   var time = new Date(date);

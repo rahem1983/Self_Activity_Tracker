@@ -19,7 +19,6 @@ class AttendanceController extends Controller
         $attend->attend = 1;
         $attend->save();
 
-
         // $mins variable have the time in min ho much time left for today
         $timezone=new DateTimeZone( 'Asia/Dhaka' );
         $now=new DateTime( 'now', $timezone );

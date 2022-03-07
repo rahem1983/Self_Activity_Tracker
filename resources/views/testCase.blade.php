@@ -12,13 +12,20 @@
     <Script src="{{url('js/testCase.js')}}" defer></Script>
 </head>
 <body>
-    <time class="output" id="la"> lalal</time>
+    <h1 class="output" id="la"> lalal</h1>
     <div class="inputOnProject">
+        <div>
+            <p>hello : <%= Session("Name").ToString%> </p>
+          
+            </div>
         <input type="checkbox" id="CBproject" >
-        <label for="CBproject"> project 1</label><br>
+        <label for="CBproject">{{Session("Name")}} </label><br>
         <div id="inputProject"></div>
         <input type="checkbox" id="CBproject2" >
-        <label for="CBproject2"> project 2</label><br>
+        @if (session('Name'))
+        <label for="CBproject2">olla lokka</label><br>
+        @endif
+        
         <div id="inputProject2"></div>
         <button class=""></button>
 

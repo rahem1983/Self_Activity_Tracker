@@ -9,16 +9,16 @@
     <script
       src="https://kit.fontawesome.com/64d58efce2.js"
       crossorigin="anonymous"></script>
-      
-      <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-     
-      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
-      
     
+      <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    
+      <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    
+
     <style>
 
         /* .login-btn{
-         
+        
         background-color: #543c52;
         color: #f1e8e6;
         box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
@@ -70,18 +70,18 @@
 
 </head>
 <body style="background-color: #ccccff;">
-    
+
     <div>
-    
+
         <div class="row pt-5 pb-3 justify-content center" style="align-items: center;">
-            
+
             <div class="col-lg-6" style="align-items: center;">
                 <img src="{{url('./image/undraw_online_ad_re_ol62.svg')}}" style="width: 100%;" alt="">
             </div>
 
             <div class="col-lg-6" style="align-items: center;">
                 <div class="p-3" style="box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 3px 0px, rgba(0, 0, 0, 0.06) 0px 1px 2px 0px; width: 90%; max-height: 100%; background: white; margin-top: 70px; margin-left: 30px;">
-                   
+                  
                     <h2 class="text-center pt-2" style="color: #002db3">Login</h2>
                     @if(session('NoUser'))
                       <div class="title text-center mb-3 pt-4 text-white">
@@ -98,8 +98,8 @@
                               {{-- <span style="color:#ff0000 ">@error('email'){{$message}}@enderror</span> --}}
                             </div>
                           </div>
-
-                                                 
+                        
+                          
                           <div class="form-row pt-4">
                             <div class="form-group">
                               <h5><label for="title">Password</label></h5>
@@ -125,10 +125,7 @@
                           </div>
                         </div>
                         
-                      </form>
-            
-            
-                    
+                      </form>   
                 </div>
             </div>
         </div>
